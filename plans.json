@@ -1,0 +1,85 @@
+[
+  {
+    "id": "business-basic-50",
+    "name": "Business Basic",
+    "speed": "50/20 Mbps",
+    "download": 50,
+    "upload": 20,
+    "price": 79,
+    "features": [
+      "Unlimited Data",
+      "Static IP Included",
+      "Standard Business Support",
+      "No Lock-in Contract"
+    ]
+  },
+  {
+    "id": "business-pro-100",
+    "name": "Business Pro",
+    "speed": "100/40 Mbps",
+    "download": 100,
+    "upload": 40,
+    "price": 99,
+    "features": [
+      "Unlimited Data",
+      "Static IP Included",
+      "Priority Business Support",
+      "12h eSLA Included",
+      "No Lock-in Contract"
+    ]
+  },
+  {
+    "id": "business-max-250",
+    "name": "Business Max 250",
+    "speed": "250/100 Mbps",
+    "download": 250,
+    "upload": 100,
+    "price": 105,
+    "promo_price": 90,
+    "promo_duration": 6,
+    "features": [
+      "Unlimited Data",
+      "Static IP Included",
+      "Priority Business Support",
+      "12h eSLA Included",
+      "Free Wi-Fi 7 Modem Option",
+      "No Lock-in Contract"
+    ]
+  },
+  {
+    "id": "business-max-500",
+    "name": "Business Max 500",
+    "speed": "500/200 Mbps",
+    "download": 500,
+    "upload": 200,
+    "price": 125,
+    "promo_price": 110,
+    "promo_duration": 6,
+    "features": [
+      "Unlimited Data",
+      "Static IP Included",
+      "Priority Business Support",
+      "12h eSLA Included",
+      "Free Wi-Fi 7 Modem Option",
+      "No Lock-in Contract"
+    ]
+  },
+  {
+    "id": "business-max-1000",
+    "name": "Business Max 1000",
+    "speed": "1000/400 Mbps",
+    "download": 1000,
+    "upload": 400,
+    "price": 145,
+    "promo_price": 130,
+    "promo_duration": 6,
+    "features": [
+      "Unlimited Data",
+      "Static IP Included",
+      "Priority Business Support",
+      "12h eSLA Included",
+      "Free Wi-Fi 7 Modem Option",
+      "No Lock-in Contract"
+    ]
+  }
+]
