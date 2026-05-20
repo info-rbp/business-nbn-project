@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FiberFlow Business | Address Check</title>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#dadada",
+                    "on-secondary-fixed": "#410001",
+                    "on-error-container": "#93000a",
+                    "primary": "#000000",
+                    "deep-navy": "#0A0A0F",
+                    "surface-bright": "#f9f9f9",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#e2e2e2",
+                    "tertiary-container": "#1f005f",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#e90812",
+                    "on-secondary-container": "#fffbff",
+                    "secondary": "#bc000a",
+                    "surface-container": "#eeeeee",
+                    "inverse-surface": "#2f3131",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "outline-variant": "#c4c7c7",
+                    "on-tertiary-container": "#8c69ff",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f3f3f3",
+                    "on-primary-fixed": "#1c1b1b",
+                    "inverse-primary": "#c8c6c5",
+                    "surface-gray": "#F5F5F5",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#ffb4aa",
+                    "pure-white": "#FFFFFF",
+                    "secondary-fixed": "#ffdad5",
+                    "on-primary-fixed-variant": "#474746",
+                    "primary-fixed": "#e5e2e1",
+                    "tertiary": "#000000",
+                    "surface-container-high": "#e8e8e8",
+                    "on-background": "#1a1c1c",
+                    "surface-tint": "#5f5e5e",
+                    "electric-purple": "#4200B3",
+                    "surface": "#f9f9f9",
+                    "on-surface": "#1a1c1c",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#858383",
+                    "on-tertiary-fixed": "#1f005f",
+                    "outline": "#747878",
+                    "tertiary-fixed-dim": "#cdbdff",
+                    "tertiary-fixed": "#e7deff",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-secondary-fixed-variant": "#930006",
+                    "on-surface-variant": "#444748",
+                    "on-tertiary-fixed-variant": "#4e1ebe",
+                    "vibrant-red": "#E5000F",
+                    "primary-container": "#1c1b1b",
+                    "background": "#f9f9f9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "unit": "8px",
+                    "max-width": "1280px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "label-md": ["Hanken Grotesk"],
+                    "label-bold": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .bg-mesh {
+            background-color: #f9f9f9;
+            background-image: radial-gradient(at 0% 0%, rgba(66, 0, 179, 0.03) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(229, 0, 15, 0.03) 0px, transparent 50%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body-md text-on-surface selection:bg-electric-purple selection:text-pure-white">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-pure-white z-50 border-b border-surface-variant">
+<div class="flex justify-between items-center px-6 md:px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer transition-transform active:scale-95" data-icon="arrow_back">arrow_back</span>
+<span class="font-display-lg text-vibrant-red tracking-tighter text-2xl md:text-3xl font-extrabold">FiberFlow Business</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant hover:text-electric-purple transition-colors cursor-pointer group">
+<span class="font-label-md text-label-md">Need assistance?</span>
+<span class="material-symbols-outlined transition-transform group-hover:scale-110" data-icon="help">help</span>
+</div>
+</div>
+</header>
+<main class="min-h-screen bg-mesh">
+<!-- Progress Indicator -->
+<nav class="max-w-max-width mx-auto px-6 md:px-margin-desktop py-8">
+<div class="flex items-center justify-between w-full max-w-3xl mx-auto relative">
+<!-- Progress Line -->
+<div class="absolute top-1/2 left-0 w-full h-0.5 bg-surface-variant -translate-y-1/2 z-0"></div>
+<div class="absolute top-1/2 left-0 w-1/4 h-0.5 bg-vibrant-red -translate-y-1/2 z-0 transition-all duration-700 ease-in-out" id="progress-bar"></div>
+<!-- Steps -->
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-vibrant-red text-pure-white flex items-center justify-center font-bold shadow-lg shadow-vibrant-red/20 border-2 border-pure-white">1</div>
+<span class="font-label-bold text-label-bold text-vibrant-red">Address</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-bold border-2 border-pure-white">2</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Plan</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-bold border-2 border-pure-white">3</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Config</span>
+</div>
+<div class="relative z-10 flex flex-col items-center gap-2">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-bold border-2 border-pure-white">4</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Review</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section & Address Tool -->
+<section class="max-w-max-width mx-auto px-6 md:px-margin-desktop py-12 md:py-20 flex flex-col items-center text-center">
+<div class="max-w-3xl">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">
+                    Connect your enterprise to the <span class="text-vibrant-red">future.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                    Enter your business location to check availability for ultra-high-speed fiber symmetric connectivity and dedicated enterprise support.
+                </p>
+<!-- Check Address Tool -->
+<div class="w-full max-w-2xl mx-auto bg-pure-white p-2 rounded-lg border border-surface-variant shadow-sm focus-within:ring-2 focus-within:ring-electric-purple transition-all">
+<div class="flex flex-col md:flex-row gap-2">
+<div class="relative flex-grow flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-outline" data-icon="location_on">location_on</span>
+<input class="w-full pl-12 pr-4 py-4 font-body-md text-body-md border-none focus:ring-0 outline-none placeholder:text-outline" id="address-input" placeholder="Enter your business address" type="text"/>
+</div>
+<button class="bg-vibrant-red text-pure-white font-label-bold text-label-bold py-4 px-8 rounded flex items-center justify-center gap-2 hover:bg-secondary transition-all active:scale-95 whitespace-nowrap" onclick="simulateCheck()">
+<span>Check Availability</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Success State (Hidden by Default) -->
+<div class="hidden mt-8 p-6 bg-surface-container-low border border-electric-purple/20 rounded-xl flex items-center gap-4 text-left animate-in fade-in slide-in-from-bottom-4 duration-500" id="success-state">
+<div class="w-12 h-12 rounded-full bg-electric-purple/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-purple" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<p class="font-headline-md text-headline-md text-electric-purple">Success! Your location is fiber-ready.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Enterprise Grade 10Gbps symmetric speeds available.</p>
+</div>
+<button class="ml-auto bg-electric-purple text-pure-white px-6 py-2 rounded font-label-bold text-label-bold hover:opacity-90 transition-opacity">Continue</button>
+</div>
+</div>
+</section>
+<!-- Value Propositions (Bento Style) -->
+<section class="max-w-max-width mx-auto px-6 md:px-margin-desktop py-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="md:col-span-2 relative overflow-hidden rounded-xl h-80 border border-surface-variant group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-tech macro photograph of glowing blue and purple fiber optic cables transmitting data in a dark, structured server room environment. The lighting is dramatic and moody, emphasizing speed and high-end enterprise technology. The style is professional and corporate with sharp focus and cinematic depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFCIML-kYHsJ0CHi-5LVsTVpsZxqvVeTJDYi796nU4UjvmbX8C2IlUBY-bLMNtW-LA6U0_XP_Taj4rGVqJO4Mk6Y4Oo6bVNLnyK-x9wKJrZqE8YzGxFnfVSq4E1SkL4n7vmE408nR2rb0RXIdMY-nBc3Fy1ZYV2Rvs-Lc2IR5az-UA9vnYtGW4rtEZSFgueHv_ZTm9oEjmhczmar9vZ5wfMPbtKOMs74C3fe2wsxMSDRFqwsGNbbPdRP_cV6_AIKFS62XyF4BQGf1S"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-navy to-transparent opacity-80"></div>
+<div class="absolute bottom-8 left-8 text-pure-white">
+<span class="bg-vibrant-red px-3 py-1 rounded-full font-label-bold text-xs uppercase tracking-widest mb-4 inline-block">Infrastructure</span>
+<h3 class="font-headline-lg text-headline-lg">Tier 1 Global Network</h3>
+<p class="font-body-md text-body-md opacity-80">Direct peering with global cloud providers for 99.99% uptime.</p>
+</div>
+</div>
+<div class="bg-pure-white p-8 rounded-xl border border-surface-variant flex flex-col justify-between hover:border-electric-purple transition-colors duration-300">
+<div>
+<span class="material-symbols-outlined text-electric-purple text-4xl mb-4" data-icon="support_agent">support_agent</span>
+<h3 class="font-headline-md text-headline-md mb-2">24/7 Priority Support</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">L3 engineers on standby with a guaranteed 2-hour response time for all business plans.</p>
+</div>
+<div class="mt-6 font-label-bold text-label-bold text-primary flex items-center gap-2 cursor-pointer group">
+                        Learn about our SLA <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="east">east</span>
+</div>
+</div>
+<div class="bg-surface-gray p-8 rounded-xl border border-surface-variant flex flex-col items-center text-center justify-center">
+<div class="mb-4 text-4xl font-extrabold text-vibrant-red">10 Gbps</div>
+<h3 class="font-label-bold text-label-bold uppercase tracking-widest text-on-surface-variant mb-2">Symmetric Speed</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Standard across our enterprise ecosystem. No throttles, no caps.</p>
+</div>
+<div class="md:col-span-2 bg-pure-white p-8 rounded-xl border border-surface-variant flex items-center gap-8">
+<div class="hidden md:block w-32 h-32 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A stylized minimalist digital map showing a high-density urban fiber network grid in Melbourne. The map uses a sleek dark navy and electric purple color scheme with glowing nodes indicating connectivity points. It looks professional, accurate, and high-tech." data-location="Melbourne" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEXOtYk_Wb8k7oyZgg-xCuEi4ISugM400Z4c7WR5mM6Z_Tu3XljC9qoHfCZ8uxr9ftU_0-ACEmEmzIz37NNF2rbwqVmgI8sI_GwcHqJuk_wCkblb8h2qQf4-pBWzxMsjVXcF7B5Lm2L8Edu_am67FoQIIO-A_bqpfFdRBZt2D7z7PY1agvZh9ZnP7D6HRG4ZB-HA9yHIOL4SIckw3QsYVFUXV-f3I2zR2yniLN2xY0GYFF5CVeub7WXNxW4LWbAg7VxVvic-ffrHyY"/>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md mb-2">Expanding Every Day</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Over 2,500 new business sites were connected this month. Our dedicated deployment teams work around the clock to ensure your premises are ready for the high-bandwidth era.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface-container-low border-t border-surface-variant">
+<div class="grid grid-cols-1 md:grid-cols-2 px-6 md:px-margin-desktop max-w-max-width mx-auto gap-gutter items-center">
+<div>
+<span class="font-label-bold text-on-surface block mb-2">FiberFlow Business</span>
+<p class="font-label-md text-label-md text-on-surface-variant">© 2024 FiberFlow Business ISP. All rights reserved. SLA Guaranteed.</p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4 md:justify-end">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">Critical Information Summary</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">Privacy Policy</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">Terms of Service</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">Support</a>
+</div>
+</div>
+</footer>
+<script>
+        function simulateCheck() {
+            const btn = document.querySelector('button[onclick="simulateCheck()"]');
+            const input = document.getElementById('address-input');
+            const success = document.getElementById('success-state');
+            const progress = document.getElementById('progress-bar');
+            
+            if(!input.value) {
+                input.classList.add('animate-shake');
+                setTimeout(() => input.classList.remove('animate-shake'), 500);
+                return;
+            }
+
+            // UI Feedback
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin" data-icon="progress_activity">progress_activity</span> Validating...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.classList.add('hidden');
+                success.classList.remove('hidden');
+                progress.style.width = '35%'; // Visual progress move
+                
+                // Scroll to result
+                success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 1500);
+        }
+
+        // Add shake animation
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                25% { transform: translateX(-5px); }
+                75% { transform: translateX(5px); }
+            }
+            .animate-shake { animation: shake 0.2s ease-in-out 0s 2; }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body></html>

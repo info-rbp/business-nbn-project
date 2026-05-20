@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Critical Information Summaries | Core Connect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Hanken Grotesk', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e2e2e2;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e7deff",
+                        "tertiary-container": "#1f005f",
+                        "surface": "#f9f9f9",
+                        "vibrant-red": "#E5000F",
+                        "secondary": "#bc000a",
+                        "deep-navy": "#0A0A0F",
+                        "electric-purple": "#4200B3",
+                        "pure-white": "#FFFFFF",
+                        "surface-gray": "#F5F5F5",
+                        "outline-variant": "#c4c7c7",
+                        "on-surface-variant": "#444748",
+                        "on-surface": "#1a1c1c",
+                        "secondary-container": "#e90812",
+                        "on-secondary-container": "#fffbff",
+                        "surface-container-low": "#f3f3f3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "max-width": "1280px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-bold": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-deep-navy border-b border-on-surface-variant/20 h-20">
+<div class="flex justify-between items-center h-full px-margin-desktop max-w-max-width mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-headline-md" data-icon="router">router</span>
+<span class="font-display-lg text-headline-md font-extrabold text-pure-white">CORE CONNECT</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-pure-white font-label-md text-label-md hover:text-secondary transition-colors" href="#">Home</a>
+<a class="text-pure-white font-label-md text-label-md hover:text-secondary transition-colors" href="#">Plans &amp; Pricing</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-label-md text-label-md" href="#">CIS Documents</a>
+<a class="text-pure-white font-label-md text-label-md hover:text-secondary transition-colors" href="#">Support Hub</a>
+</nav>
+<button class="bg-vibrant-red text-pure-white px-6 py-2 font-label-bold text-label-bold rounded-sm transition-transform active:scale-95 hover:shadow-lg">
+                Check Address
+            </button>
+</div>
+</header>
+<main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto">
+<!-- Hero Section -->
+<div class="mb-16">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<span class="inline-block py-1 px-3 bg-surface-container-low text-deep-navy font-label-bold text-label-bold mb-4 border border-outline-variant">REGULATORY COMPLIANCE</span>
+<h1 class="font-display-lg text-display-lg text-deep-navy mb-6">Critical Information Summaries</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Access detailed documentation for our business internet services. These summaries provide transparent information regarding pricing, inclusions, and service guarantees.
+                    </p>
+</div>
+<!-- Interactive Search Tool -->
+<div class="w-full md:w-96">
+<div class="relative">
+<input class="w-full h-14 pl-12 pr-4 bg-pure-white border border-outline-variant focus:border-electric-purple focus:ring-1 focus:ring-electric-purple outline-none transition-all font-body-md text-body-md" id="cisSearch" placeholder="Search plans or keywords..." type="text"/>
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant" data-icon="search">search</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="flex flex-wrap gap-3 mb-12">
+<button class="px-6 py-2 bg-deep-navy text-pure-white rounded-full font-label-bold text-label-bold filter-btn active" data-filter="all">All Documents</button>
+<button class="px-6 py-2 bg-pure-white border border-outline-variant text-on-surface-variant rounded-full font-label-bold text-label-bold filter-btn hover:bg-surface-gray transition-colors" data-filter="nbn">NBN Business</button>
+<button class="px-6 py-2 bg-pure-white border border-outline-variant text-on-surface-variant rounded-full font-label-bold text-label-bold filter-btn hover:bg-surface-gray transition-colors" data-filter="ee">Enterprise Ethernet</button>
+<button class="px-6 py-2 bg-pure-white border border-outline-variant text-on-surface-variant rounded-full font-label-bold text-label-bold filter-btn hover:bg-surface-gray transition-colors" data-filter="fiber">Fibre Fiber</button>
+</div>
+<!-- Documents Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Sidebar: Categories Card -->
+<div class="lg:col-span-3">
+<div class="bg-surface-container-low border border-outline-variant p-6 sticky top-28">
+<h3 class="font-headline-md text-headline-md mb-6">Quick Filters</h3>
+<ul class="space-y-4">
+<li class="flex items-center justify-between group cursor-pointer">
+<span class="font-label-md text-label-md group-hover:text-vibrant-red transition-colors">Business Fiber 1000</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]" data-icon="chevron_right">chevron_right</span>
+</li>
+<li class="flex items-center justify-between group cursor-pointer">
+<span class="font-label-md text-label-md group-hover:text-vibrant-red transition-colors">Asymmetric NBN</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]" data-icon="chevron_right">chevron_right</span>
+</li>
+<li class="flex items-center justify-between group cursor-pointer">
+<span class="font-label-md text-label-md group-hover:text-vibrant-red transition-colors">Managed Security Packs</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]" data-icon="chevron_right">chevron_right</span>
+</li>
+</ul>
+<hr class="my-6 border-outline-variant/50"/>
+<div class="p-4 bg-electric-purple text-pure-white rounded-sm">
+<p class="font-label-bold text-label-bold mb-2">Need help choosing?</p>
+<p class="text-[12px] opacity-90 mb-4">Our engineers can help you find the right CIS based on your location.</p>
+<button class="text-[12px] font-bold underline hover:no-underline">Speak to an Agent</button>
+</div>
+</div>
+</div>
+<!-- Main Content: Document List -->
+<div class="lg:col-span-9 space-y-6">
+<!-- Group: NBN Business -->
+<section class="doc-group" data-category="nbn">
+<h2 class="font-headline-md text-headline-md mb-6 flex items-center gap-2">
+<span class="w-8 h-1 bg-vibrant-red"></span>
+                        NBN Business Plans
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Doc Item -->
+<div class="flex items-center p-5 bg-pure-white border border-outline-variant group hover:border-vibrant-red transition-all cursor-pointer">
+<div class="w-12 h-12 bg-surface-container-low flex items-center justify-center text-vibrant-red mr-4 group-hover:bg-vibrant-red group-hover:text-pure-white transition-colors">
+<span class="material-symbols-outlined" data-icon="picture_as_pdf">picture_as_pdf</span>
+</div>
+<div class="flex-grow">
+<p class="font-label-bold text-label-bold text-deep-navy">NBN Business High Speed 100/40</p>
+<p class="text-[12px] text-on-surface-variant uppercase tracking-wider">PDF | 240KB | Updated Jan 2024</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-vibrant-red transition-colors" data-icon="download">download</span>
+</div>
+<div class="flex items-center p-5 bg-pure-white border border-outline-variant group hover:border-vibrant-red transition-all cursor-pointer">
+<div class="w-12 h-12 bg-surface-container-low flex items-center justify-center text-vibrant-red mr-4 group-hover:bg-vibrant-red group-hover:text-pure-white transition-colors">
+<span class="material-symbols-outlined" data-icon="picture_as_pdf">picture_as_pdf</span>
+</div>
+<div class="flex-grow">
+<p class="font-label-bold text-label-bold text-deep-navy">NBN Business Superfast 250/100</p>
+<p class="text-[12px] text-on-surface-variant uppercase tracking-wider">PDF | 252KB | Updated Jan 2024</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-vibrant-red transition-colors" data-icon="download">download</span>
+</div>
+</div>
+</section>
+<!-- Group: Enterprise Ethernet -->
+<section class="doc-group pt-8" data-category="ee">
+<h2 class="font-headline-md text-headline-md mb-6 flex items-center gap-2">
+<span class="w-8 h-1 bg-electric-purple"></span>
+                        Enterprise Ethernet
+                    </h2>
+<div class="grid grid-cols-1 gap-4">
+<div class="flex items-center p-5 bg-pure-white border border-outline-variant group hover:border-electric-purple transition-all cursor-pointer">
+<div class="w-12 h-12 bg-surface-container-low flex items-center justify-center text-electric-purple mr-4 group-hover:bg-electric-purple group-hover:text-pure-white transition-colors">
+<span class="material-symbols-outlined" data-icon="picture_as_pdf">picture_as_pdf</span>
+</div>
+<div class="flex-grow">
+<p class="font-label-bold text-label-bold text-deep-navy">Enterprise Ethernet - Symmetric 1000/1000 Low CoS</p>
+<p class="text-[12px] text-on-surface-variant uppercase tracking-wider">PDF | 310KB | Updated Feb 2024</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-electric-purple transition-colors" data-icon="download">download</span>
+</div>
+<div class="flex items-center p-5 bg-pure-white border border-outline-variant group hover:border-electric-purple transition-all cursor-pointer">
+<div class="w-12 h-12 bg-surface-container-low flex items-center justify-center text-electric-purple mr-4 group-hover:bg-electric-purple group-hover:text-pure-white transition-colors">
+<span class="material-symbols-outlined" data-icon="picture_as_pdf">picture_as_pdf</span>
+</div>
+<div class="flex-grow">
+<p class="font-label-bold text-label-bold text-deep-navy">Enterprise Ethernet - Symmetric 1000/1000 High CoS</p>
+<p class="text-[12px] text-on-surface-variant uppercase tracking-wider">PDF | 315KB | Updated Feb 2024</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-electric-purple transition-colors" data-icon="download">download</span>
+</div>
+</div>
+</section>
+<!-- Group: Fiber Fiber -->
+<section class="doc-group pt-8" data-category="fiber">
+<h2 class="font-headline-md text-headline-md mb-6 flex items-center gap-2">
+<span class="w-8 h-1 bg-deep-navy"></span>
+                        Fiber Fiber Direct
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-center p-5 bg-pure-white border border-outline-variant group hover:border-deep-navy transition-all cursor-pointer">
+<div class="w-12 h-12 bg-surface-container-low flex items-center justify-center text-deep-navy mr-4 group-hover:bg-deep-navy group-hover:text-pure-white transition-colors">
+<span class="material-symbols-outlined" data-icon="picture_as_pdf">picture_as_pdf</span>
+</div>
+<div class="flex-grow">
+<p class="font-label-bold text-label-bold text-deep-navy">Direct Fiber 10Gbps CIS</p>
+<p class="text-[12px] text-on-surface-variant uppercase tracking-wider">PDF | 1.2MB | Updated Mar 2024</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-deep-navy transition-colors" data-icon="download">download</span>
+</div>
+<div class="flex items-center p-5 bg-pure-white border border-outline-variant group hover:border-deep-navy transition-all cursor-pointer">
+<div class="w-12 h-12 bg-surface-container-low flex items-center justify-center text-deep-navy mr-4 group-hover:bg-deep-navy group-hover:text-pure-white transition-colors">
+<span class="material-symbols-outlined" data-icon="picture_as_pdf">picture_as_pdf</span>
+</div>
+<div class="flex-grow">
+<p class="font-label-bold text-label-bold text-deep-navy">Dark Fiber Leasing Agreement CIS</p>
+<p class="text-[12px] text-on-surface-variant uppercase tracking-wider">PDF | 980KB | Updated Mar 2024</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-deep-navy transition-colors" data-icon="download">download</span>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Call to Action Banner -->
+<div class="mt-24 relative overflow-hidden bg-deep-navy p-12 flex flex-col items-center text-center">
+<div class="absolute top-0 right-0 w-64 h-64 bg-vibrant-red opacity-10 blur-3xl -translate-y-1/2 translate-x-1/2 rounded-full"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-electric-purple opacity-10 blur-3xl translate-y-1/2 -translate-x-1/2 rounded-full"></div>
+<h2 class="font-display-lg text-headline-lg text-pure-white mb-6 relative z-10">Can't find your plan's summary?</h2>
+<p class="font-body-lg text-body-lg text-pure-white/80 max-w-xl mb-8 relative z-10">
+                Legacy documents and specialized infrastructure agreements are available through our portal or by contacting your account manager directly.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 relative z-10">
+<button class="bg-vibrant-red text-pure-white px-8 py-4 font-label-bold text-label-bold transition-all hover:scale-105">Request Legacy CIS</button>
+<button class="border border-pure-white/20 text-pure-white px-8 py-4 font-label-bold text-label-bold hover:bg-pure-white/10 transition-all">Visit Portal</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-navy py-12 border-t border-on-surface-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-max-width mx-auto">
+<div class="md:col-span-1">
+<span class="font-headline-md text-headline-md text-pure-white mb-4 block">CORE CONNECT</span>
+<p class="text-surface-variant text-[14px] leading-relaxed">High-performance business NBN and enterprise fiber solutions for modern Australian enterprises.</p>
+</div>
+<div>
+<h4 class="text-secondary font-label-bold mb-6">RESOURCES</h4>
+<ul class="space-y-3">
+<li><a class="text-surface-variant hover:text-pure-white transition-colors text-body-md" href="#">About Us</a></li>
+<li><a class="text-secondary-fixed-dim underline transition-colors text-body-md" href="#">Critical Information Summaries</a></li>
+<li><a class="text-surface-variant hover:text-pure-white transition-colors text-body-md" href="#">SLA Details</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-secondary font-label-bold mb-6">LEGAL</h4>
+<ul class="space-y-3">
+<li><a class="text-surface-variant hover:text-pure-white transition-colors text-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-surface-variant hover:text-pure-white transition-colors text-body-md" href="#">Referral Program</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-secondary font-label-bold mb-6">CONNECT</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center bg-pure-white/10 text-pure-white hover:bg-vibrant-red transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="alternate_email">alternate_email</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center bg-pure-white/10 text-pure-white hover:bg-vibrant-red transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-max-width mx-auto px-margin-desktop mt-12 pt-8 border-t border-pure-white/5 text-center md:text-left">
+<p class="text-surface-variant text-[12px]">© 2024 Core Connect Business NBN. All Rights Reserved. TCPSS Code Compliant.</p>
+</div>
+</footer>
+<script>
+        // Filter logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const groups = document.querySelectorAll('.doc-group');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+                
+                // Update UI
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-deep-navy', 'text-pure-white');
+                    b.classList.add('bg-pure-white', 'text-on-surface-variant', 'border', 'border-outline-variant');
+                });
+                btn.classList.remove('bg-pure-white', 'text-on-surface-variant', 'border-outline-variant');
+                btn.classList.add('bg-deep-navy', 'text-pure-white');
+
+                // Filter content
+                groups.forEach(group => {
+                    if (filter === 'all' || group.getAttribute('data-category') === filter) {
+                        group.style.display = 'block';
+                    } else {
+                        group.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Simple Search
+        const searchInput = document.getElementById('cisSearch');
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            const items = document.querySelectorAll('.doc-group .flex.items-center.p-5');
+            
+            items.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(term)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Hide headers if no children visible
+            groups.forEach(group => {
+                const visibleItems = Array.from(group.querySelectorAll('.doc-group .flex.items-center.p-5')).filter(i => i.style.display !== 'none');
+                group.style.display = visibleItems.length > 0 ? 'block' : 'none';
+            });
+        });
+
+        // Subtle parallax/reveal effects
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            const hero = document.querySelector('h1');
+            hero.style.transform = `translateY(${scrolled * 0.1}px)`;
+            hero.style.opacity = 1 - (scrolled / 500);
+        });
+    </script>
+</body></html>

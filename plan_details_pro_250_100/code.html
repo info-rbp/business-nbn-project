@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pro Business NBN | FiberFlow Business</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #FFFFFF 0%, #F5F5F5 100%);
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 20px rgba(66, 0, 179, 0.15);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline-variant": "#c4c7c7",
+                      "pure-white": "#FFFFFF",
+                      "on-secondary-fixed-variant": "#930006",
+                      "inverse-on-surface": "#f1f1f1",
+                      "primary": "#000000",
+                      "secondary-fixed": "#ffdad5",
+                      "error-container": "#ffdad6",
+                      "secondary-container": "#e90812",
+                      "on-surface": "#1a1c1c",
+                      "on-primary-container": "#858383",
+                      "background": "#f9f9f9",
+                      "surface-dim": "#dadada",
+                      "on-background": "#1a1c1c",
+                      "on-surface-variant": "#444748",
+                      "on-primary-fixed": "#1c1b1b",
+                      "primary-container": "#1c1b1b",
+                      "tertiary-fixed-dim": "#cdbdff",
+                      "secondary-fixed-dim": "#ffb4aa",
+                      "on-error": "#ffffff",
+                      "surface": "#f9f9f9",
+                      "error": "#ba1a1a",
+                      "on-tertiary-fixed": "#1f005f",
+                      "on-primary-fixed-variant": "#474746",
+                      "on-error-container": "#93000a",
+                      "surface-tint": "#5f5e5e",
+                      "surface-container-highest": "#e2e2e2",
+                      "electric-purple": "#4200B3",
+                      "surface-container": "#eeeeee",
+                      "inverse-primary": "#c8c6c5",
+                      "tertiary-container": "#1f005f",
+                      "secondary": "#bc000a",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-fixed": "#e5e2e1",
+                      "on-secondary-container": "#fffbff",
+                      "vibrant-red": "#E5000F",
+                      "deep-navy": "#0A0A0F",
+                      "outline": "#747878",
+                      "surface-variant": "#e2e2e2",
+                      "on-primary": "#ffffff",
+                      "surface-container-low": "#f3f3f3",
+                      "surface-gray": "#F5F5F5",
+                      "on-tertiary": "#ffffff",
+                      "inverse-surface": "#2f3131",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "on-secondary-fixed": "#410001",
+                      "surface-container-high": "#e8e8e8",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed": "#e7deff",
+                      "tertiary": "#000000",
+                      "on-tertiary-container": "#8c69ff",
+                      "surface-bright": "#f9f9f9",
+                      "on-tertiary-fixed-variant": "#4e1ebe"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "max-width": "1280px",
+                      "margin-desktop": "64px",
+                      "unit": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Hanken Grotesk"],
+                      "label-md": ["Hanken Grotesk"],
+                      "headline-lg": ["Hanken Grotesk"],
+                      "display-lg-mobile": ["Hanken Grotesk"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "body-md": ["Hanken Grotesk"],
+                      "label-bold": ["Hanken Grotesk"],
+                      "display-lg": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                      "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-pure-white text-on-surface">
+<!-- Top Navigation Header -->
+<header class="w-full top-0 sticky bg-pure-white dark:bg-deep-navy border-b border-surface-variant z-50">
+<nav class="flex justify-between items-center px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="font-display-lg text-vibrant-red tracking-tighter cursor-pointer transition-transform active:scale-95" style="font-size: 32px;">
+                FiberFlow Business
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md text-vibrant-red font-bold hover:text-electric-purple transition-colors" href="#">Business Plans</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-electric-purple transition-colors" href="#">Infrastructure</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-electric-purple transition-colors" href="#">SLA Support</a>
+<button class="bg-vibrant-red text-pure-white px-6 py-2 font-label-bold text-label-bold transition-transform active:scale-95">Check Address</button>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="hero-gradient pt-20 pb-32 overflow-hidden border-b border-surface-variant">
+<div class="max-w-max-width mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 bg-surface-container px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-vibrant-red text-[18px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-bold text-label-bold text-primary">ENTERPRISE GRADE NBN</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary leading-tight">
+                        Powering Your <br/><span class="text-vibrant-red">Pro Business</span> Edge
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        High-performance 250/100 Mbps connectivity engineered for seamless cloud operations, large-scale data transfers, and critical business uptime.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<button class="bg-vibrant-red text-pure-white px-10 py-4 font-headline-md text-headline-md hover:brightness-110 transition-all active:scale-95">
+                            Select Plan — $149/mo
+                        </button>
+<button class="border border-primary text-primary px-10 py-4 font-headline-md text-headline-md hover:bg-primary hover:text-pure-white transition-all">
+                            Talk to IT Sales
+                        </button>
+</div>
+<p class="font-label-md text-label-md text-on-primary-container">
+                        *No lock-in contracts. 24/7 Priority Support included.
+                    </p>
+</div>
+<div class="relative">
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-electric-purple/5 rounded-full blur-3xl"></div>
+<div class="relative bg-pure-white border border-outline-variant p-2 shadow-2xl">
+<img alt="Business Server Rack" class="w-full h-[480px] object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" data-alt="A clean and professional server room interior with sleek hardware racks glowing with soft blue and white LED lights. The environment is impeccably organized, reflecting a high-performance corporate data center. The lighting is bright and modern, using a light-mode aesthetic with high contrast accents of vibrant red cable management. The mood is sophisticated and represents secure enterprise-grade infrastructure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKszYaLgFuIkgoCeqAa9tP_ZmYx4yRXeTQ4KPqGTiNK9Jq-hCyfPkKmq9t3uVS_R2cdyKanD0qdjSk43jDEpRjF_VGSAl-6T-gVjGB-c2BMs0qdnZ5wH_vn3-7_p2XRlXfGBAL4c9Jb9hZl2L-3_Z_FU4JnX_nS8iXQ5Vz7EkvI1F-48Ztj7mB77U8m59KvE3H9hMkPzeLAWeY1eLxAo_gxg6xajMUOi1XAlvYsAiqDfmr2MoO7-3_NDAH5Qwhyix_Ah3l9xjAli4q"/>
+<div class="absolute -bottom-8 -left-8 bg-electric-purple text-pure-white p-8 max-w-[240px]">
+<div class="font-display-lg text-[48px] leading-none mb-2">250</div>
+<div class="font-label-bold text-label-bold uppercase tracking-widest">Mbps Download Speed</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Bento Grid -->
+<section class="py-32 bg-pure-white">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">The Infrastructure for Scale</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Uncompromising speed and reliability for modern business teams.</p>
+</div>
+<div class="bento-grid">
+<!-- Feature 1: High Speed -->
+<div class="col-span-12 md:col-span-8 bg-surface-gray border border-outline-variant p-10 flex flex-col justify-between group hover:border-electric-purple transition-colors">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-[48px] text-vibrant-red">speed</span>
+<div class="text-right">
+<span class="font-label-bold text-label-bold text-on-surface-variant block">UPLOAD CAPACITY</span>
+<span class="font-headline-lg text-headline-lg text-primary">100 Mbps</span>
+</div>
+</div>
+<div class="mt-20">
+<h3 class="font-headline-md text-headline-md mb-2">Fiber-Optic Symmetrical Bursts</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Optimized for video conferencing, large file uploads to AWS/Azure, and multi-user VPN environments without latency spikes.</p>
+</div>
+</div>
+<!-- Feature 2: SLA -->
+<div class="col-span-12 md:col-span-4 bg-deep-navy p-10 flex flex-col justify-between text-pure-white hover:bg-black transition-colors">
+<span class="material-symbols-outlined text-[48px] text-vibrant-red">verified_user</span>
+<div class="mt-20">
+<div class="font-display-lg text-[40px] text-vibrant-red mb-1">99.95%</div>
+<h3 class="font-label-bold text-label-bold uppercase tracking-widest mb-4">Uptime SLA</h3>
+<p class="font-body-md text-body-md text-surface-variant opacity-80">Guaranteed reliability with automatic service credits for any unforeseen downtime.</p>
+</div>
+</div>
+<!-- Feature 3: Support -->
+<div class="col-span-12 md:col-span-4 bg-pure-white border border-outline-variant p-10 hover:border-electric-purple transition-colors">
+<span class="material-symbols-outlined text-[40px] text-electric-purple mb-8">support_agent</span>
+<h3 class="font-headline-md text-headline-md mb-3">24/7 Priority Support</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Direct access to our Level 2 engineering team. No call centers, just expert local Australian support.</p>
+</div>
+<!-- Feature 4: Cyber Security -->
+<div class="col-span-12 md:col-span-4 bg-surface-gray border border-outline-variant p-10 flex flex-col justify-between group">
+<div>
+<span class="material-symbols-outlined text-[40px] text-primary mb-8">shield_with_heart</span>
+<h3 class="font-headline-md text-headline-md mb-3">Cyber-Shield</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Built-in DDoS protection and malware filtering at the network level to protect your local endpoints.</p>
+</div>
+<div class="mt-8 flex gap-2">
+<span class="bg-primary text-pure-white px-2 py-1 text-[10px] font-bold uppercase">Included</span>
+</div>
+</div>
+<!-- Feature 5: Static IP -->
+<div class="col-span-12 md:col-span-4 border-2 border-vibrant-red p-10 relative overflow-hidden flex flex-col justify-between">
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-[120px] text-vibrant-red">router</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md mb-3 text-vibrant-red">Static IP</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Required for hosting your own mail servers, web apps, or secure office-to-office VPN tunnels.</p>
+</div>
+<div class="mt-8">
+<button class="text-vibrant-red font-label-bold text-label-bold flex items-center gap-2 hover:gap-4 transition-all">
+                                LEARN CONFIGURATION <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-surface-container-low border-t border-surface-variant">
+<div class="max-w-4xl mx-auto px-margin-mobile text-center">
+<h2 class="font-display-lg text-[40px] md:text-[56px] text-primary mb-6">Ready to upgrade to <span class="text-vibrant-red">Pro</span>?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                    Join over 4,500 Australian businesses relying on FiberFlow for critical connectivity. Validated addresses can be live in as little as 4 hours.
+                </p>
+<div class="flex flex-col md:flex-row justify-center items-stretch gap-0 bg-pure-white shadow-xl border border-outline-variant p-1">
+<input class="flex-grow px-8 py-5 border-none focus:ring-0 font-body-md text-body-md min-w-[300px]" placeholder="Enter business address..." type="text"/>
+<button class="bg-vibrant-red text-pure-white px-12 py-5 font-headline-md text-headline-md transition-all hover:brightness-110 active:scale-95 whitespace-nowrap">
+                        Check Availability
+                    </button>
+</div>
+<div class="mt-8 flex justify-center gap-12 text-on-surface-variant opacity-60">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">done</span> No activation fees</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">done</span> Zero downtime migration</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full py-12 bg-surface-container-low dark:bg-deep-navy border-t border-surface-variant">
+<div class="grid grid-cols-1 md:grid-cols-2 px-margin-desktop max-w-max-width mx-auto gap-gutter">
+<div class="space-y-6">
+<div class="font-label-bold text-on-surface text-[20px]">FiberFlow Business</div>
+<p class="font-label-md text-label-md text-on-surface-variant max-w-sm">
+                    High-performance business ISP infrastructure for enterprises across Australia. SLA guaranteed connectivity for critical systems.
+                </p>
+<div class="font-label-md text-label-md text-on-surface dark:text-surface-variant">
+                    © 2024 FiberFlow Business ISP. All rights reserved. SLA Guaranteed.
+                </div>
+</div>
+<div class="grid grid-cols-2 gap-8 md:justify-end">
+<div class="space-y-4">
+<h4 class="font-label-bold text-label-bold text-primary">Products</h4>
+<ul class="space-y-2">
+<li><a class="font-label-md text-label-md text-on-surface-variant hover:text-vibrant-red transition-colors" href="#">Business NBN</a></li>
+<li><a class="font-label-md text-label-md text-on-surface-variant hover:text-vibrant-red transition-colors" href="#">Enterprise Ethernet</a></li>
+<li><a class="font-label-md text-label-md text-on-surface-variant hover:text-vibrant-red transition-colors" href="#">Cloud Connect</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-bold text-label-bold text-primary">Legal &amp; Support</h4>
+<ul class="space-y-2">
+<li><a class="font-label-md text-label-md text-on-surface-variant hover:text-vibrant-red transition-colors" href="#">Critical Information Summary</a></li>
+<li><a class="font-label-md text-label-md text-on-surface-variant hover:text-vibrant-red transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-label-md text-label-md text-on-surface-variant hover:text-vibrant-red transition-colors" href="#">Terms of Service</a></li>
+<li><a class="font-label-md text-label-md text-on-surface-variant hover:text-vibrant-red transition-colors" href="#">Support</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions for address bar focus
+        const addressInput = document.querySelector('input');
+        const searchContainer = addressInput.parentElement;
+        
+        addressInput.addEventListener('focus', () => {
+            searchContainer.classList.add('ring-2', 'ring-electric-purple');
+        });
+        
+        addressInput.addEventListener('blur', () => {
+            searchContainer.classList.remove('ring-2', 'ring-electric-purple');
+        });
+
+        // Hover animations for bento cards
+        const cards = document.querySelectorAll('.bento-grid > div');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+                card.style.transition = 'all 0.3s ease';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>

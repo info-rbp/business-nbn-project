@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NBN Business | High-Performance Connectivity</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e2e2e2",
+                        "background": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "on-tertiary-container": "#8c69ff",
+                        "on-tertiary": "#ffffff",
+                        "pure-white": "#FFFFFF",
+                        "surface": "#f9f9f9",
+                        "error": "#ba1a1a",
+                        "vibrant-red": "#E5000F",
+                        "deep-navy": "#0A0A0F",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-bright": "#f9f9f9",
+                        "electric-purple": "#4200B3",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#4e1ebe",
+                        "surface-tint": "#5f5e5e",
+                        "on-background": "#1a1c1c",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "primary-fixed": "#e5e2e1",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c4c7c7",
+                        "primary-container": "#1c1b1b",
+                        "tertiary": "#000000",
+                        "tertiary-fixed": "#e7deff",
+                        "secondary-fixed": "#ffdad5",
+                        "on-surface-variant": "#444748",
+                        "tertiary-container": "#1f005f",
+                        "on-secondary-container": "#fffbff",
+                        "outline": "#747878",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "secondary": "#bc000a",
+                        "on-secondary-fixed-variant": "#930006",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#474746",
+                        "surface-container": "#eeeeee",
+                        "inverse-surface": "#2f3131",
+                        "surface-gray": "#F5F5F5",
+                        "on-secondary-fixed": "#410001",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#c8c6c5",
+                        "on-primary-container": "#858383",
+                        "on-primary-fixed": "#1c1b1b",
+                        "secondary-container": "#e90812",
+                        "tertiary-fixed-dim": "#cdbdff",
+                        "surface-dim": "#dadada",
+                        "primary": "#000000",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-tertiary-fixed": "#1f005f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "max-width": "1280px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-bold": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #4200B3 0%, #0A0A0F 100%);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Custom scroll snap for mobile layouts */
+        .snap-x-mandatory {
+            scroll-snap-type: x mandatory;
+        }
+        .snap-center {
+            scroll-snap-align: center;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md min-h-screen flex flex-col overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-pure-white dark:bg-deep-navy border-b border-outline-variant dark:border-outline flex justify-between items-center px-margin-mobile h-16 w-full fixed top-0 z-50">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="menu">menu</span>
+<h1 class="text-headline-md font-headline-md text-deep-navy dark:text-pure-white uppercase tracking-tighter">NBN Business</h1>
+</div>
+<button class="font-label-bold text-label-bold text-secondary dark:text-secondary hover:text-electric-purple transition-colors">LOGIN</button>
+</header>
+<main class="flex-grow pt-16">
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex flex-col justify-center items-start px-margin-mobile hero-gradient overflow-hidden">
+<!-- Decorative Background Element inspired by Image 1 -->
+<div class="absolute inset-0 z-0 opacity-40">
+<div class="absolute -top-1/4 -right-1/4 w-[150%] h-[150%] bg-[radial-gradient(circle,rgba(229,0,15,0.15)_0%,rgba(66,0,179,0.3)_50%,transparent_100%)]"></div>
+</div>
+<div class="relative z-10 w-full">
+<span class="inline-block bg-vibrant-red text-pure-white px-3 py-1 rounded-full text-label-bold font-label-bold mb-6">Speedblast™ Ready</span>
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-pure-white mb-4 max-w-[320px]">High-Performance NBN for Business</h2>
+<p class="font-body-lg text-body-lg text-surface-variant mb-10 max-w-[340px]">Reliable, high-speed connectivity tailored for your business needs.</p>
+<!-- Check Address Tool -->
+<div class="w-full bg-pure-white p-2 rounded-xl shadow-lg flex flex-col gap-2">
+<div class="relative flex-grow">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="location_on">location_on</span>
+<input class="w-full h-14 pl-10 pr-4 border-0 focus:ring-2 focus:ring-electric-purple rounded-lg bg-surface-container-low text-on-surface font-body-md" placeholder="Enter business address" type="text"/>
+</div>
+<button class="w-full h-14 bg-vibrant-red text-pure-white font-label-bold text-label-bold rounded-lg uppercase tracking-wider active:scale-[0.98] transition-transform">
+                        Check Availability
+                    </button>
+</div>
+</div>
+</section>
+<!-- Value Propositions (Bento-style scroll) -->
+<section class="py-20 px-margin-mobile bg-pure-white overflow-hidden">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-deep-navy mb-8">Business-Grade Reliability</h3>
+<div class="flex gap-gutter overflow-x-auto snap-x-mandatory pb-6 no-scrollbar">
+<!-- Card 1 -->
+<div class="min-w-[280px] snap-center bg-surface-gray p-8 rounded-xl border border-outline-variant flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-electric-purple/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-purple text-3xl" data-icon="speed">speed</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-deep-navy">Speeds up to 1Gbps</h4>
+<p class="text-on-surface-variant font-body-md">Experience lightning-fast uploads and downloads with fiber technology.</p>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[280px] snap-center bg-surface-gray p-8 rounded-xl border border-outline-variant flex flex-col gap-4">
+<div class="w-12 h-12 rounded-lg bg-vibrant-red/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-vibrant-red text-3xl" data-icon="support_agent">support_agent</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-deep-navy">Expert Business Support</h4>
+<p class="text-on-surface-variant font-body-md">Priority 24/7 technical assistance from our Australian-based expert team.</p>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[280px] snap-center bg-surface-gray p-8 rounded-xl border border-outline-variant flex flex-col gap-4 border-t-2 border-t-electric-purple">
+<div class="w-12 h-12 rounded-lg bg-deep-navy/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-deep-navy text-3xl" data-icon="cloud">cloud</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-deep-navy">Reliable Network</h4>
+<p class="text-on-surface-variant font-body-md">SLA-guaranteed uptime keeping your critical operations online always.</p>
+</div>
+</div>
+</section>
+<!-- Mid-section Feature -->
+<section class="bg-deep-navy py-16 px-margin-mobile relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-vibrant-red opacity-10 blur-[100px] rounded-full"></div>
+<div class="rounded-2xl overflow-hidden mb-10 shadow-2xl">
+<img alt="Professionals in a modern office" class="w-full h-64 object-cover grayscale-[0.2] contrast-[1.1]" src="https://lh3.googleusercontent.com/aida/ADBb0ugWt5ICzGzJf2s7yTjxOS52GwA5-VVda0cvGBEdxSvy9xQMVeagQaPeBoK7dzphHmKTMeXh8QjksYAZIy40Zhuf8ZoeVdmB1Ez9iBg1RHEc-Z68KqnjIa854kEi0vvH-UOQGvZvQnO9TFOPUNgM-TU4lVvnu32AvcdZaAh-TphNsKKJNmkP4AOGRuIsbylwDuqNXICfzPzEFjrDjdNmMRX2MOzbKvkpX3TliIf35-PPnr2b08Xm3213JM2K"/>
+</div>
+<div class="text-center">
+<h3 class="font-display-lg-mobile text-display-lg-mobile text-pure-white mb-6">Built for Australian Businesses</h3>
+<p class="font-body-lg text-body-lg text-surface-variant mb-10">We understand the unique challenges of the local market, providing scalability and security for every enterprise.</p>
+<button class="w-full h-16 bg-vibrant-red text-pure-white font-label-bold text-label-bold rounded-lg uppercase tracking-widest hover:bg-secondary transition-colors">
+                    See our Business Plans
+                </button>
+</div>
+</section>
+<!-- Support / Trust Section -->
+<section class="py-20 px-margin-mobile bg-surface">
+<div class="flex flex-col gap-gutter">
+<div class="flex items-center gap-4 p-6 bg-pure-white rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-electric-purple text-4xl" data-icon="verified_user">verified_user</span>
+<div>
+<h5 class="font-label-bold text-label-bold text-deep-navy">Enterprise Security</h5>
+<p class="text-on-surface-variant text-sm">Hardware-level protection included.</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-6 bg-pure-white rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-secondary text-4xl" data-icon="rocket_launch">rocket_launch</span>
+<div>
+<h5 class="font-label-bold text-label-bold text-deep-navy">Quick Setup</h5>
+<p class="text-on-surface-variant text-sm">Get connected within 48 hours.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-2 bg-pure-white dark:bg-deep-navy border-t border-outline-variant dark:border-outline shadow-lg rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim font-bold transition-transform active:scale-110 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="speed">speed</span>
+<span class="font-label-md text-label-md">Plans</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="router">router</span>
+<span class="font-label-md text-label-md">Hardware</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+<span class="font-label-md text-label-md">Support</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="flex flex-col gap-gutter p-margin-mobile w-full mt-auto mb-20 bg-deep-navy dark:bg-black text-pure-white">
+<div class="flex flex-col gap-6">
+<h2 class="font-headline-md text-pure-white uppercase tracking-tighter">NBN Business</h2>
+<div class="flex flex-col gap-4">
+<a class="text-surface-variant opacity-70 font-label-md text-label-md hover:text-vibrant-red hover:opacity-100 transition-colors" href="#">Critical Information Summaries</a>
+<a class="text-surface-variant opacity-70 font-label-md text-label-md hover:text-vibrant-red hover:opacity-100 transition-colors" href="#">Privacy Policy</a>
+<a class="text-surface-variant opacity-70 font-label-md text-label-md hover:text-vibrant-red hover:opacity-100 transition-colors" href="#">Terms of Service</a>
+<a class="text-surface-variant opacity-70 font-label-md text-label-md hover:text-vibrant-red hover:opacity-100 transition-colors" href="#">Wholesale</a>
+</div>
+</div>
+<div class="pt-8 border-t border-outline opacity-20">
+<p class="font-body-md text-body-md text-surface-variant opacity-70">© 2024 NBN Business Solutions. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.classList.add('opacity-80', 'scale-95');
+            });
+            button.addEventListener('mouseup', () => {
+                button.classList.remove('opacity-80', 'scale-95');
+            });
+            button.addEventListener('mouseleave', () => {
+                button.classList.remove('opacity-80', 'scale-95');
+            });
+        });
+
+        // Sticky header opacity change on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

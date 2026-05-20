@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e7deff",
+                    "tertiary-container": "#1f005f",
+                    "surface": "#f9f9f9",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "vibrant-red": "#E5000F",
+                    "secondary-fixed-dim": "#ffb4aa",
+                    "tertiary": "#000000",
+                    "surface-bright": "#f9f9f9",
+                    "on-primary-fixed-variant": "#474746",
+                    "on-primary-fixed": "#1c1b1b",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f3f3f3",
+                    "on-tertiary-container": "#8c69ff",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#1a1c1c",
+                    "deep-navy": "#0A0A0F",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#dadada",
+                    "surface-tint": "#5f5e5e",
+                    "pure-white": "#FFFFFF",
+                    "background": "#f9f9f9",
+                    "secondary-container": "#e90812",
+                    "secondary": "#bc000a",
+                    "secondary-fixed": "#ffdad5",
+                    "on-secondary-fixed-variant": "#930006",
+                    "electric-purple": "#4200B3",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e2e2e2",
+                    "primary-container": "#1c1b1b",
+                    "primary-fixed": "#e5e2e1",
+                    "on-surface": "#1a1c1c",
+                    "on-secondary-fixed": "#410001",
+                    "surface-container": "#eeeeee",
+                    "inverse-surface": "#2f3131",
+                    "on-secondary-container": "#fffbff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-variant": "#e2e2e2",
+                    "on-primary-container": "#858383",
+                    "surface-container-high": "#e8e8e8",
+                    "surface-gray": "#F5F5F5",
+                    "tertiary-fixed-dim": "#cdbdff",
+                    "outline-variant": "#c4c7c7",
+                    "on-surface-variant": "#444748",
+                    "primary": "#000000",
+                    "on-tertiary-fixed-variant": "#4e1ebe",
+                    "on-tertiary-fixed": "#1f005f",
+                    "on-primary": "#ffffff",
+                    "outline": "#747878",
+                    "inverse-primary": "#c8c6c5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "max-width": "1280px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "label-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "label-bold": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Hanken Grotesk', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-deep-navy dark:bg-deep-navy fixed top-0 w-full z-50 border-b border-on-surface-variant/20">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-max-width mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-size: 32px;">router</span>
+<span class="font-display-lg text-headline-md font-extrabold text-pure-white">CORE CONNECT</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-pure-white font-label-md text-label-md hover:text-secondary-fixed-dim transition-colors duration-200" href="#">Home</a>
+<a class="text-pure-white font-label-md text-label-md hover:text-secondary-fixed-dim transition-colors duration-200" href="#">Plans &amp; Pricing</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1" href="#">Case Studies</a>
+<a class="text-pure-white font-label-md text-label-md hover:text-secondary-fixed-dim transition-colors duration-200" href="#">Support Hub</a>
+</nav>
+<button class="bg-vibrant-red text-pure-white px-6 py-3 font-label-bold text-label-bold rounded-lg hover:opacity-90 active:scale-95 transition-all">
+                Check Address
+            </button>
+</div>
+</header>
+<main class="pt-32 pb-20">
+<!-- Hero Section -->
+<section class="px-margin-desktop max-w-max-width mx-auto mb-20">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div>
+<span class="inline-block bg-surface-gray text-deep-navy font-label-bold text-label-bold px-4 py-1 mb-6 rounded-full border border-outline-variant">
+                        SUCCESS STORIES
+                    </span>
+<h1 class="font-display-lg text-display-lg mb-6 leading-tight">Empowering Industry Leaders with <span class="text-vibrant-red">Pure Velocity</span>.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Discover how Core Connect transforms mission-critical operations with enterprise-grade fiber infrastructure and 99.9% uptime guarantees.
+                    </p>
+</div>
+<div class="relative h-[400px] overflow-hidden rounded-xl">
+<img alt="" class="w-full h-full object-cover" data-alt="A professional, high-end server room with rows of sleek dark server racks illuminated by neon blue and vibrant red status lights. The atmosphere is high-tech and clinical, showcasing premium fiber optic infrastructure. The lighting is low-key with high-contrast glowing elements, emphasizing reliability and extreme speed in a corporate IT environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdGVPQVxu6DHIFefyK5igFeBhRlRbRl2Pa6auHPz2EOi_BhaXXoFcJNZUTIfOCuMPa0bKgZ0kzNKs8JBef8TlGOLTU41ho3r5fODeEFEAWaxKBIz81TdFE-wJhAy004A3pUBYJp3JYp_YgCkdkU3OOvlCcqxq13OfYtrmnRWPd3nb6x4YdgyPx7dYty9GH_cAw5xeMavwdau754NKaaz9cuzcPSewUCCMp9zzX63yZ5YH_xXOQ_ZoYga42ZJP8PTaNLzfp_gyp-qyj"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-navy/40 to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Case Studies Grid -->
+<section class="px-margin-desktop max-w-max-width mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- Case Study Card 1 -->
+<div class="group bg-pure-white border border-outline-variant hover:border-electric-purple transition-all duration-300 flex flex-col h-full">
+<div class="h-48 overflow-hidden bg-surface-gray">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxury hotel lobby with modern architectural design, featuring grand marble floors and warm, sophisticated interior lighting. The scene is bright and airy, representing the Metropol Hotel Group's premium atmosphere. The style is clean, corporate, and elegant, focusing on professional hospitality excellence and high-end connectivity needs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQUXx6WY7tQh6TKe3waBqBaeUO5DW61c18oVHoA4jG4gXhheEQP5ivtFSTy_wG61pRi9FOKogXzDYMTPmolKB6ePxIHnWTm0n4h1v5LF-wD8NNbSI9Fxxlee4FG9pl71FmVYzPauM9iHB3zXRFqDfqmcp48wvBckk2JVpP6_Zu7WRJLEGfpwE81hGRs582-W2Sa9gsqUVspP1_KZYRx1xOnPh7rJJbh4LwreCoVQd7ZMog6W1Obb80y6SNcr-rDXFu8im0N6WpPmoh"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-electric-purple" style="font-variation-settings: 'FILL' 1;">hotel</span>
+<h3 class="font-headline-md text-headline-md">Metropol Hotel Group</h3>
+</div>
+<div class="mb-6">
+<p class="font-label-bold text-label-bold text-on-surface-variant mb-2">CHALLENGE</p>
+<p class="font-body-md text-body-md text-on-surface">Legacy DSL infrastructure was causing bottlenecking during peak guest check-ins and failing to support high-density conferencing suites.</p>
+</div>
+<div class="mb-8 p-4 bg-tertiary-fixed/30 border-l-4 border-electric-purple">
+<p class="font-label-bold text-label-bold text-electric-purple mb-1">VELOCITY SOLUTION</p>
+<p class="font-body-md text-body-md text-on-surface">Dedicated 10Gbps symmetric fiber link with managed Wi-Fi 6 across 400+ rooms and public spaces.</p>
+</div>
+<div class="mt-auto">
+<button class="flex items-center gap-2 font-label-bold text-label-bold text-vibrant-red hover:gap-4 transition-all">
+                                Read Full Story <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Case Study Card 2 -->
+<div class="group bg-pure-white border border-outline-variant hover:border-electric-purple transition-all duration-300 flex flex-col h-full">
+<div class="h-48 overflow-hidden bg-surface-gray">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A large, high-efficiency logistics warehouse with automated sorting systems and bright, even industrial lighting. Technicians are seen in the distance managing digital tablet interfaces. The overall mood is fast-paced, structured, and technologically advanced, using a clean color palette of white, gray, and vibrant red accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNMi4SomG7jJXbYwoIkfPposfs98XvTg5gCPEnh8ySZiWUdXU62N1cRT8tcuRaaymL4gQg-44ilMzMIUESoSl644mExwl1YnlT7XOSnVeHfayHsb_Xh9r-3xb5Fusm09el4Ex9NAqInBBC9MXPpHbnh3dDFEBUlDPXfz8nWC_veksNkBQTXN3tfJ8-3W8IDD2DaS9w2hgoRUlh8cHh_djft6Rza_7uDiIn_gKl9AGH8cdzdAE-OEyVD6I3pma42K3K48czmiEwS_ng"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-electric-purple" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+<h3 class="font-headline-md text-headline-md">Apex Logistics</h3>
+</div>
+<div class="mb-6">
+<p class="font-label-bold text-label-bold text-on-surface-variant mb-2">CHALLENGE</p>
+<p class="font-body-md text-body-md text-on-surface">Inconsistent network latency disrupting real-time GPS tracking and cloud-based warehouse management syncing.</p>
+</div>
+<div class="mb-8 p-4 bg-tertiary-fixed/30 border-l-4 border-electric-purple">
+<p class="font-label-bold text-label-bold text-electric-purple mb-1">VELOCITY SOLUTION</p>
+<p class="font-body-md text-body-md text-on-surface">Redundant NBN Enterprise Ethernet paths with sub-10ms latency guarantee and 4G failover.</p>
+</div>
+<div class="mt-auto">
+<button class="flex items-center gap-2 font-label-bold text-label-bold text-vibrant-red hover:gap-4 transition-all">
+                                Read Full Story <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Case Study Card 3 -->
+<div class="group bg-pure-white border border-outline-variant hover:border-electric-purple transition-all duration-300 flex flex-col h-full">
+<div class="h-48 overflow-hidden bg-surface-gray">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sleek, modern open-plan office for a tech startup, featuring glass partitions, ergonomic workstations, and large windows with a city view. The lighting is bright and natural, creating an energetic and innovative atmosphere. The visual style is crisp and professional, emphasizing a modern workspace that relies on high-speed, seamless connectivity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAghoaTWr3Htu6GfWElvJMbTvhGYFzwHB8nNLKT-j0XJ4n67Sq-5YbnaPKCCWaDvqrVHTRjC6-4IVO6cSLenN5KUaHbykEBZTL2XtrKoDgHUGxUJw60iuQ8WYDEt1Zx9crrGTa9LD10YXbjseIt82YjTG1c28V3IhdVgM7AohEBvyci0yEBjTFkluvCmNwLbg-4WHKbArXeoGqGJK-mRAVVym3bLllU1vb7eAxxwwlNJDCRPD05GUVpVY9dcPQsPSJugiR7ny7lFbWN"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-electric-purple" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<h3 class="font-headline-md text-headline-md">Quantum Softworks</h3>
+</div>
+<div class="mb-6">
+<p class="font-label-bold text-label-bold text-on-surface-variant mb-2">CHALLENGE</p>
+<p class="font-body-md text-body-md text-on-surface">High data egress costs and slow upload speeds hindering massive daily cloud-native code deployments.</p>
+</div>
+<div class="mb-8 p-4 bg-tertiary-fixed/30 border-l-4 border-electric-purple">
+<p class="font-label-bold text-label-bold text-electric-purple mb-1">VELOCITY SOLUTION</p>
+<p class="font-body-md text-body-md text-on-surface">Unmetered Cloud-Direct fiber connection with symmetrical 1Gbps throughput and priority packet routing.</p>
+</div>
+<div class="mt-auto">
+<button class="flex items-center gap-2 font-label-bold text-label-bold text-vibrant-red hover:gap-4 transition-all">
+                                Read Full Story <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Address Tool CTA -->
+<section class="mt-32 px-margin-desktop max-w-max-width mx-auto">
+<div class="bg-deep-navy p-12 md:p-20 text-center relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="text-pure-white font-headline-lg text-headline-lg mb-4">Ready for Enterprise Velocity?</h2>
+<p class="text-surface-variant font-body-lg text-body-lg mb-10 max-w-2xl mx-auto">Join the hundreds of businesses running on Core Connect infrastructure. Enter your business address to see available speeds.</p>
+<div class="flex flex-col md:flex-row max-w-2xl mx-auto bg-pure-white p-2">
+<input class="flex-grow border-none focus:ring-0 text-deep-navy px-4 h-14 font-body-md" placeholder="Enter business address..." type="text"/>
+<button class="bg-vibrant-red text-pure-white px-10 h-14 font-label-bold text-label-bold hover:bg-secondary transition-colors">
+                            Check Address
+                        </button>
+</div>
+</div>
+<!-- Background decorative element -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-electric-purple/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-vibrant-red/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-navy dark:bg-deep-navy w-full py-12 border-t border-on-surface-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-max-width mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-secondary" style="font-size: 24px;">router</span>
+<span class="font-headline-md text-headline-md text-pure-white">CORE CONNECT</span>
+</div>
+<p class="text-surface-variant font-body-md text-body-md mb-6">
+                    Professional infrastructure for the modern enterprise. Fast, reliable, and Australian-owned.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-pure-white font-label-bold text-label-bold">Company</h4>
+<a class="text-surface-variant font-body-md text-body-md hover:text-pure-white transition-colors" href="#">About Us</a>
+<a class="text-surface-variant font-body-md text-body-md hover:text-pure-white transition-colors" href="#">Referral Program</a>
+<a class="text-secondary-fixed-dim underline font-body-md text-body-md" href="#">Case Studies</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-pure-white font-label-bold text-label-bold">Support</h4>
+<a class="text-surface-variant font-body-md text-body-md hover:text-pure-white transition-colors" href="#">SLA Details</a>
+<a class="text-surface-variant font-body-md text-body-md hover:text-pure-white transition-colors" href="#">Support Hub</a>
+<a class="text-surface-variant font-body-md text-body-md hover:text-pure-white transition-colors" href="#">Network Status</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-pure-white font-label-bold text-label-bold">Legal</h4>
+<a class="text-surface-variant font-body-md text-body-md hover:text-pure-white transition-colors" href="#">Privacy Policy</a>
+<a class="text-surface-variant font-body-md text-body-md hover:text-pure-white transition-colors" href="#">Critical Information Summaries</a>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-on-surface-variant/5 px-margin-desktop max-w-max-width mx-auto text-center">
+<p class="text-surface-variant font-body-md text-body-md">© 2024 Core Connect Business NBN. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
+        // Simple intersection observer for reveal effect
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.group').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(el);
+        });
+    </script>
+</body></html>

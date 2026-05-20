@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Managed Wi-Fi &amp; Hardware | NBN Business</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#000000",
+                    "surface-tint": "#5f5e5e",
+                    "background": "#f9f9f9",
+                    "inverse-on-surface": "#f1f1f1",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#e5e2e1",
+                    "on-tertiary-container": "#8c69ff",
+                    "surface-container-high": "#e8e8e8",
+                    "on-background": "#1a1c1c",
+                    "on-secondary-fixed": "#410001",
+                    "surface": "#f9f9f9",
+                    "inverse-surface": "#2f3131",
+                    "surface-dim": "#dadada",
+                    "surface-gray": "#F5F5F5",
+                    "surface-container-highest": "#e2e2e2",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "surface-bright": "#f9f9f9",
+                    "electric-purple": "#4200B3",
+                    "on-surface-variant": "#444748",
+                    "outline-variant": "#c4c7c7",
+                    "secondary-fixed": "#ffdad5",
+                    "outline": "#747878",
+                    "on-secondary": "#ffffff",
+                    "pure-white": "#FFFFFF",
+                    "surface-container-low": "#f3f3f3",
+                    "surface-container": "#eeeeee",
+                    "on-primary-fixed-variant": "#474746",
+                    "tertiary-container": "#1f005f",
+                    "secondary-container": "#e90812",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#930006",
+                    "error": "#ba1a1a",
+                    "secondary": "#bc000a",
+                    "on-primary-fixed": "#1c1b1b",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#cdbdff",
+                    "deep-navy": "#0A0A0F",
+                    "on-surface": "#1a1c1c",
+                    "vibrant-red": "#E5000F",
+                    "inverse-primary": "#c8c6c5",
+                    "tertiary-fixed": "#e7deff",
+                    "on-primary-container": "#858383",
+                    "on-tertiary-fixed-variant": "#4e1ebe",
+                    "primary-container": "#1c1b1b",
+                    "on-secondary-container": "#fffbff",
+                    "secondary-fixed-dim": "#ffb4aa",
+                    "on-tertiary": "#ffffff",
+                    "surface-variant": "#e2e2e2",
+                    "primary": "#000000",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#1f005f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "max-width": "1280px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "label-bold": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "label-md": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .mesh-gradient {
+            background-color: #f9f9f9;
+            background-image: radial-gradient(at 0% 0%, rgba(66, 0, 179, 0.05) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(229, 0, 15, 0.05) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen mesh-gradient">
+<!-- TopAppBar -->
+<header class="bg-pure-white dark:bg-deep-navy border-b border-outline-variant dark:border-outline flex justify-between items-center px-4 md:px-margin-desktop h-16 w-full fixed top-0 z-50">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary dark:text-secondary cursor-pointer">menu</span>
+<span class="text-headline-md font-headline-md text-deep-navy dark:text-pure-white uppercase tracking-tighter">NBN Business</span>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-bold text-label-bold text-on-surface dark:text-surface-variant hover:text-electric-purple transition-colors" href="#">Home</a>
+<a class="font-label-bold text-label-bold text-on-surface dark:text-surface-variant hover:text-electric-purple transition-colors" href="#">Plans</a>
+<a class="font-label-bold text-label-bold text-secondary font-bold hover:text-electric-purple transition-colors" href="#">Hardware</a>
+<a class="font-label-bold text-label-bold text-on-surface dark:text-surface-variant hover:text-electric-purple transition-colors" href="#">Support</a>
+</nav>
+<button class="font-label-bold text-label-bold text-secondary dark:text-secondary hover:opacity-80 active:scale-95 transition-all">LOGIN</button>
+</header>
+<main class="mt-16 pb-20 md:pb-0">
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-deep-navy text-pure-white py-20 md:py-32">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 items-center gap-12">
+<div class="z-10">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6">
+                        Business-Grade Wi-Fi that <span class="text-vibrant-red">Just Works</span>.
+                    </h1>
+<p class="font-body-lg text-body-lg mb-8 opacity-90 max-w-lg">
+                        Seamless coverage, enterprise hardware, and 24/7 proactive monitoring. Keep your team connected with zero dead zones and lightning-fast speeds.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-vibrant-red text-pure-white px-8 py-4 font-label-bold text-label-bold hover:opacity-90 transition-all rounded-none uppercase">Contact an expert</button>
+<button class="border border-pure-white text-pure-white px-8 py-4 font-label-bold text-label-bold hover:bg-pure-white hover:text-deep-navy transition-all rounded-none uppercase">Check Availability</button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-electric-purple/20 blur-3xl rounded-full transition-all group-hover:scale-110"></div>
+<img alt="Business mesh wifi router" class="relative w-full h-auto drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida/ADBb0uici5HJeitHE0xuvH4wQSnmZ__F17hPW82wdxLHP-_6DSSlUw0OPaNu9_fR_vuO2o0KGJC75ixF6-QibmjrUGZRWCs1whztU6uF4C2o0qJiSndi9JBFz8RxO-zA8MJ_n63HA2crmQaG-yMl3I961mHMPFutADtKTRYz9CEFiqiNbkraU28oEQBRWvOjbdMAfzc7hRryt3qFywfOqBqCEUE-9JVJA3iUKacYQQ40RcUzxYJOhTjQJhsU4k7W"/>
+</div>
+</div>
+</section>
+<!-- Hardware Spotlight: eero 6+ -->
+<section class="py-20 bg-pure-white">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row items-center gap-16">
+<div class="w-full md:w-1/2 order-2 md:order-1">
+<img class="w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-500" data-alt="A clean, minimalist studio photograph of the white eero 6 plus mesh wifi router on a light gray surface. The lighting is soft and professional, highlighting the rounded square silhouette and the subtle silver logo. The background is a clinical, high-contrast white environment, emphasizing corporate reliability and modern aesthetic. The mood is high-tech and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZOMi_rYQyO8Ws_w6c5AwOXLhfeDBv6cI2Mz2TY9nhz8Wf846bejkDozk076jYrXMP4U5Mt6ZyesrWkqqrmTybQ9khagP887PS-cl4JsZbTMJesD36_MuT5PHytPNKVQ1cbv-quEKQcg9GzXvXRzR3IKACIVN8aGxsxmJH2apXdY727rSdR0CzY5lNUZF_UY13h7VQY0iNTr-EJ8eaj8qC47P6dDTgCAuIfX-9Xlvsm5x6wEGEPKUaFPwq6hcZo9q19Y7LihT7b88C"/>
+</div>
+<div class="w-full md:w-1/2 order-1 md:order-2">
+<div class="inline-block px-3 py-1 bg-surface-gray border border-outline-variant text-deep-navy font-label-bold text-label-bold mb-4 uppercase">Flagship Hardware</div>
+<h2 class="font-headline-lg text-headline-lg text-deep-navy mb-6">Experience the eero 6+ Mesh System</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                            Engineered for high-performance business environments, the eero 6+ brings gigabit speeds to every corner of your office without the complexity of traditional enterprise networking.
+                        </p>
+<div class="grid grid-cols-1 gap-6 mb-10">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-electric-purple">wifi_1_bar</span>
+<div>
+<p class="font-label-bold text-label-bold text-deep-navy">Wi-Fi 6 Technology</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Support for 160MHz channels for faster-than-gigabit performance.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-electric-purple">grid_view</span>
+<div>
+<p class="font-label-bold text-label-bold text-deep-navy">Massive Coverage</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Up to 140 sqm of reliable coverage per unit with zero hand-off lag.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-electric-purple">devices</span>
+<div>
+<p class="font-label-bold text-label-bold text-deep-navy">High Device Density</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Confidently connect 75+ devices per unit simultaneously.</p>
+</div>
+</div>
+</div>
+<button class="bg-electric-purple text-pure-white px-10 py-4 font-label-bold text-label-bold hover:brightness-110 transition-all uppercase">Add to your plan</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Key Features Section -->
+<section class="py-20 bg-surface-gray border-y border-outline-variant">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-deep-navy mb-4">Enterprise Control, Simplified</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Advanced networking features built for business, managed through a single intuitive interface.</p>
+</div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-3 gap-gutter">
+<div class="bg-pure-white p-10 border border-outline-variant hover:border-vibrant-red transition-colors group">
+<div class="w-16 h-16 bg-surface-container flex items-center justify-center mb-8 group-hover:bg-vibrant-red group-hover:text-pure-white transition-colors">
+<span class="material-symbols-outlined text-[32px]">smartphone</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-4">App-Based Management</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Check network health, pause access for guests, and monitor usage directly from your phone.</p>
+</div>
+<div class="bg-pure-white p-10 border border-outline-variant hover:border-vibrant-red transition-colors group">
+<div class="w-16 h-16 bg-surface-container flex items-center justify-center mb-8 group-hover:bg-vibrant-red group-hover:text-pure-white transition-colors">
+<span class="material-symbols-outlined text-[32px]">security</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-4">Automatic Updates</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Stay protected with cloud-delivered security patches and firmware updates that happen while you sleep.</p>
+</div>
+<div class="bg-pure-white p-10 border border-outline-variant hover:border-vibrant-red transition-colors group">
+<div class="w-16 h-16 bg-surface-container flex items-center justify-center mb-8 group-hover:bg-vibrant-red group-hover:text-pure-white transition-colors">
+<span class="material-symbols-outlined text-[32px]">hub</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-deep-navy mb-4">Mesh Technology</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Intelligent TrueMesh technology dynamically routes traffic to avoid congestion and interference.</p>
+</div>
+</div>
+</section>
+<!-- Professional Setup & Managed Services -->
+<section class="py-24">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-16">
+<div class="space-y-12">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<div class="h-[2px] w-12 bg-vibrant-red"></div>
+<span class="font-label-bold text-label-bold uppercase tracking-widest text-vibrant-red">White-Glove Support</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-deep-navy mb-6">Professional Installation</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                            Don't leave your connectivity to chance. Our certified technicians perform an on-site radio frequency (RF) site survey to identify the optimal placement for every mesh node.
+                        </p>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary scale-75">check_circle</span> Complete office Wi-Fi heatmapping</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary scale-75">check_circle</span> Hardware cabling and mounting</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary scale-75">check_circle</span> Device configuration and testing</li>
+</ul>
+</div>
+<div class="bg-deep-navy p-8 border-l-4 border-vibrant-red">
+<h3 class="font-headline-md text-headline-md text-pure-white mb-4">Managed Monitoring</h3>
+<p class="font-body-md text-body-md text-surface-variant">
+                            Our network engineers monitor your hardware 24/7. If a node goes offline or interference is detected, we proactively optimize your network remotely—often before you even notice.
+                        </p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 h-full">
+<div class="space-y-4">
+<div class="h-1/2 overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A professional technician in a branded corporate polo shirt installing a white mesh wifi router high on a minimalist white office wall. The office is modern with glass partitions and soft natural light. The technician is focused and professional, using a tablet to check the signal strength. The aesthetic is clean, bright, and service-oriented." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQLydrt44dzgAVl-oVNbCrOySL0SdbFD87jO5Ex4TgBacwyZL5XDvyNxgr1ii3xzljGDOiooyKzUMLh21BQjBt9UD0yzzvR9nBuEToySdR2TmtL-zsnwzMAYcgnc0qvllseidZNtm3E1uTYOrlHmFJEUHcQKyOdqrcQqv9RxDsVhfvS5gofJ8iqFkpBjvDp4oF1OFw4OC4jZF4M7hwdgL0pk0axeePD4Xm9IhsAMSe1UGW0iOD6fjuaaF4hzrDngKrahSPY1km1xNF"/>
+</div>
+<div class="h-1/2 bg-electric-purple flex items-center justify-center p-8 text-center">
+<div>
+<p class="text-[48px] font-bold text-pure-white leading-none">99.9%</p>
+<p class="font-label-bold text-label-bold text-pure-white/80 uppercase">Uptime Guarantee</p>
+</div>
+</div>
+</div>
+<div class="h-full overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A sophisticated network operations center with blurred monitors displaying data visualizations and network health maps in deep blues and reds. The lighting is low and cinematic, emphasizing the 24/7 monitoring aspect. The scene conveys high-end technical expertise and proactive infrastructure management in a modern corporate ISP setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB44Qo0oVJPXkjcr-MwnzjmNI2vlLLRqVyzbJ8YXJth38IwGz_dMPUMcsrClvt9IpYE-FNot-xaYEeGAnlofnJhubUnkELaEo0uunxkhICQm7-8dDnJ7egdTGBv5cbTlAecDkF2ZKMEZlaC2dCcAY2aOYGLnvDq-_0lTT5rB7JS0Cqv5vBwJWvjGTrh7xcHPXCgideFXJ2HYCyN0NdkJIjah7G1TKzn8FHTBVQdP6PTCHZJEupDnAykXwmDTVfdda61SfljqH1qK_aR"/>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 bg-vibrant-red">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-display-lg-mobile md:font-headline-lg text-pure-white mb-8">Ready to Upgrade Your Office?</h2>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-deep-navy text-pure-white px-12 py-5 font-label-bold text-label-bold hover:scale-105 transition-transform uppercase">Add Hardware to Plan</button>
+<button class="bg-pure-white text-vibrant-red px-12 py-5 font-label-bold text-label-bold hover:scale-105 transition-transform uppercase">Talk to an expert</button>
+</div>
+<p class="mt-8 font-label-md text-label-md text-pure-white/80">Available on all Business NBN Premium plans. Terms apply.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-navy dark:bg-black flex flex-col gap-gutter p-margin-mobile w-full mt-auto mb-20 md:mb-0">
+<div class="max-w-max-width mx-auto w-full grid md:grid-cols-2 gap-12 py-10">
+<div>
+<span class="font-headline-md text-headline-md text-pure-white uppercase tracking-tighter">NBN Business</span>
+<p class="mt-4 font-body-md text-body-md text-surface-variant opacity-70 max-w-sm">Providing enterprise-grade fiber and mesh solutions to businesses across Australia.</p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4">
+<a class="font-label-md text-label-md text-surface-variant opacity-70 hover:text-vibrant-red hover:opacity-100 transition-colors" href="#">Critical Information Summaries</a>
+<a class="font-label-md text-label-md text-surface-variant opacity-70 hover:text-vibrant-red hover:opacity-100 transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-md text-label-md text-surface-variant opacity-70 hover:text-vibrant-red hover:opacity-100 transition-colors" href="#">Terms of Service</a>
+<a class="font-label-md text-label-md text-surface-variant opacity-70 hover:text-vibrant-red hover:opacity-100 transition-colors" href="#">Wholesale</a>
+</div>
+</div>
+<div class="max-w-max-width mx-auto w-full border-t border-pure-white/10 pt-6 pb-10">
+<p class="font-body-md text-body-md text-surface-variant opacity-70">© 2024 NBN Business Solutions. All rights reserved.</p>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-2 bg-pure-white dark:bg-deep-navy border-t border-outline-variant dark:border-outline shadow-lg rounded-t-xl">
+<button class="flex flex-col items-center justify-center text-outline dark:text-outline-variant hover:bg-surface-container-low transition-colors w-full h-full">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-outline dark:text-outline-variant hover:bg-surface-container-low transition-colors w-full h-full">
+<span class="material-symbols-outlined">speed</span>
+<span class="font-label-md text-label-md">Plans</span>
+</button>
+<button class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim font-bold transition-transform duration-150 scale-110 w-full h-full">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">router</span>
+<span class="font-label-md text-label-md">Hardware</span>
+</button>
+<button class="flex flex-col items-center justify-center text-outline dark:text-outline-variant hover:bg-surface-container-low transition-colors w-full h-full">
+<span class="material-symbols-outlined">support_agent</span>
+<span class="font-label-md text-label-md">Support</span>
+</button>
+</nav>
+<script>
+        // Micro-interaction for smooth scroll or hover effects could go here
+        document.querySelectorAll('button, a').forEach(el => {
+            el.addEventListener('mousedown', () => {
+                el.classList.add('scale-95');
+            });
+            el.addEventListener('mouseup', () => {
+                el.classList.remove('scale-95');
+            });
+            el.addEventListener('mouseleave', () => {
+                el.classList.remove('scale-95');
+            });
+        });
+    </script>
+</body></html>

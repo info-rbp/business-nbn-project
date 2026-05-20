@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Core Connect Business NBN</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#e7deff",
+                      "tertiary-container": "#1f005f",
+                      "surface": "#f9f9f9",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "vibrant-red": "#E5000F",
+                      "secondary-fixed-dim": "#ffb4aa",
+                      "tertiary": "#000000",
+                      "surface-bright": "#f9f9f9",
+                      "on-primary-fixed-variant": "#474746",
+                      "on-primary-fixed": "#1c1b1b",
+                      "on-error-container": "#93000a",
+                      "surface-container-low": "#f3f3f3",
+                      "on-tertiary-container": "#8c69ff",
+                      "on-secondary": "#ffffff",
+                      "on-background": "#1a1c1c",
+                      "deep-navy": "#0A0A0F",
+                      "error-container": "#ffdad6",
+                      "error": "#ba1a1a",
+                      "surface-dim": "#dadada",
+                      "surface-tint": "#5f5e5e",
+                      "pure-white": "#FFFFFF",
+                      "background": "#f9f9f9",
+                      "secondary-container": "#e90812",
+                      "secondary": "#bc000a",
+                      "secondary-fixed": "#ffdad5",
+                      "on-secondary-fixed-variant": "#930006",
+                      "electric-purple": "#4200B3",
+                      "on-error": "#ffffff",
+                      "surface-container-highest": "#e2e2e2",
+                      "primary-container": "#1c1b1b",
+                      "primary-fixed": "#e5e2e1",
+                      "on-surface": "#1a1c1c",
+                      "on-secondary-fixed": "#410001",
+                      "surface-container": "#eeeeee",
+                      "inverse-surface": "#2f3131",
+                      "on-secondary-container": "#fffbff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "inverse-on-surface": "#f1f1f1",
+                      "surface-variant": "#e2e2e2",
+                      "on-primary-container": "#858383",
+                      "surface-container-high": "#e8e8e8",
+                      "surface-gray": "#F5F5F5",
+                      "tertiary-fixed-dim": "#cdbdff",
+                      "outline-variant": "#c4c7c7",
+                      "on-surface-variant": "#444748",
+                      "primary": "#000000",
+                      "on-tertiary-fixed-variant": "#4e1ebe",
+                      "on-tertiary-fixed": "#1f005f",
+                      "on-primary": "#ffffff",
+                      "outline": "#747878",
+                      "inverse-primary": "#c8c6c5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "max-width": "1280px",
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "label-md": ["Hanken Grotesk"],
+                      "headline-lg": ["Hanken Grotesk"],
+                      "label-bold": ["Hanken Grotesk"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "headline-md": ["Hanken Grotesk"],
+                      "display-lg-mobile": ["Hanken Grotesk"],
+                      "display-lg": ["Hanken Grotesk"],
+                      "body-md": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                      "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                      "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0A0A0F 0%, #1c1b1b 100%);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .bento-card {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover {
+            transform: translateY(-4px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-deep-navy border-b border-on-surface-variant/20">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-max-width mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-headline-md" data-icon="router">router</span>
+<span class="font-display-lg text-headline-md font-extrabold text-pure-white tracking-tight">CORE CONNECT</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-pure-white font-label-md text-label-md hover:text-secondary-fixed-dim transition-colors duration-200" href="#">Home</a>
+<a class="text-pure-white font-label-md text-label-md hover:text-secondary-fixed-dim transition-colors duration-200" href="#">Plans &amp; Pricing</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-label-md text-label-md" href="#">About Us</a>
+<a class="text-pure-white font-label-md text-label-md hover:text-secondary-fixed-dim transition-colors duration-200" href="#">Support Hub</a>
+</nav>
+<button class="bg-vibrant-red text-pure-white px-6 py-2 font-label-bold text-label-bold active:scale-95 opacity-90 transition-all">
+                Check Address
+            </button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section: Why Velocity? -->
+<section class="relative h-[618px] flex items-center overflow-hidden hero-gradient">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40" data-alt="A sprawling, high-tech data center interior illuminated by rows of glowing blue and red server lights against a dark, industrial background. The perspective creates a sense of immense scale and precision engineering. The overall lighting is moody yet sharp, reflecting a corporate modern aesthetic with high-contrast elements. The scene conveys reliability and high-performance infrastructure through its clean, structured composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYwVhIF6GUu5cHcs4XXJ1BZicdq0KoPe3MlGWvY4fIR5kQQHh9x8xWhWQd7TcGt9VE6d8N_snMfqJwgtenNFa8f1DQPGiN_A2VA1l5n8JGCu-E1etLSMMM6O5zipKCB8NDGdIqK3fzoiP3aHdkAvttVLsixVZiM4I45QAhYRVB150eVyupbgv0tptnpgcJasc-q061kIVOnzHxZCd5FweLyLW1BPq2djs5Iq9x6CgxW2XhZalCHKRKD-3T264g89N-Q90U17ZbJDQ8"/>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-max-width mx-auto w-full">
+<div class="max-w-2xl">
+<span class="inline-block bg-vibrant-red/10 text-vibrant-red px-3 py-1 font-label-bold text-label-bold mb-6 rounded-sm uppercase tracking-widest">The Core Standard</span>
+<h1 class="font-display-lg text-display-lg text-pure-white mb-6">Why Velocity?</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-8">Engineering the physical reality of fiber-optic technology—light traveling through dark cables at enterprise scale.</p>
+<div class="flex gap-4">
+<button class="bg-vibrant-red hover:bg-secondary text-pure-white px-8 py-4 font-label-bold text-label-bold transition-all">Download Network Specs</button>
+<button class="border border-pure-white/20 text-pure-white hover:bg-pure-white/10 px-8 py-4 font-label-bold text-label-bold transition-all">Our Infrastructure</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Infrastructure Highlights -->
+<section class="py-24 px-margin-desktop max-w-max-width mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Card: Tier 1 Network -->
+<div class="md:col-span-8 bg-surface-container border border-outline-variant p-10 bento-card relative overflow-hidden group">
+<div class="relative z-10 h-full flex flex-col">
+<span class="material-symbols-outlined text-vibrant-red mb-6" data-icon="hub" style="font-size: 48px;">hub</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">Tier 1 Global Network</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg mb-auto">We operate on a pure Tier 1 backbone, ensuring the shortest logical path between your business and the global internet. Zero congestion, maximum throughput.</p>
+<div class="mt-8 flex items-center gap-2 text-vibrant-red font-label-bold text-label-bold group-hover:gap-4 transition-all cursor-pointer">
+                            EXPLORE PEERING PARTNERS <span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+<div class="absolute right-[-10%] bottom-[-10%] opacity-5 group-hover:scale-110 transition-transform duration-700">
+<span class="material-symbols-outlined" data-icon="language" style="font-size: 320px;">language</span>
+</div>
+</div>
+<!-- Small Card: 100% Australian Support -->
+<div class="md:col-span-4 bg-deep-navy p-10 bento-card border border-white/5">
+<span class="material-symbols-outlined text-secondary-fixed-dim mb-6" data-icon="support_agent" style="font-size: 48px;">support_agent</span>
+<h3 class="font-headline-md text-headline-md text-pure-white mb-4">100% Local Support</h3>
+<p class="font-body-md text-body-md text-on-primary-container">Based in Sydney and Melbourne. Real engineers, not script-readers, available 24/7 for enterprise escalation.</p>
+</div>
+<!-- Small Card: SLA -->
+<div class="md:col-span-4 bg-surface-gray border border-outline-variant p-8 bento-card">
+<div class="flex flex-col h-full">
+<div class="text-vibrant-red font-display-lg text-display-lg-mobile font-extrabold mb-2">99.9%</div>
+<h4 class="font-label-bold text-label-bold uppercase mb-4">Uptime Guarantee</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Legally binding Service Level Agreements for mission-critical operations.</p>
+</div>
+</div>
+<!-- Medium Card: Peering -->
+<div class="md:col-span-8 bg-white border border-outline-variant p-10 bento-card flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1">
+<h3 class="font-headline-md text-headline-md mb-4">Direct Global Peering</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We peer directly with AWS, Google Cloud, and Microsoft Azure, reducing latency for your cloud-first workflow by up to 40ms compared to standard NBN.</p>
+</div>
+<div class="w-full md:w-64 h-48 rounded-lg overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A clean, professional data visualization showing network latency comparisons. High-contrast line graphs in vibrant red and electric purple depict significant performance improvements over standard providers. The chart is set against a minimalist white background, reflecting a structured, enterprise-grade design aesthetic. Precision and speed are the core themes of the visual." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5TE8p0m1Q7rj0dDblDJ8ZpGWwxBdjuq0QcOFb82BKU9hcQroL0z5buJkqn4QHpbScnTcu8mczFJFLOlDsECvbVmh0cewHTB2xsD47_K8KKH-0y6PR-I1lEMnEpyLWOJU1k7tCqrB6QGwW7tOGA5d3QVw4fVVa5I_0Jns9pA9CV0oBt0fhDEqOcTguQgm6dyU3ROZaS8ZxGjCf19rpJV9-g47SHGYV6BwFZ2wvushf3r9wRwOmDG0iEqC31M6jQKnQAklIBjXPXGI3"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Vision: High-Impact Typography -->
+<section class="bg-deep-navy py-32">
+<div class="px-margin-desktop max-w-max-width mx-auto text-center">
+<span class="text-secondary-fixed-dim font-label-bold text-label-bold tracking-[0.3em] uppercase mb-8 block">Our Vision</span>
+<h2 class="font-display-lg text-display-lg text-pure-white max-w-4xl mx-auto leading-tight">
+                    To build the <span class="text-vibrant-red">nervous system</span> of Australian enterprise, where speed is silent and reliability is absolute.
+                </h2>
+<div class="mt-16 flex justify-center gap-12">
+<div class="text-left">
+<div class="text-pure-white font-headline-md text-headline-md">150+</div>
+<div class="text-on-primary-container font-label-md text-label-md uppercase">Global Nodes</div>
+</div>
+<div class="w-px h-12 bg-on-primary-fixed-variant"></div>
+<div class="text-left">
+<div class="text-pure-white font-headline-md text-headline-md">12Tbps</div>
+<div class="text-on-primary-container font-label-md text-label-md uppercase">Network Capacity</div>
+</div>
+<div class="w-px h-12 bg-on-primary-fixed-variant"></div>
+<div class="text-left">
+<div class="text-pure-white font-headline-md text-headline-md">&lt;15ms</div>
+<div class="text-on-primary-container font-label-md text-label-md uppercase">Average Latency</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Network Map Preview -->
+<section class="py-24 bg-surface">
+<div class="px-margin-desktop max-w-max-width mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-4">Strategic Presence</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Our fiber footprint spans the continent, with hardened points of presence in every capital city.</p>
+</div>
+<button class="bg-electric-purple text-pure-white px-8 py-3 font-label-bold text-label-bold flex items-center gap-2">
+                        VIEW INTERACTIVE MAP <span class="material-symbols-outlined">map</span>
+</button>
+</div>
+<div class="relative rounded-xl overflow-hidden border border-outline-variant h-[600px] shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A sophisticated, dark-themed geographic map of Australia with glowing fiber-optic network routes connecting major capital cities like Sydney, Melbourne, Brisbane, and Perth. The map uses a sleek, corporate design with minimalist cartography in deep charcoal and lines of vibrant red light indicating high-speed connections. Small, pulsating dots mark data center nodes, creating a high-tech, professional atmosphere." data-location="Australia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBncwEeEPExBOS_txKmkerzB-NzsbsnLGOXwCHMJNCXbyF4vLT96tJ-oBgvYVaiFIWr_S7IogDnWntd784TDBkhUT4yrpBUe-wczFl-1kp_L9bt030luWB5JaR6wMPh5F4OiwIQtorxl0X4CIgPe_4trpw2g0iAbrfTYuNiA7hsy3OiEDRK5PqkPqbFp1KpIO0_MMraR9bRjZGvu4WH1pJE6FHI5ieRW6Z-lAr32JbbJV3wKYjM6prVx_Hm0cT5OvOAvPQjuZe21XbN"/>
+<div class="absolute bottom-10 left-10 glass-panel p-6 max-w-xs">
+<h4 class="text-pure-white font-label-bold text-label-bold mb-2 flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-vibrant-red animate-pulse"></span> LIVE NETWORK STATUS
+                        </h4>
+<p class="text-on-primary-container font-label-md text-label-md">All systems operational across Sydney, Melbourne, Brisbane nodes. No active maintenance.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Leadership/Professional Teams -->
+<section class="py-24 px-margin-desktop max-w-max-width mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg">Expertise by Engineering</h2>
+<div class="h-1 w-20 bg-vibrant-red mx-auto mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="group">
+<div class="aspect-[4/5] overflow-hidden mb-6 grayscale group-hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="A professional network engineer wearing a branded charcoal uniform, standing in a brightly lit, modern server environment. The individual is focused on a tablet displaying complex network diagnostics. The lighting is crisp and clean, reflecting a high-end light-mode aesthetic. The background features blurred racks of server hardware, emphasizing a high-performance corporate atmosphere focused on technical precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANh3UHkDF1Z4cKEJWY7QA0RVgAZSzBaxIRp8qQY-qppUZs00Dm-fnXnqLsIguS6qS9SsVnQOcVDF7t9sjvfnX0OiLDQPzMF5Qj_NXF7S6wH-N9W0wq48GtxsfExxV_JO4rvdCYLEosnjKhoVsga3tJwLeVlYcGnHruktPEHkaNaqR3gN2YKl895FIn6UfqZbjNcy8WqCK5ZKDHFtoUYPuZE-nHCAZh4k4VX6OvfKgtDq1LU2GQ-K8h7tviHRsTL9GISqH5JqJbR1Uf"/>
+</div>
+<h4 class="font-headline-md text-headline-md mb-1">Network Operations</h4>
+<p class="text-on-surface-variant font-body-md">24/7 proactive monitoring by CCIE-certified engineers.</p>
+</div>
+<div class="group">
+<div class="aspect-[4/5] overflow-hidden mb-6 grayscale group-hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="An enterprise account manager in a minimalist, modern office setting. The professional is engaged in a strategic discussion, exuding confidence and reliability. The office features glass walls and clean white surfaces, typical of a high-contrast corporate design system. Soft, natural light fills the space, creating an inviting yet professional mood. The scene emphasizes personalized business service and enterprise-scale reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfhh9NXOZLCWUjILzeB8IFyLfwnhpWwSQgkZpK-4c-EoOg64GpNkd6TuAesBt1IsbNIxikb-FDgIdy8YRwetNZRoHzkwKIXyoc39FXCN7C54WrgPsVdWhe9RpSmBxsA9ukLKtNoSNw6ljjR4dEzGK2xoDESwIk1Cvw_tOhCAZDGvJTmGV0PjUyXZSGxsWQLouIomJ5guHP7Y-v5a2t_A2rUi1UGf5s75fmUo_K2vTU-zk0AphlMI3oV0MI0ezaV573x5sPUZUd6Wt_"/>
+</div>
+<h4 class="font-headline-md text-headline-md mb-1">Strategic Solutions</h4>
+<p class="text-on-surface-variant font-body-md">Personalized architecting for multi-site enterprise deployments.</p>
+</div>
+<div class="group">
+<div class="aspect-[4/5] overflow-hidden mb-6 grayscale group-hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="A customer success lead based in a modern Australian office, smiling while working with dual-monitor setups showing network health dashboards. The environment is clean and professional, using a palette of white and light gray with subtle branding accents. The lighting is bright and high-key, conveying transparency and high-quality local support services. The mood is helpful, professional, and technologically advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0FIB8vGWDyYQ3MQ-F1yMoGqntKZaSVMc3aSAhy3qvEfhsf2ctwWV93aGBmygA3Zin-hv3Lnz_pE5BI-3Jo9uEVv0G1pdIwZfKxRnH9P4Crv9-6aBX-rlBd7-dr5oIIuH0TFL7yVjFE6YkGcY8zTRagrJdSUZ-swXqwgqhkIv0LYUOPJehKdiy41AvzqIGJV83ueEVgNoQ5WrxA6tQvek7kaRGCh-x4etrFfnY40QmOeLe-pEyokxRfkAnF9eycPZ2B9gQfzTOXzqe"/>
+</div>
+<h4 class="font-headline-md text-headline-md mb-1">Account Success</h4>
+<p class="text-on-surface-variant font-body-md">Dedicated local managers for seamless business continuity.</p>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="bg-vibrant-red py-20 px-margin-desktop text-center">
+<h2 class="font-display-lg text-headline-lg text-pure-white mb-8">Ready for Enterprise-Grade Connectivity?</h2>
+<div class="flex flex-col md:flex-row justify-center gap-4">
+<input class="h-16 px-6 md:w-96 text-on-surface focus:ring-electric-purple border-none font-body-md" placeholder="Enter Business Address" type="text"/>
+<button class="h-16 bg-deep-navy text-pure-white px-10 font-label-bold text-label-bold hover:bg-black transition-all">CHECK AVAILABILITY</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-navy w-full py-12 border-t border-on-surface-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-max-width mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="font-headline-md text-headline-md text-pure-white block mb-6">CORE CONNECT</span>
+<p class="text-surface-variant font-body-md text-body-md">Level 42, International Tower One, Barangaroo, NSW 2000</p>
+</div>
+<div>
+<h5 class="text-secondary font-label-bold text-label-bold mb-6 uppercase">Company</h5>
+<ul class="space-y-4">
+<li><a class="text-surface-variant hover:text-pure-white transition-colors" href="#">About Us</a></li>
+<li><a class="text-surface-variant hover:text-pure-white transition-colors" href="#">Career Opportunities</a></li>
+<li><a class="text-surface-variant hover:text-pure-white transition-colors" href="#">Our Infrastructure</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-secondary font-label-bold text-label-bold mb-6 uppercase">Legal</h5>
+<ul class="space-y-4">
+<li><a class="text-surface-variant hover:text-pure-white transition-colors" href="#">SLA Details</a></li>
+<li><a class="text-surface-variant hover:text-pure-white transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-surface-variant hover:text-pure-white transition-colors" href="#">Critical Information Summaries</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-secondary font-label-bold text-label-bold mb-6 uppercase">Partners</h5>
+<ul class="space-y-4">
+<li><a class="text-surface-variant hover:text-pure-white transition-colors" href="#">Referral Program</a></li>
+<li><a class="text-surface-variant hover:text-pure-white transition-colors" href="#">Wholesale Fiber</a></li>
+<li><a class="text-surface-variant hover:text-pure-white transition-colors" href="#">Agent Portal</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-on-surface-variant/5 text-center">
+<p class="text-surface-variant font-body-md text-body-md">© 2024 Core Connect Business NBN. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
+        // Micro-interactions for hovering elements
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.borderColor = 'rgba(229, 0, 15, 0.3)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.borderColor = '';
+            });
+        });
+
+        // Simple scroll reveal effect
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

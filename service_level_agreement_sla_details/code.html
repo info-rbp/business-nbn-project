@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SLA Details | Core Connect Business NBN</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e7deff",
+                    "tertiary-container": "#1f005f",
+                    "surface": "#f9f9f9",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "vibrant-red": "#E5000F",
+                    "secondary-fixed-dim": "#ffb4aa",
+                    "tertiary": "#000000",
+                    "surface-bright": "#f9f9f9",
+                    "on-primary-fixed-variant": "#474746",
+                    "on-primary-fixed": "#1c1b1b",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f3f3f3",
+                    "on-tertiary-container": "#8c69ff",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#1a1c1c",
+                    "deep-navy": "#0A0A0F",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#dadada",
+                    "surface-tint": "#5f5e5e",
+                    "pure-white": "#FFFFFF",
+                    "background": "#f9f9f9",
+                    "secondary-container": "#e90812",
+                    "secondary": "#bc000a",
+                    "secondary-fixed": "#ffdad5",
+                    "on-secondary-fixed-variant": "#930006",
+                    "electric-purple": "#4200B3",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e2e2e2",
+                    "primary-container": "#1c1b1b",
+                    "primary-fixed": "#e5e2e1",
+                    "on-surface": "#1a1c1c",
+                    "on-secondary-fixed": "#410001",
+                    "surface-container": "#eeeeee",
+                    "inverse-surface": "#2f3131",
+                    "on-secondary-container": "#fffbff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-variant": "#e2e2e2",
+                    "on-primary-container": "#858383",
+                    "surface-container-high": "#e8e8e8",
+                    "surface-gray": "#F5F5F5",
+                    "tertiary-fixed-dim": "#cdbdff",
+                    "outline-variant": "#c4c7c7",
+                    "on-surface-variant": "#444748",
+                    "primary": "#000000",
+                    "on-tertiary-fixed-variant": "#4e1ebe",
+                    "on-tertiary-fixed": "#1f005f",
+                    "on-primary": "#ffffff",
+                    "outline": "#747878",
+                    "inverse-primary": "#c8c6c5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "max-width": "1280px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "label-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "label-bold": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Hanken Grotesk', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-mesh {
+            background-color: #FFFFFF;
+            background-image: radial-gradient(at 0% 0%, rgba(66, 0, 179, 0.05) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(229, 0, 15, 0.05) 0px, transparent 50%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-electric-purple selection:text-pure-white">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-deep-navy border-b border-on-surface-variant/20 h-20">
+<div class="flex justify-between items-center h-full px-margin-desktop max-w-max-width mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-2xl" data-icon="router">router</span>
+<span class="font-display-lg text-headline-md font-extrabold text-pure-white">CORE CONNECT</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-pure-white font-label-md text-label-md hover:text-secondary-fixed-dim transition-colors duration-200" href="#">Home</a>
+<a class="text-pure-white font-label-md text-label-md hover:text-secondary-fixed-dim transition-colors duration-200" href="#">Plans &amp; Pricing</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-label-md text-label-md" href="#">SLA Details</a>
+<a class="text-pure-white font-label-md text-label-md hover:text-secondary-fixed-dim transition-colors duration-200" href="#">Support Hub</a>
+</nav>
+<button class="bg-vibrant-red text-pure-white px-6 py-2 font-label-bold text-label-bold rounded-none hover:opacity-90 active:scale-95 transition-all">
+                Check Address
+            </button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-deep-navy py-24 md:py-32">
+<div class="absolute inset-0 opacity-20">
+<img class="w-full h-full object-cover" data-alt="A sophisticated data center environment with glowing blue and red fiber optic cables running through high-performance server racks. The lighting is cinematic and high-contrast, emphasizing the speed and reliability of enterprise-grade infrastructure. The atmosphere is professional and technologically advanced, using a palette of deep navy and vibrant accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9l5AGEsOKPp4LIItNwqJUYZi5ejaTc1iPJ9xI8rb6hN9ItdLLbr8v_vmrmW4sX10jswMAh9prYUuShbLWNG8Ctm9xOE7cIT1WHe5ETwvj-FtK-LvP1FY7gqQ8O1vONDK-KBnFBvfe70HfEht886-NJ6rWfw9XOtI7F_ygZNzkIrAxlhfXAEL1Mxh0ploBN1AVSy6IFskoa9p3xFpuW3JoTzIgaSMQk1MnHLsZkofwLs5yESiirAPELp3NrC-alisv8UwttGY5n_H0"/>
+</div>
+<div class="relative px-margin-desktop max-w-max-width mx-auto">
+<div class="max-w-3xl">
+<span class="inline-block bg-electric-purple text-pure-white px-4 py-1 font-label-bold text-label-bold mb-6">ENTERPRISE GRADE</span>
+<h1 class="font-display-lg text-display-lg text-pure-white mb-6 leading-tight">Service Level <br/><span class="text-vibrant-red">Agreement</span></h1>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-xl">
+                        Our Business-Grade Guarantee isn't just a promise. It's a legally binding commitment to uptime, performance, and rapid restoration.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Service Targets Table Section -->
+<section class="py-20 bg-surface px-margin-desktop max-w-max-width mx-auto">
+<div class="mb-12">
+<h2 class="font-headline-lg text-headline-lg mb-4">Core Performance Targets</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+                    We measure our network health every minute to ensure your business stays connected at peak efficiency. These targets apply across all Enterprise NBN tiers.
+                </p>
+</div>
+<div class="overflow-x-auto border border-outline-variant bg-pure-white">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high border-b border-outline-variant">
+<th class="p-6 font-label-bold text-label-bold uppercase">Metric</th>
+<th class="p-6 font-label-bold text-label-bold uppercase text-center">Commitment</th>
+<th class="p-6 font-label-bold text-label-bold uppercase">Measurement Frequency</th>
+<th class="p-6 font-label-bold text-label-bold uppercase">Business Impact</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<tr class="hover:bg-surface-gray transition-colors">
+<td class="p-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-purple" data-icon="timer">timer</span>
+<span class="font-label-bold text-label-bold">Service Uptime</span>
+</div>
+</td>
+<td class="p-6 text-center">
+<span class="bg-secondary-fixed text-on-secondary-fixed px-3 py-1 font-label-bold rounded-full">99.95%</span>
+</td>
+<td class="p-6 font-body-md text-body-md">Monthly Aggregate</td>
+<td class="p-6 font-body-md text-body-md">Ensures zero operational disruption for critical cloud apps.</td>
+</tr>
+<tr class="hover:bg-surface-gray transition-colors">
+<td class="p-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-purple" data-icon="speed">speed</span>
+<span class="font-label-bold text-label-bold">Latency (RTT)</span>
+</div>
+</td>
+<td class="p-6 text-center">
+<span class="font-label-bold text-label-bold text-on-surface">&lt; 40ms</span>
+</td>
+<td class="p-6 font-body-md text-body-md">Real-time sampling</td>
+<td class="p-6 font-body-md text-body-md">Lag-free VoIP and seamless video conferencing.</td>
+</tr>
+<tr class="hover:bg-surface-gray transition-colors">
+<td class="p-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-purple" data-icon="waves">waves</span>
+<span class="font-label-bold text-label-bold">Jitter</span>
+</div>
+</td>
+<td class="p-6 text-center">
+<span class="font-label-bold text-label-bold text-on-surface">&lt; 10ms</span>
+</td>
+<td class="p-6 font-body-md text-body-md">Real-time sampling</td>
+<td class="p-6 font-body-md text-body-md">Consistent data packet delivery for stable VPN sessions.</td>
+</tr>
+<tr class="hover:bg-surface-gray transition-colors">
+<td class="p-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-purple" data-icon="error_outline">error_outline</span>
+<span class="font-label-bold text-label-bold">Packet Loss</span>
+</div>
+</td>
+<td class="p-6 text-center">
+<span class="font-label-bold text-label-bold text-on-surface">&lt; 0.1%</span>
+</td>
+<td class="p-6 font-body-md text-body-md">Monthly average</td>
+<td class="p-6 font-body-md text-body-md">Reliable file transfers and database synchronization.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Velocity Rebate Scheme (Bento Grid) -->
+<section class="py-20 bg-surface-gray">
+<div class="px-margin-desktop max-w-max-width mx-auto">
+<div class="mb-12 text-center">
+<h2 class="font-display-lg text-headline-lg mb-4">Velocity Rebate Scheme</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">
+                        We put our money where our mouth is. If we fail to meet our targets, you are automatically credited—no complex claims required.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Rebate Card 1 -->
+<div class="bg-pure-white p-unit flex flex-col gap-6 border border-outline-variant group hover:border-vibrant-red transition-all duration-300">
+<div class="bg-surface-container p-6 flex justify-center items-center">
+<span class="material-symbols-outlined text-5xl text-vibrant-red" data-icon="bolt">bolt</span>
+</div>
+<div class="px-4 pb-4">
+<h3 class="font-headline-md text-headline-md mb-2">Tier 1: Minor Breach</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Outage duration between 2 - 4 hours within a single billing cycle.</p>
+<div class="text-display-lg-mobile font-display-lg-mobile text-electric-purple">10% Rebate</div>
+<span class="text-label-bold font-label-bold text-on-surface-variant">Of Monthly Service Fee</span>
+</div>
+</div>
+<!-- Rebate Card 2 (Featured) -->
+<div class="bg-deep-navy p-unit flex flex-col gap-6 border-t-4 border-vibrant-red shadow-xl md:-translate-y-4">
+<div class="bg-primary-container p-6 flex justify-center items-center">
+<span class="material-symbols-outlined text-5xl text-pure-white" data-icon="emergency">emergency</span>
+</div>
+<div class="px-4 pb-4 text-pure-white">
+<h3 class="font-headline-md text-headline-md mb-2">Tier 2: Significant Breach</h3>
+<p class="font-body-md text-body-md text-surface-variant mb-4">Outage duration between 4 - 8 hours within a single billing cycle.</p>
+<div class="text-display-lg-mobile font-display-lg-mobile text-vibrant-red">25% Rebate</div>
+<span class="text-label-bold font-label-bold text-surface-variant">Of Monthly Service Fee</span>
+</div>
+</div>
+<!-- Rebate Card 3 -->
+<div class="bg-pure-white p-unit flex flex-col gap-6 border border-outline-variant group hover:border-vibrant-red transition-all duration-300">
+<div class="bg-surface-container p-6 flex justify-center items-center">
+<span class="material-symbols-outlined text-5xl text-vibrant-red" data-icon="warning">warning</span>
+</div>
+<div class="px-4 pb-4">
+<h3 class="font-headline-md text-headline-md mb-2">Tier 3: Critical Breach</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Any single outage exceeding 8 hours or multiple outages totaling 12+ hours.</p>
+<div class="text-display-lg-mobile font-display-lg-mobile text-electric-purple">50% Rebate</div>
+<span class="text-label-bold font-label-bold text-on-surface-variant">Of Monthly Service Fee</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-mesh border-y border-outline-variant">
+<div class="px-margin-desktop max-w-max-width mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg mb-4 text-deep-navy">Ready for Unbreakable Connectivity?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Join over 5,000 Australian businesses who rely on Core Connect for their mission-critical infrastructure. Check your address now for a custom quote.
+                    </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+<button class="bg-vibrant-red text-pure-white px-10 py-4 font-label-bold text-label-bold uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all">
+                        Check Address
+                    </button>
+<button class="border-2 border-deep-navy text-deep-navy px-10 py-4 font-label-bold text-label-bold uppercase tracking-widest hover:bg-deep-navy hover:text-pure-white transition-all">
+                        Download SLA PDF
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-navy w-full py-12 border-t border-on-surface-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-max-width mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary text-2xl" data-icon="router">router</span>
+<span class="font-headline-md text-headline-md text-pure-white">CORE CONNECT</span>
+</div>
+<p class="text-surface-variant text-body-md mb-6">High-performance fiber connectivity for the modern Australian enterprise.</p>
+</div>
+<div>
+<h4 class="text-pure-white font-label-bold mb-6">Solutions</h4>
+<ul class="flex flex-col gap-3">
+<li><a class="text-surface-variant hover:text-pure-white transition-colors" href="#">Enterprise NBN</a></li>
+<li><a class="text-surface-variant hover:text-pure-white transition-colors" href="#">Fiber-to-the-Premise</a></li>
+<li><a class="text-surface-variant hover:text-pure-white transition-colors" href="#">Managed Wi-Fi</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-pure-white font-label-bold mb-6">Support</h4>
+<ul class="flex flex-col gap-3">
+<li><a class="text-secondary-fixed-dim underline font-body-md" href="#">SLA Details</a></li>
+<li><a class="text-surface-variant hover:text-pure-white transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-surface-variant hover:text-pure-white transition-colors" href="#">Critical Information Summaries</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-pure-white font-label-bold mb-6">Connect</h4>
+<ul class="flex flex-col gap-3">
+<li><a class="text-surface-variant hover:text-pure-white transition-colors" href="#">About Us</a></li>
+<li><a class="text-surface-variant hover:text-pure-white transition-colors" href="#">Referral Program</a></li>
+<li><a class="text-surface-variant hover:text-pure-white transition-colors" href="#">Contact Sales</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 pt-8 border-t border-on-surface-variant/10 px-margin-desktop max-w-max-width mx-auto text-center">
+<p class="text-surface-variant text-body-md">© 2024 Core Connect Business NBN. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for hover states on rebate cards
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Business NBN Plans | NBN Business</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "deep-navy": "#0A0A0F",
+                    "secondary-fixed-dim": "#ffb4aa",
+                    "outline": "#747878",
+                    "tertiary-fixed-dim": "#cdbdff",
+                    "surface-container-high": "#e8e8e8",
+                    "primary-container": "#1c1b1b",
+                    "surface": "#f9f9f9",
+                    "on-background": "#1a1c1c",
+                    "surface-container-low": "#f3f3f3",
+                    "tertiary-container": "#1f005f",
+                    "electric-purple": "#4200B3",
+                    "surface-bright": "#f9f9f9",
+                    "outline-variant": "#c4c7c7",
+                    "secondary": "#bc000a",
+                    "inverse-on-surface": "#f1f1f1",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#fffbff",
+                    "tertiary": "#000000",
+                    "tertiary-fixed": "#e7deff",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-primary-fixed": "#1c1b1b",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#930006",
+                    "on-primary-fixed-variant": "#474746",
+                    "surface-dim": "#dadada",
+                    "on-tertiary-container": "#8c69ff",
+                    "inverse-primary": "#c8c6c5",
+                    "secondary-fixed": "#ffdad5",
+                    "secondary-container": "#e90812",
+                    "surface-tint": "#5f5e5e",
+                    "primary-fixed": "#e5e2e1",
+                    "on-secondary-fixed": "#410001",
+                    "surface-container": "#eeeeee",
+                    "on-tertiary-fixed-variant": "#4e1ebe",
+                    "primary": "#000000",
+                    "on-surface": "#1a1c1c",
+                    "on-primary-container": "#858383",
+                    "surface-variant": "#e2e2e2",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "vibrant-red": "#E5000F",
+                    "background": "#f9f9f9",
+                    "pure-white": "#FFFFFF",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-surface-variant": "#444748",
+                    "inverse-surface": "#2f3131",
+                    "surface-gray": "#F5F5F5",
+                    "on-tertiary-fixed": "#1f005f",
+                    "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px",
+                    "max-width": "1280px"
+            },
+            "fontFamily": {
+                    "label-md": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "label-bold": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+        .speed-gradient {
+            background: linear-gradient(135deg, #4200B3 0%, #E5000F 100%);
+        }
+        .plan-card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-pure-white dark:bg-deep-navy border-b border-outline-variant dark:border-outline flex justify-between items-center px-margin-mobile h-16 w-full fixed top-0 z-50">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary dark:text-secondary cursor-pointer" data-icon="menu">menu</span>
+<span class="text-headline-md font-headline-md text-deep-navy dark:text-pure-white uppercase tracking-tighter">NBN Business</span>
+</div>
+<button class="font-label-bold text-label-bold text-secondary dark:text-secondary hover:text-electric-purple transition-colors Active: opacity-80 scale-95 transition-all">LOGIN</button>
+</header>
+<main class="pt-24 pb-20 px-margin-mobile max-w-max-width mx-auto w-full">
+<!-- Page Title & Toggle -->
+<section class="text-center mb-10">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-deep-navy mb-6">Business NBN Plans</h1>
+<div class="inline-flex bg-surface-container p-1 rounded-full items-center">
+<button class="bg-pure-white shadow-sm px-6 py-2 rounded-full font-label-bold text-label-bold text-deep-navy" id="toggleMonthly">Monthly</button>
+<button class="px-6 py-2 rounded-full font-label-bold text-label-bold text-on-surface-variant opacity-60" id="toggleAnnual">Annual</button>
+</div>
+</section>
+<!-- Plan Grid (Bento/Card Mix) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+<!-- Business Basic -->
+<div class="bg-pure-white border border-outline-variant rounded-xl p-6 flex flex-col plan-card-hover transition-all duration-300">
+<div class="mb-4">
+<span class="font-label-bold text-label-bold bg-surface-container-low px-3 py-1 rounded text-deep-navy">ESSENTIAL</span>
+<h2 class="font-headline-md text-headline-md text-deep-navy mt-4">Business Basic</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Standard high-speed fiber</p>
+</div>
+<div class="my-6">
+<p class="font-label-bold text-label-bold text-secondary">50Mbps Typical Evening Speed</p>
+<div class="flex items-baseline gap-1 mt-2">
+<span class="font-display-lg-mobile text-display-lg-mobile text-deep-navy">$79</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/mo</span>
+</div>
+</div>
+<ul class="space-y-3 mb-8 flex-grow">
+<li class="flex items-center gap-2 font-body-md text-body-md">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle">check_circle</span>
+                        Unlimited Data
+                    </li>
+<li class="flex items-center gap-2 font-body-md text-body-md">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle">check_circle</span>
+                        Standard Static IP
+                    </li>
+<li class="flex items-center gap-2 font-body-md text-body-md opacity-40">
+<span class="material-symbols-outlined text-outline text-lg" data-icon="cancel">cancel</span>
+                        4G Backup Not Included
+                    </li>
+</ul>
+<button class="w-full bg-vibrant-red text-pure-white font-label-bold text-label-bold py-4 rounded-lg hover:brightness-90 transition-all uppercase">Select Plan</button>
+</div>
+<!-- Business Pro (Highlighted) -->
+<div class="bg-pure-white border-2 border-electric-purple rounded-xl p-6 flex flex-col relative plan-card-hover transition-all duration-300 scale-105 z-10 shadow-xl">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-electric-purple text-pure-white px-4 py-1 rounded-full font-label-bold text-[12px] uppercase">Recommended</div>
+<div class="mb-4">
+<span class="font-label-bold text-label-bold bg-electric-purple/10 px-3 py-1 rounded text-electric-purple">MOST POPULAR</span>
+<h2 class="font-headline-md text-headline-md text-deep-navy mt-4">Business Pro</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Optimized for small offices</p>
+</div>
+<div class="my-6">
+<p class="font-label-bold text-label-bold text-secondary">100Mbps Typical Evening Speed</p>
+<div class="flex items-baseline gap-1 mt-2">
+<span class="font-display-lg-mobile text-display-lg-mobile text-deep-navy">$99</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/mo</span>
+</div>
+</div>
+<ul class="space-y-3 mb-8 flex-grow">
+<li class="flex items-center gap-2 font-body-md text-body-md font-bold">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Unlimited Data
+                    </li>
+<li class="flex items-center gap-2 font-body-md text-body-md font-bold">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        Static IP included
+                    </li>
+<li class="flex items-center gap-2 font-body-md text-body-md font-bold">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        4G Backup Ready
+                    </li>
+</ul>
+<button class="w-full bg-vibrant-red text-pure-white font-label-bold text-label-bold py-4 rounded-lg hover:brightness-90 transition-all uppercase">Order Now</button>
+</div>
+<!-- Business Elite -->
+<div class="bg-pure-white border border-outline-variant rounded-xl p-6 flex flex-col plan-card-hover transition-all duration-300">
+<div class="mb-4">
+<span class="font-label-bold text-label-bold bg-surface-container-low px-3 py-1 rounded text-deep-navy">ENTERPRISE</span>
+<h2 class="font-headline-md text-headline-md text-deep-navy mt-4">Business Elite</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">High-performance infrastructure</p>
+</div>
+<div class="my-6">
+<p class="font-label-bold text-label-bold text-secondary">250Mbps Typical Evening Speed</p>
+<div class="flex items-baseline gap-1 mt-2">
+<span class="font-display-lg-mobile text-display-lg-mobile text-deep-navy">$149</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/mo</span>
+</div>
+</div>
+<ul class="space-y-3 mb-8 flex-grow">
+<li class="flex items-center gap-2 font-body-md text-body-md">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle">check_circle</span>
+                        Unlimited Data
+                    </li>
+<li class="flex items-center gap-2 font-body-md text-body-md">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle">check_circle</span>
+                        SLA Guaranteed Uptime
+                    </li>
+<li class="flex items-center gap-2 font-body-md text-body-md">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="check_circle">check_circle</span>
+                        Priority 24/7 Support
+                    </li>
+</ul>
+<button class="w-full bg-vibrant-red text-pure-white font-label-bold text-label-bold py-4 rounded-lg hover:brightness-90 transition-all uppercase">Select Plan</button>
+</div>
+</section>
+<!-- Compare Link -->
+<section class="mb-16 overflow-hidden">
+<h2 class="font-headline-md text-headline-md text-deep-navy mb-6 text-center">Compare All Features</h2>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container">
+<th class="p-4 font-label-bold text-label-bold text-deep-navy border-b border-outline-variant">Feature</th>
+<th class="p-4 font-label-bold text-label-bold text-deep-navy border-b border-outline-variant text-center">Basic</th>
+<th class="p-4 font-label-bold text-label-bold text-deep-navy border-b border-outline-variant text-center">Pro</th>
+<th class="p-4 font-label-bold text-label-bold text-deep-navy border-b border-outline-variant text-center">Elite</th>
+</tr>
+</thead>
+<tbody class="bg-pure-white">
+<tr class="border-b border-outline-variant">
+<td class="p-4 font-label-md text-label-md text-on-surface-variant">Evening Speed</td>
+<td class="p-4 font-body-md text-body-md text-center">50Mbps</td>
+<td class="p-4 font-body-md text-body-md text-center">100Mbps</td>
+<td class="p-4 font-body-md text-body-md text-center">250Mbps</td>
+</tr>
+<tr class="border-b border-outline-variant">
+<td class="p-4 font-label-md text-label-md text-on-surface-variant">Data</td>
+<td class="p-4 text-center"><span class="material-symbols-outlined text-secondary">check_circle</span></td>
+<td class="p-4 text-center"><span class="material-symbols-outlined text-secondary">check_circle</span></td>
+<td class="p-4 text-center"><span class="material-symbols-outlined text-secondary">check_circle</span></td>
+</tr>
+<tr class="border-b border-outline-variant">
+<td class="p-4 font-label-md text-label-md text-on-surface-variant">Static IP</td>
+<td class="p-4 font-body-md text-body-md text-center">Optional</td>
+<td class="p-4 font-body-md text-body-md text-center text-secondary font-bold">Included</td>
+<td class="p-4 font-body-md text-body-md text-center text-secondary font-bold">Included</td>
+</tr>
+<tr class="border-b border-outline-variant">
+<td class="p-4 font-label-md text-label-md text-on-surface-variant">4G Backup</td>
+<td class="p-4 text-center"><span class="material-symbols-outlined text-outline opacity-40">cancel</span></td>
+<td class="p-4 font-body-md text-body-md text-center">Ready</td>
+<td class="p-4 font-body-md text-body-md text-center text-secondary font-bold">Included</td>
+</tr>
+<tr class="border-b border-outline-variant">
+<td class="p-4 font-label-md text-label-md text-on-surface-variant">Support</td>
+<td class="p-4 font-body-md text-body-md text-center">Standard</td>
+<td class="p-4 font-body-md text-body-md text-center">Priority</td>
+<td class="p-4 font-body-md text-body-md text-center text-secondary font-bold">24/7 Priority</td>
+</tr>
+<tr>
+<td class="p-4 font-label-md text-label-md text-on-surface-variant">SLA</td>
+<td class="p-4 font-body-md text-body-md text-center">N/A</td>
+<td class="p-4 font-body-md text-body-md text-center">N/A</td>
+<td class="p-4 font-body-md text-body-md text-center font-bold">99.9% Uptime</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Speedblast Section -->
+<section class="speed-gradient rounded-2xl overflow-hidden relative mb-16 p-8 md:p-12 text-pure-white">
+<div class="max-w-2xl relative z-10">
+<p class="font-label-bold text-label-bold mb-2 uppercase tracking-widest opacity-90">Speedblast™</p>
+<h2 class="font-display-lg-mobile text-display-lg-mobile mb-4 leading-tight">Speeds up to 1Gbps on Totalbiz plans</h2>
+<p class="font-body-lg text-body-lg mb-8 opacity-80">Get maximum speeds of up to 1Gbps for your business on Totalbiz plans with 2 FREE Speed Upgrade Days every month.</p>
+<button class="bg-vibrant-red text-pure-white px-8 py-3 rounded-full font-label-bold text-label-bold flex items-center gap-2 hover:scale-105 transition-transform">
+                    See Totalbiz plans
+                    <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<!-- Using style reference for bg image logic -->
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<img alt="Background pattern reference" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ugLa_yqO6io0YNTaU1EBVSJfo4hRqvPy3F25twDyd9vcPghY2b7vk__PG_gq7sETq-DEr_W4x4wHJARODevgjG4qFH-oHnqxYiur34efa2KroTB88lI3mrFG5jxgI7pG8j6u2_9NS5JwrSB8sU-zJTiTfT_k5Uf281dzTSXlo8UyXwEemUukut1zqh3-AtWcjhXMzjKSVvcBTRI92OqNqf8EVd4PXqhUNfeaDlQK_zbYA6ZnpW-Ra6KdgQ"/>
+</div>
+<!-- Prompted Image for visual flair -->
+<div class="absolute right-0 bottom-0 w-1/3 hidden md:block">
+<img class="w-full h-auto object-contain" data-alt="A futuristic digital representation of high-speed fiber optic data transmission in a corporate environment. Streams of light in vibrant red and deep purple streak across a dark, technological background, creating a sense of extreme motion and power. The lighting is crisp and modern, reflecting a high-performance ISP brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTsDxRvSRRRPc9WldIE8bPpkeAuSqTP4eYm11Be0pRSlDCow_VIgZTDUYi00A2khwcU2fKVniwyc9LfDl5tbCIAjxfaagqUR6Pz-acNkZjrd4MgOGswMhnuPdawWW8idIFO5SBurVO5npmY2cvhM59AM8zVnN16DYixGb8LNi2SAHYQTV2VFgO10gRYq3LvnmpbronDwarivDRIvkkdmjY148E4VYVcTlpL3vK0GQ9bHhv4oisKK9u1At_j8DTMStnNJA5AaUBujao"/>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="max-w-3xl mx-auto mb-16">
+<h2 class="font-headline-lg text-headline-lg text-center mb-10 text-deep-navy">Frequently Asked Questions</h2>
+<div class="space-y-4">
+<details class="group border border-outline-variant rounded-xl bg-pure-white">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none font-label-bold text-label-bold text-deep-navy">
+                        How long does setup take?
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 font-body-md text-body-md text-on-surface-variant">
+                        Standard activations typically take 2-4 business days. For locations requiring new infrastructure, our team will provide a specific timeline within 24 hours of your order.
+                    </div>
+</details>
+<details class="group border border-outline-variant rounded-xl bg-pure-white">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none font-label-bold text-label-bold text-deep-navy">
+                        Can I bring my own modem?
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 font-body-md text-body-md text-on-surface-variant">
+                        Yes, you can use any NBN-compatible modem. However, for 4G backup functionality and priority support, we recommend our business-grade NBN Gateway.
+                    </div>
+</details>
+<details class="group border border-outline-variant rounded-xl bg-pure-white">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none font-label-bold text-label-bold text-deep-navy">
+                        What is a Static IP used for?
+                        <span class="material-symbols-outlined transition-transform group-open:rotate-180" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="px-6 pb-6 font-body-md text-body-md text-on-surface-variant">
+                        A Static IP is essential for hosting servers, remotely accessing office files, or running certain business applications that require a consistent address.
+                    </div>
+</details>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-navy dark:bg-black flex flex-col gap-gutter p-margin-mobile w-full mt-auto mb-20">
+<div class="flex flex-col md:flex-row justify-between items-start gap-8">
+<span class="font-headline-md text-pure-white">NBN Business</span>
+<div class="flex flex-wrap gap-6">
+<a class="font-label-md text-label-md text-surface-variant opacity-70 hover:text-vibrant-red hover:opacity-100 transition-colors" href="#">Critical Information Summaries</a>
+<a class="font-label-md text-label-md text-surface-variant opacity-70 hover:text-vibrant-red hover:opacity-100 transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-md text-label-md text-surface-variant opacity-70 hover:text-vibrant-red hover:opacity-100 transition-colors" href="#">Terms of Service</a>
+<a class="font-label-md text-label-md text-surface-variant opacity-70 hover:text-vibrant-red hover:opacity-100 transition-colors" href="#">Wholesale</a>
+</div>
+</div>
+<p class="font-body-md text-body-md text-pure-white opacity-50">© 2024 NBN Business Solutions. All rights reserved.</p>
+</footer>
+<!-- BottomNavBar (Active: Plans) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-2 bg-pure-white dark:bg-deep-navy border-t border-outline-variant dark:border-outline shadow-lg">
+<div class="flex flex-col items-center justify-center text-outline dark:text-outline-variant hover:bg-surface-container-low transition-colors Tap: scale-110 transition-transform duration-150 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim font-bold hover:bg-surface-container-low transition-colors Tap: scale-110 transition-transform duration-150 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="speed" style="font-variation-settings: 'FILL' 1;">speed</span>
+<span class="font-label-md text-label-md">Plans</span>
+</div>
+<div class="flex flex-col items-center justify-center text-outline dark:text-outline-variant hover:bg-surface-container-low transition-colors Tap: scale-110 transition-transform duration-150 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="router">router</span>
+<span class="font-label-md text-label-md">Hardware</span>
+</div>
+<div class="flex flex-col items-center justify-center text-outline dark:text-outline-variant hover:bg-surface-container-low transition-colors Tap: scale-110 transition-transform duration-150 cursor-pointer">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+<span class="font-label-md text-label-md">Support</span>
+</div>
+</nav>
+<script>
+        // Simple toggle interaction
+        const monthlyBtn = document.getElementById('toggleMonthly');
+        const annualBtn = document.getElementById('toggleAnnual');
+
+        monthlyBtn.addEventListener('click', () => {
+            monthlyBtn.classList.add('bg-pure-white', 'shadow-sm', 'text-deep-navy');
+            monthlyBtn.classList.remove('text-on-surface-variant', 'opacity-60');
+            annualBtn.classList.remove('bg-pure-white', 'shadow-sm', 'text-deep-navy');
+            annualBtn.classList.add('text-on-surface-variant', 'opacity-60');
+        });
+
+        annualBtn.addEventListener('click', () => {
+            annualBtn.classList.add('bg-pure-white', 'shadow-sm', 'text-deep-navy');
+            annualBtn.classList.remove('text-on-surface-variant', 'opacity-60');
+            monthlyBtn.classList.remove('bg-pure-white', 'shadow-sm', 'text-deep-navy');
+            monthlyBtn.classList.add('text-on-surface-variant', 'opacity-60');
+        });
+    </script>
+</body></html>

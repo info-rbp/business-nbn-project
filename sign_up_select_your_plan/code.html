@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dadada",
+                        "on-secondary-fixed": "#410001",
+                        "on-error-container": "#93000a",
+                        "primary": "#000000",
+                        "deep-navy": "#0A0A0F",
+                        "surface-bright": "#f9f9f9",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "tertiary-container": "#1f005f",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#e90812",
+                        "on-secondary-container": "#fffbff",
+                        "secondary": "#bc000a",
+                        "surface-container": "#eeeeee",
+                        "inverse-surface": "#2f3131",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "outline-variant": "#c4c7c7",
+                        "on-tertiary-container": "#8c69ff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f3f3f3",
+                        "on-primary-fixed": "#1c1b1b",
+                        "inverse-primary": "#c8c6c5",
+                        "surface-gray": "#F5F5F5",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "pure-white": "#FFFFFF",
+                        "secondary-fixed": "#ffdad5",
+                        "on-primary-fixed-variant": "#474746",
+                        "primary-fixed": "#e5e2e1",
+                        "tertiary": "#000000",
+                        "surface-container-high": "#e8e8e8",
+                        "on-background": "#1a1c1c",
+                        "surface-tint": "#5f5e5e",
+                        "electric-purple": "#4200B3",
+                        "surface": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#858383",
+                        "on-tertiary-fixed": "#1f005f",
+                        "outline": "#747878",
+                        "tertiary-fixed-dim": "#cdbdff",
+                        "tertiary-fixed": "#e7deff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#930006",
+                        "on-surface-variant": "#444748",
+                        "on-tertiary-fixed-variant": "#4e1ebe",
+                        "vibrant-red": "#E5000F",
+                        "primary-container": "#1c1b1b",
+                        "background": "#f9f9f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "max-width": "1280px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Hanken Grotesk"],
+                        "label-bold": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .step-active { width: 48px; }
+        .plan-card:hover { border-color: #4200B3; }
+        .recommended-card { border-top: 4px solid #4200B3 !important; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col">
+<!-- Header Shell (TopAppBar) -->
+<header class="w-full top-0 sticky bg-pure-white z-50 border-b border-surface-variant">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer transition-transform active:scale-95" data-icon="arrow_back">arrow_back</span>
+<span class="font-display-lg text-vibrant-red tracking-tighter text-[24px]">FiberFlow Business</span>
+</div>
+<div class="flex items-center gap-6">
+<span class="font-label-md text-label-md text-on-surface-variant hidden md:block">Need assistance?</span>
+<span class="material-symbols-outlined text-primary cursor-pointer transition-transform active:scale-95" data-icon="help">help</span>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Progress Bar Section -->
+<section class="max-w-max-width mx-auto px-margin-desktop mt-12 mb-12">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="font-label-bold text-label-bold text-electric-purple uppercase">Step 2 of 4</span>
+<span class="font-headline-md text-headline-md block">Choose Your Velocity Plan</span>
+</div>
+</div>
+<div class="w-full bg-surface-variant h-1 rounded-full overflow-hidden flex gap-1">
+<div class="h-full bg-vibrant-red flex-1"></div>
+<div class="h-full bg-vibrant-red flex-1"></div>
+<div class="h-full bg-surface-dim flex-1"></div>
+<div class="h-full bg-surface-dim flex-1"></div>
+</div>
+</section>
+<!-- Main Plan Canvas -->
+<section class="max-w-max-width mx-auto px-margin-desktop mb-24">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-start">
+<!-- Basic Plan -->
+<div class="plan-card bg-pure-white border border-surface-variant p-unit*4 flex flex-col h-full transition-all duration-300">
+<div class="mb-8">
+<span class="font-label-bold text-label-bold bg-surface-gray px-3 py-1 rounded-full text-on-surface mb-4 inline-block">NBN READY</span>
+<h3 class="font-headline-lg text-headline-lg mb-1">Basic</h3>
+<p class="font-body-md text-on-surface-variant">Reliable speed for small offices.</p>
+</div>
+<div class="mb-8">
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg-mobile text-display-lg-mobile text-primary">$</span>
+<span class="font-display-lg text-display-lg text-primary">89</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/mo</span>
+</div>
+<p class="font-label-bold text-label-bold text-vibrant-red mt-2">100/40 Mbps</p>
+</div>
+<div class="space-y-4 mb-10 flex-grow">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-vibrant-red text-[20px]" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Standard Support (9-5)</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-vibrant-red text-[20px]" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Dynamic IP Address</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-vibrant-red text-[20px]" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Unlimited Data</span>
+</div>
+<div class="flex items-start gap-3 opacity-30">
+<span class="material-symbols-outlined text-[20px]" data-icon="block">block</span>
+<span class="font-body-md line-through">SLA Guaranteed Uptime</span>
+</div>
+</div>
+<button class="w-full py-4 bg-primary text-on-primary font-label-bold text-label-bold uppercase tracking-widest hover:bg-electric-purple transition-colors active:scale-[0.98]">
+                        Select Plan
+                    </button>
+</div>
+<!-- Pro Plan (Recommended) -->
+<div class="plan-card recommended-card bg-pure-white border border-surface-variant p-unit*4 flex flex-col h-full relative shadow-lg transform md:-translate-y-4">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-electric-purple text-pure-white px-4 py-1 font-label-bold text-label-bold uppercase tracking-tighter">
+                        Most Popular
+                    </div>
+<div class="mb-8">
+<div class="flex justify-between items-start">
+<span class="font-label-bold text-label-bold bg-surface-gray px-3 py-1 rounded-full text-on-surface mb-4 inline-block">SLA GUARANTEED</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-1">Pro</h3>
+<p class="font-body-md text-on-surface-variant">Advanced performance for growing teams.</p>
+</div>
+<div class="mb-8">
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg-mobile text-display-lg-mobile text-primary">$</span>
+<span class="font-display-lg text-display-lg text-primary">149</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/mo</span>
+</div>
+<p class="font-label-bold text-label-bold text-vibrant-red mt-2">250/100 Mbps</p>
+</div>
+<div class="space-y-4 mb-10 flex-grow">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-electric-purple text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md font-bold">Priority 24/7 Support</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-electric-purple text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md">Static IP included</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-electric-purple text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md">Unlimited Data</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-electric-purple text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md">99.95% Uptime SLA</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-electric-purple text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md">Cyber-Security Shield</span>
+</div>
+</div>
+<button class="w-full py-4 bg-vibrant-red text-pure-white font-label-bold text-label-bold uppercase tracking-widest hover:brightness-110 transition-all active:scale-[0.98]">
+                        Select Plan
+                    </button>
+</div>
+<!-- Elite Plan -->
+<div class="plan-card bg-pure-white border border-surface-variant p-unit*4 flex flex-col h-full transition-all duration-300">
+<div class="mb-8">
+<span class="font-label-bold text-label-bold bg-surface-gray px-3 py-1 rounded-full text-on-surface mb-4 inline-block">DIRECT FIBER</span>
+<h3 class="font-headline-lg text-headline-lg mb-1">Elite</h3>
+<p class="font-body-md text-on-surface-variant">Enterprise-grade dedicated bandwidth.</p>
+</div>
+<div class="mb-8">
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg-mobile text-display-lg-mobile text-primary">$</span>
+<span class="font-display-lg text-display-lg text-primary">299</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/mo</span>
+</div>
+<p class="font-label-bold text-label-bold text-vibrant-red mt-2">1000/1000 Mbps</p>
+</div>
+<div class="space-y-4 mb-10 flex-grow">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-vibrant-red text-[20px]" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Personal Account Manager</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-vibrant-red text-[20px]" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Multiple Static IPs (/29)</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-vibrant-red text-[20px]" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">99.99% Uptime SLA</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-vibrant-red text-[20px]" data-icon="check_circle">check_circle</span>
+<span class="font-body-md">Uncontended Bandwidth</span>
+</div>
+</div>
+<button class="w-full py-4 bg-primary text-on-primary font-label-bold text-label-bold uppercase tracking-widest hover:bg-electric-purple transition-colors active:scale-[0.98]">
+                        Select Plan
+                    </button>
+</div>
+</div>
+</section>
+<!-- Feature Comparison Teaser -->
+<section class="bg-surface-gray py-20 px-margin-desktop overflow-hidden">
+<div class="max-w-max-width mx-auto flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-1/2">
+<img class="w-full aspect-video object-cover shadow-xl border border-outline-variant" data-alt="A clean, high-tech server room with glowing blue and red fiber optic cables neatly organized in racks. The atmosphere is professional and sophisticated, with soft industrial lighting and a sense of extreme speed and data security. The visual style is modern corporate, emphasizing infrastructure excellence and high-contrast technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCadlVdrQW4s3wXffFkT5IHEHP_RUefM7B9fEWZsqqdP_Fhnzp0tmmzHhWISD3T5CG1xJMEp8Zj4L1HU3KCOI1tU0V3KLhB5WdqRMnapsYO6nbgNMH0RI_cc9JUJuoEaxwevv5xgSndjTy2MfXLXkGq9TJWEe3zFyolzD-eR7PfWJ4eUBySnTJlaUgMENqXWyB8rU7E9rRTCcTIQZD_CUPbOx2gu6g7aLQu6s8opdzO_3URG4wY9CJbUtKd2-MIxzdZczQauQmZbxFO"/>
+</div>
+<div class="md:w-1/2">
+<h2 class="font-headline-lg text-headline-lg mb-6">Why Business Fiber?</h2>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<div class="bg-pure-white p-2 flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-purple" data-icon="bolt">bolt</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold">Symmetric Speeds</h4>
+<p class="text-on-surface-variant font-body-md">Upload as fast as you download. Critical for cloud backups and video conferencing.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<div class="bg-pure-white p-2 flex items-center justify-center">
+<span class="material-symbols-outlined text-electric-purple" data-icon="verified_user">verified_user</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold">Enterprise Reliability</h4>
+<p class="text-on-surface-variant font-body-md">Our SLA guarantees uptime. If you go down, we pay you back. It's that simple.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full py-12 bg-surface-container-low border-t border-surface-variant">
+<div class="grid grid-cols-1 md:grid-cols-2 px-margin-desktop max-w-max-width mx-auto gap-gutter">
+<div class="flex flex-col gap-4">
+<span class="font-label-bold text-on-surface">FiberFlow Business ISP</span>
+<p class="font-label-md text-label-md text-on-surface-variant">© 2024 FiberFlow Business ISP. All rights reserved. SLA Guaranteed.</p>
+</div>
+<div class="flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-center">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">Critical Information Summary</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">Privacy Policy</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">Terms of Service</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">Support</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple card selection micro-interaction
+        document.querySelectorAll('.plan-card').forEach(card => {
+            card.addEventListener('click', function() {
+                document.querySelectorAll('.plan-card').forEach(c => {
+                    c.classList.remove('ring-4', 'ring-electric-purple/20');
+                });
+                this.classList.add('ring-4', 'ring-electric-purple/20');
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .transition-scale:active {
+            transform: scale(0.95);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#1a1c1c",
+                        "pure-white": "#FFFFFF",
+                        "secondary-container": "#e90812",
+                        "surface-gray": "#F5F5F5",
+                        "inverse-primary": "#c8c6c5",
+                        "surface-container-high": "#e8e8e8",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-surface-variant": "#444748",
+                        "tertiary-container": "#1f005f",
+                        "primary-container": "#1c1b1b",
+                        "outline": "#747878",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary-container": "#fffbff",
+                        "tertiary-fixed": "#e7deff",
+                        "on-surface": "#1a1c1c",
+                        "on-primary-fixed": "#1c1b1b",
+                        "surface-container": "#eeeeee",
+                        "surface-tint": "#5f5e5e",
+                        "background": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary-container": "#8c69ff",
+                        "on-secondary-fixed-variant": "#930006",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary-fixed-variant": "#474746",
+                        "secondary-fixed": "#ffdad5",
+                        "surface": "#f9f9f9",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#410001",
+                        "tertiary": "#000000",
+                        "outline-variant": "#c4c7c7",
+                        "tertiary-fixed-dim": "#cdbdff",
+                        "primary": "#000000",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "on-primary-container": "#858383",
+                        "electric-purple": "#4200B3",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#4e1ebe",
+                        "on-tertiary-fixed": "#1f005f",
+                        "surface-variant": "#e2e2e2",
+                        "deep-navy": "#0A0A0F",
+                        "surface-dim": "#dadada",
+                        "vibrant-red": "#E5000F",
+                        "secondary": "#bc000a",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "max-width": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Hanken Grotesk"],
+                        "label-bold": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky bg-pure-white border-b border-outline-variant z-50">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="font-display-lg text-headline-lg tracking-tighter text-on-surface">Velocity Enterprise</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-label-bold text-label-bold text-on-surface hover:text-vibrant-red transition-colors" href="#">Plans</a>
+<a class="font-label-bold text-label-bold text-on-surface hover:text-vibrant-red transition-colors" href="#">Support</a>
+<a class="font-label-bold text-label-bold text-vibrant-red font-bold border-b-2 border-vibrant-red pb-1" href="#">About</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="font-label-bold text-label-bold text-on-surface hover:text-vibrant-red transition-colors px-4 py-2">Login</button>
+<button class="bg-vibrant-red text-pure-white font-label-bold text-label-bold px-6 py-3 rounded-DEFAULT transition-transform active:scale-95">Check Address</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative bg-primary-container text-pure-white overflow-hidden py-32">
+<div class="absolute inset-0 opacity-20">
+<img class="w-full h-full object-cover" data-alt="A macro shot of vibrant fiber optic cables glowing with intense red and purple light against a dark, deep navy background. The image has a high-contrast, technical aesthetic representing high-speed enterprise data transfer. Soft bokeh highlights the complex network of transparent glass fibers in a professional, modern corporate style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMyvtHOgcR4ypJ0vZpsc5y3yJYB0S4nTCCOo62A2IlL8WWxpW0QumCp9farRk6b57E3pECpEJVGdeMD2usJSF4YmngDA9LnKd9mPru1wrAqGAV_KghOFvl43-MSiCgMCbOvA7uweRtn40IQx5yUvruUctDdv1Y72EGnySrYeK-r1jY6hARi22HfPSEmXiWr4Og2_N36Ncdm-OCUhQogIyAR-McUlUMfdaiBX2VKGXiAfXpnRnLvlt-lfYcaO51OLI5H75d3sanNiTk"/>
+</div>
+<div class="relative max-w-max-width mx-auto px-margin-desktop">
+<div class="max-w-3xl">
+<span class="inline-block bg-vibrant-red text-pure-white font-label-bold text-label-bold px-3 py-1 mb-6">THE BACKBONE OF ENTERPRISE</span>
+<h1 class="font-display-lg text-display-lg mb-8">Uncompromising speed. Engineered for scale.</h1>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-xl">
+                        Velocity Enterprise isn't just a provider. We are the architects of the Tier 1 global fiber backbone, delivering the physical infrastructure that powers the world's most demanding businesses.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Global Backbone Section -->
+<section class="py-24 bg-pure-white">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="flex-1">
+<h2 class="font-headline-lg text-headline-lg mb-6 text-on-surface">Tier 1 Global Network</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+                            Our network bypasses the public internet congestion. With owned submarine cables and strategic points of presence across 45 countries, we offer the lowest possible latency between your regional offices and global cloud hubs.
+                        </p>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<div class="font-display-lg text-headline-lg text-vibrant-red">99.999%</div>
+<div class="font-label-bold text-label-bold text-on-surface">UPTIME GUARANTEE</div>
+</div>
+<div>
+<div class="font-display-lg text-headline-lg text-electric-purple">400G+</div>
+<div class="font-label-bold text-label-bold text-on-surface">CORE CAPACITY</div>
+</div>
+</div>
+</div>
+<div class="flex-1 w-full h-[400px] bg-surface-gray border border-outline-variant relative overflow-hidden group">
+<img class="w-full h-full object-cover grayscale brightness-50 group-hover:scale-105 transition-transform duration-700" data-alt="A detailed digital map of the world presented in a minimalist high-contrast dark mode style. Connecting glowing red lines represent a global Tier 1 fiber optic backbone across continents. The aesthetic is clean, technical, and corporate, emphasizing global connectivity and strategic enterprise presence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTT7x-uM7qTaZfbsMWo2rmqXOyYSaRozp8gHENNTQEtEX866JEWUI3R_m9G4EH9FyDsKepFZtdoyJptYKTvjhzCFIdhcKbf2g611HbOG63c2pGgDdkmdsa1Ujt7ZLbpplQUe-h_NFZQqp6pcNNO79q2od7lcsQ4C5ONxIqSfbgTtKbHobwhlKDme58IzR7qYs2VvOinmfaK8bTOcvc2MEt8pEQwQGc6iXXYd1B-_4D5rBbdWmHRvBB6aWdFp7My9qCgK3BAC8ys_XB"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-vibrant-red" style="font-variation-settings: 'FILL' 1;">language</span>
+<span class="font-label-bold text-label-bold text-pure-white">Global Infrastructure Map</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Pillars: Bento Grid -->
+<section class="py-24 bg-surface-gray">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">Why Businesses Trust Velocity</h2>
+<div class="w-20 h-1 bg-vibrant-red"></div>
+</div>
+<div class="bento-grid">
+<!-- Card 1 -->
+<div class="col-span-12 md:col-span-7 bg-pure-white p-12 border border-outline-variant hover:border-vibrant-red transition-colors group">
+<span class="material-symbols-outlined text-vibrant-red mb-6 text-4xl">engineering</span>
+<h3 class="font-headline-md text-headline-md mb-4">Local Engineering Expertise</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            We don't outsource our support. Our locally-based NOC (Network Operations Center) is staffed by Tier 3 engineers 24/7/365. When you call, you speak to the technician who can actually fix the issue.
+                        </p>
+<ul class="space-y-3">
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-vibrant-red text-sm">check_circle</span>
+                                Dedicated Account Engineering
+                            </li>
+<li class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-vibrant-red text-sm">check_circle</span>
+                                On-site hardware replacement in &lt; 4 hours
+                            </li>
+</ul>
+</div>
+<!-- Card 2 -->
+<div class="col-span-12 md:col-span-5 bg-primary-container text-pure-white p-12 border border-outline flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-electric-purple mb-6 text-4xl">shield_with_heart</span>
+<h3 class="font-headline-md text-headline-md mb-4">SLA Guaranteed</h3>
+<p class="font-body-md text-body-md text-inverse-on-surface">
+                                Our Enterprise Service Level Agreement is industry-leading. We put our money where our fiber is.
+                            </p>
+</div>
+<button class="mt-8 border border-pure-white/20 hover:bg-pure-white/10 px-6 py-3 font-label-bold text-label-bold transition-colors">Download SLA Document</button>
+</div>
+<!-- Card 3 -->
+<div class="col-span-12 md:col-span-4 bg-pure-white p-8 border border-outline-variant text-center">
+<div class="w-16 h-16 bg-surface-gray rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-on-surface">router</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-2">Carrier Neutral</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Seamless integration with all major global data centers and IXPs.</p>
+</div>
+<!-- Card 4 -->
+<div class="col-span-12 md:col-span-4 bg-pure-white p-8 border border-outline-variant text-center">
+<div class="w-16 h-16 bg-surface-gray rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-on-surface">memory</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-2">Dark Fiber</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Maximum control for organizations requiring complete network sovereignty.</p>
+</div>
+<!-- Card 5 -->
+<div class="col-span-12 md:col-span-4 bg-pure-white p-8 border border-outline-variant text-center">
+<div class="w-16 h-16 bg-surface-gray rounded-full flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-on-surface">monitoring</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-2">Real-time Portals</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Full transparency into traffic, health, and latency via our Enterprise Portal.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Dark Contrast Section: Strategic Presence -->
+<section class="py-24 bg-on-background text-pure-white">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row-reverse items-center gap-16">
+<div class="flex-1">
+<h2 class="font-headline-lg text-headline-lg mb-6">Strategic Local Presence</h2>
+<p class="font-body-lg text-body-lg text-inverse-on-surface mb-8">
+                            We operate redundant hubs in every major business district across Australia and New Zealand. Our infrastructure is deep-buried and physically diverse, ensuring your connection survives even during major metropolitan civil works.
+                        </p>
+<div class="space-y-6">
+<div class="border-l-4 border-vibrant-red pl-6 py-2">
+<h4 class="font-label-bold text-label-bold mb-1">METRO-ETHERNET RING</h4>
+<p class="font-body-md text-body-md text-inverse-on-surface">Sub-5ms latency within urban CBDs.</p>
+</div>
+<div class="border-l-4 border-electric-purple pl-6 py-2">
+<h4 class="font-label-bold text-label-bold mb-1">DIVERSE BACKHAUL</h4>
+<p class="font-body-md text-body-md text-inverse-on-surface">No single point of failure between exchange and premises.</p>
+</div>
+</div>
+</div>
+<div class="flex-1">
+<img class="w-full h-[500px] object-cover border border-outline/30" data-alt="A low-angle high-contrast photograph of modern city skyscrapers in a financial district. The buildings are sharp glass and steel monoliths against a deep blue dusk sky. Thin glowing red lines subtly trace the architectural edges, symbolizing the hidden enterprise fiber network beneath the city. Professional corporate aesthetic with high-end architectural photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrNZflzS3dzOQkGxnau5MSG2hFJWAdDgVK2XDkJ8leuHzpsaqa4Ap8NjXSaexfMCGA3b-gUAPIXcYx6VUCqymqYPhAovtKzEAw7ulQgy0q09ydndEgCyJ58OsTy7kfT7sH-FFuVO2HKC7IuzhNiDgclXXIAp29fHAkLqYavZqvtN73INt--7jf7kFHrrHEOrHXHcy_dB0CqkkylTh5wqNtoKxK19uXANc5Vj6SntjHQ7Oq5juxF9p7gO_wJtYQolA_dkFa7hyMBRDs"/>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 bg-pure-white text-center">
+<div class="max-w-3xl mx-auto px-margin-mobile">
+<h2 class="font-display-lg text-headline-lg mb-8 text-on-surface">Ready to upgrade your infrastructure?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                    Validate your office location for a detailed feasibility report and specialized enterprise pricing.
+                </p>
+<div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+<div class="relative w-full md:w-96">
+<input class="w-full h-14 px-4 border border-outline focus:border-electric-purple focus:ring-1 focus:ring-electric-purple outline-none transition-all" placeholder="Enter business address..." type="text"/>
+</div>
+<button class="w-full md:w-auto bg-vibrant-red text-pure-white font-label-bold text-label-bold px-10 h-14 hover:shadow-lg transition-all active:scale-95">CHECK ADDRESS</button>
+</div>
+<div class="mt-8 flex items-center justify-center gap-6">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">verified</span>
+                        NBN Ready
+                    </span>
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">verified</span>
+                        SLA Guaranteed
+                    </span>
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">verified</span>
+                        ISO 27001 Certified
+                    </span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-background w-full py-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-max-width mx-auto">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md text-pure-white mb-4">Velocity Enterprise</div>
+<p class="text-inverse-on-surface font-body-md text-body-md opacity-70">
+                    High-performance fiber infrastructure for the modern enterprise.
+                </p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-pure-white font-label-bold text-label-bold mb-2">Company</h4>
+<a class="text-inverse-on-surface hover:text-vibrant-red transition-colors font-body-md text-body-md" href="#">About Us</a>
+<a class="text-inverse-on-surface hover:text-vibrant-red transition-colors font-body-md text-body-md" href="#">SLA</a>
+<a class="text-inverse-on-surface hover:text-vibrant-red transition-colors font-body-md text-body-md" href="#">Regulatory</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-pure-white font-label-bold text-label-bold mb-2">Support</h4>
+<a class="text-inverse-on-surface hover:text-vibrant-red transition-colors font-body-md text-body-md" href="#">Contact Support</a>
+<a class="text-inverse-on-surface hover:text-vibrant-red transition-colors font-body-md text-body-md" href="#">CIS Documentation</a>
+<a class="text-inverse-on-surface hover:text-vibrant-red transition-colors font-body-md text-body-md" href="#">Network Status</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-pure-white font-label-bold text-label-bold mb-2">Legal</h4>
+<a class="text-inverse-on-surface hover:text-vibrant-red transition-colors font-body-md text-body-md" href="#">Privacy Policy</a>
+<a class="text-inverse-on-surface hover:text-vibrant-red transition-colors font-body-md text-body-md" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="max-w-max-width mx-auto px-margin-desktop mt-12 pt-8 border-t border-pure-white/10">
+<p class="text-inverse-on-surface font-body-md text-body-md opacity-50 text-sm">
+                © 2024 Velocity Enterprise. High-performance fiber infrastructure.
+            </p>
+</div>
+</footer>
+<script>
+        // Simple micro-interactions
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.classList.add('scale-95');
+            });
+            button.addEventListener('mouseup', () => {
+                button.classList.remove('scale-95');
+            });
+        });
+
+        // Hover effect for the address validation input
+        const input = document.querySelector('input');
+        if(input) {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('ring-2', 'ring-electric-purple/20');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.classList.remove('ring-2', 'ring-electric-purple/20');
+            });
+        }
+    </script>
+</body></html>

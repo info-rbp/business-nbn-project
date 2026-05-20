@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Refer a Business | NBN Business</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#cdbdff",
+                    "on-surface-variant": "#444748",
+                    "secondary-fixed-dim": "#ffb4aa",
+                    "secondary-container": "#e90812",
+                    "surface-container-highest": "#e2e2e2",
+                    "deep-navy": "#0A0A0F",
+                    "surface-container": "#eeeeee",
+                    "outline": "#747878",
+                    "on-tertiary-fixed": "#1f005f",
+                    "tertiary-fixed": "#e7deff",
+                    "secondary": "#bc000a",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed": "#1c1b1b",
+                    "surface-dim": "#dadada",
+                    "surface-container-low": "#f3f3f3",
+                    "primary": "#000000",
+                    "on-tertiary-container": "#8c69ff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "inverse-surface": "#2f3131",
+                    "on-surface": "#1a1c1c",
+                    "pure-white": "#FFFFFF",
+                    "tertiary": "#000000",
+                    "outline-variant": "#c4c7c7",
+                    "on-tertiary-fixed-variant": "#4e1ebe",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#1f005f",
+                    "on-primary-container": "#858383",
+                    "surface-variant": "#e2e2e2",
+                    "secondary-fixed": "#ffdad5",
+                    "primary-container": "#1c1b1b",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#410001",
+                    "on-secondary-fixed-variant": "#930006",
+                    "on-primary-fixed-variant": "#474746",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#5f5e5e",
+                    "on-background": "#1a1c1c",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "surface-container-high": "#e8e8e8",
+                    "surface-gray": "#F5F5F5",
+                    "on-secondary-container": "#fffbff",
+                    "primary-fixed": "#e5e2e1",
+                    "electric-purple": "#4200B3",
+                    "on-secondary": "#ffffff",
+                    "background": "#f9f9f9",
+                    "surface-bright": "#f9f9f9",
+                    "inverse-primary": "#c8c6c5",
+                    "vibrant-red": "#E5000F",
+                    "surface": "#f9f9f9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "max-width": "1280px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px",
+                    "unit": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-bold": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "label-md": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Hanken Grotesk', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="bg-pure-white dark:bg-deep-navy border-b border-outline-variant dark:border-outline flex justify-between items-center px-4 md:px-margin-desktop h-16 w-full fixed top-0 z-50">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" data-icon="menu">menu</span>
+<span class="text-headline-md font-headline-md text-deep-navy dark:text-pure-white uppercase tracking-tighter">NBN Business</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-bold text-label-bold text-on-surface hover:text-electric-purple transition-colors" href="#">Home</a>
+<a class="font-label-bold text-label-bold text-on-surface hover:text-electric-purple transition-colors" href="#">Plans</a>
+<a class="font-label-bold text-label-bold text-on-surface hover:text-electric-purple transition-colors" href="#">Hardware</a>
+<a class="font-label-bold text-label-bold text-secondary font-bold hover:text-electric-purple transition-colors" href="#">Refer</a>
+</div>
+<button class="font-label-bold text-label-bold text-secondary dark:text-secondary border border-secondary px-6 py-2 hover:bg-secondary hover:text-white transition-all active:scale-95">LOGIN</button>
+</header>
+<main class="mt-16 pb-20 md:pb-0">
+<!-- Hero Section -->
+<section class="relative bg-deep-navy text-pure-white py-20 md:py-32 overflow-hidden">
+<div class="absolute inset-0 opacity-20 pointer-events-none">
+<img class="w-full h-full object-cover" data-alt="A sophisticated network infrastructure visualization featuring glowing fiber optic cables flowing through a dark, high-tech server room. The lighting is dominated by deep blues and vibrant electric purples, emphasizing speed and connectivity. The atmosphere is professional, corporate, and extremely modern, reflecting elite business-grade technology. Geometric light patterns suggest data transfer across a global enterprise network." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChp0iXqDMSbhf6Ih997Pq_EI9h7rWT2vhzHahNXdSDGgibtzADAUctDfHazxL6CuJBApjHkWbz0xsv0e1QCvoZxQAAftR__t2vuQTXMAO-LleoaEAYciQfwkmc2s7X5zH5oT-Qi1ZqJAiHXy0ttKlo_70qzxW03Knvb8RBezBT8h5hY1iXWjfP5KgC_RmniVswYtTvRLUaLOXRyCU_PmMd551AbKlCJXOlS1Im3wUNncicLUJImu3hDXIY_xAaL8E-veOSwUmhEaeW"/>
+</div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="max-w-3xl">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-6">Grow Together. Get Rewarded.</h1>
+<p class="font-body-lg text-body-lg text-surface-variant opacity-90 mb-10">Help your network scale with Australia's most reliable business NBN. Earn service credits for every successful business referral you bring to the NBN Business ecosystem.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-vibrant-red text-on-primary font-label-bold text-label-bold py-4 px-10 text-center hover:opacity-90 transition-all active:scale-95 shadow-lg" href="#refer-form">REFER A BUSINESS NOW</a>
+<a class="border border-pure-white text-pure-white font-label-bold text-label-bold py-4 px-10 text-center hover:bg-pure-white hover:text-deep-navy transition-all" href="#how-it-works">LEARN MORE</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Referral Steps -->
+<section class="py-20 bg-pure-white" id="how-it-works">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">How it Works</h2>
+<div class="w-20 h-1 bg-vibrant-red mx-auto"></div>
+</div>
+<div class="grid md:grid-cols-3 gap-gutter">
+<div class="p-8 border border-outline-variant hover:border-electric-purple transition-colors group">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center mb-6 group-hover:bg-electric-purple transition-colors">
+<span class="material-symbols-outlined text-deep-navy group-hover:text-pure-white" data-icon="share">share</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">1. Share Details</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Fill out the referral form below with your details and the business you are recommending.</p>
+</div>
+<div class="p-8 border border-outline-variant hover:border-electric-purple transition-colors group">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center mb-6 group-hover:bg-electric-purple transition-colors">
+<span class="material-symbols-outlined text-deep-navy group-hover:text-pure-white" data-icon="app_registration">app_registration</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">2. They Sign Up</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Our enterprise specialists will contact them to find the perfect high-speed business solution.</p>
+</div>
+<div class="p-8 border border-outline-variant hover:border-electric-purple transition-colors group">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center mb-6 group-hover:bg-electric-purple transition-colors">
+<span class="material-symbols-outlined text-deep-navy group-hover:text-pure-white" data-icon="card_giftcard">card_giftcard</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">3. Both Rewarded</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Once their service is active, credits are applied to both your accounts automatically.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Referral Form & Rewards Grid -->
+<section class="py-20 bg-surface-gray" id="refer-form">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid lg:grid-cols-2 gap-16 items-start">
+<!-- Form Side -->
+<div class="bg-pure-white p-8 md:p-12 shadow-sm border border-outline-variant">
+<h2 class="font-headline-lg text-headline-lg mb-8">Submit Referral</h2>
+<form class="space-y-6">
+<div class="grid md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold uppercase text-on-surface-variant">Your Name</label>
+<input class="w-full h-12 px-4 border border-outline-variant focus:border-electric-purple focus:ring-1 focus:ring-electric-purple outline-none transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold uppercase text-on-surface-variant">Your Business Email</label>
+<input class="w-full h-12 px-4 border border-outline-variant focus:border-electric-purple focus:ring-1 focus:ring-electric-purple outline-none transition-all" placeholder="john@company.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold uppercase text-on-surface-variant">Referral Business Name</label>
+<input class="w-full h-12 px-4 border border-outline-variant focus:border-electric-purple focus:ring-1 focus:ring-electric-purple outline-none transition-all" placeholder="Future Tech Solutions" type="text"/>
+</div>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold uppercase text-on-surface-variant">Contact Name</label>
+<input class="w-full h-12 px-4 border border-outline-variant focus:border-electric-purple focus:ring-1 focus:ring-electric-purple outline-none transition-all" placeholder="Jane Smith" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-bold text-label-bold uppercase text-on-surface-variant">Contact Phone/Email</label>
+<input class="w-full h-12 px-4 border border-outline-variant focus:border-electric-purple focus:ring-1 focus:ring-electric-purple outline-none transition-all" placeholder="jane@referral.com" type="text"/>
+</div>
+</div>
+<button class="w-full bg-vibrant-red text-on-primary font-label-bold text-label-bold py-4 hover:opacity-95 transition-all active:scale-[0.98]" type="submit">SUBMIT REFERRAL</button>
+</form>
+</div>
+<!-- Rewards Side -->
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-8">Reward Tiers</h2>
+<div class="space-y-4">
+<!-- Tier 1 -->
+<div class="flex items-center justify-between p-6 bg-pure-white border-l-4 border-vibrant-red shadow-sm">
+<div>
+<h4 class="font-label-bold text-label-bold text-vibrant-red uppercase mb-1">Small Business</h4>
+<p class="font-headline-md text-headline-md">Business NBN™ Plans</p>
+</div>
+<div class="text-right">
+<span class="font-display-lg-mobile text-display-lg-mobile text-deep-navy">$100</span>
+<p class="font-label-md text-label-md text-on-surface-variant">Credit</p>
+</div>
+</div>
+<!-- Tier 2 -->
+<div class="flex items-center justify-between p-6 bg-pure-white border-l-4 border-electric-purple shadow-sm">
+<div>
+<h4 class="font-label-bold text-label-bold text-electric-purple uppercase mb-1">Corporate</h4>
+<p class="font-headline-md text-headline-md">Enterprise Ethernet</p>
+</div>
+<div class="text-right">
+<span class="font-display-lg-mobile text-display-lg-mobile text-deep-navy">$250</span>
+<p class="font-label-md text-label-md text-on-surface-variant">Credit</p>
+</div>
+</div>
+<!-- Tier 3 -->
+<div class="flex items-center justify-between p-6 bg-deep-navy text-pure-white border-l-4 border-surface-variant shadow-sm">
+<div>
+<h4 class="font-label-bold text-label-bold text-outline-variant uppercase mb-1">Elite Partner</h4>
+<p class="font-headline-md text-headline-md">Private Fiber / Multi-Site</p>
+</div>
+<div class="text-right">
+<span class="font-display-lg-mobile text-display-lg-mobile text-pure-white">$500+</span>
+<p class="font-label-md text-label-md text-surface-variant">Credit</p>
+</div>
+</div>
+</div>
+<div class="mt-12 p-8 bg-surface-container rounded-lg">
+<h4 class="font-headline-md text-headline-md mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="info">info</span>
+                                Partner Program
+                            </h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Are you an IT Consultant or Managed Service Provider? Join our formal Channel Partner program for recurring commissions and dedicated support.</p>
+<a class="text-secondary font-label-bold text-label-bold hover:underline flex items-center gap-1" href="#">
+                                VIEW PARTNER PORTAL <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ / Terms -->
+<section class="py-20 bg-pure-white">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="max-w-3xl">
+<h2 class="font-headline-lg text-headline-lg mb-8">Eligibility &amp; Terms</h2>
+<div class="space-y-8">
+<div>
+<h5 class="font-label-bold text-label-bold mb-2">When do I receive my credit?</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">Credits are applied to your next billing cycle once the referred business has completed 30 days of active service on a qualifying plan.</p>
+</div>
+<div>
+<h5 class="font-label-bold text-label-bold mb-2">Is there a limit to how many I can refer?</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">No. You can refer as many businesses as you like. If your credit balance exceeds your monthly bill, it will roll over to the following month.</p>
+</div>
+<div class="pt-8 border-t border-outline-variant">
+<p class="text-[12px] leading-relaxed text-outline">
+                                *Terms and conditions apply. Referral must be a new business customer who has not held an active account with NBN Business Solutions in the last 12 months. Credit amounts are determined by the plan type selected by the referred party at the time of activation. Credits are non-transferable and cannot be exchanged for cash. NBN Business Solutions reserves the right to modify or terminate this program at any time without prior notice.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-navy dark:bg-black flex flex-col gap-gutter p-margin-mobile md:px-margin-desktop py-16 w-full mt-auto mb-20 md:mb-0">
+<div class="max-w-max-width mx-auto w-full grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<span class="font-headline-md text-pure-white text-headline-md block mb-6 uppercase tracking-tighter">NBN Business</span>
+<p class="text-surface-variant opacity-70 font-body-md text-body-md">Enterprise-grade connectivity solutions for Australia's growing businesses.</p>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-pure-white font-label-bold text-label-bold uppercase mb-2">Product</span>
+<a class="text-surface-variant opacity-70 font-label-md text-label-md hover:text-vibrant-red transition-all" href="#">Business NBN</a>
+<a class="text-surface-variant opacity-70 font-label-md text-label-md hover:text-vibrant-red transition-all" href="#">Enterprise Ethernet</a>
+<a class="text-surface-variant opacity-70 font-label-md text-label-md hover:text-vibrant-red transition-all" href="#">Business Fiber</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-pure-white font-label-bold text-label-bold uppercase mb-2">Support</span>
+<a class="text-surface-variant opacity-70 font-label-md text-label-md hover:text-vibrant-red transition-all" href="#">Technical Support</a>
+<a class="text-surface-variant opacity-70 font-label-md text-label-md hover:text-vibrant-red transition-all" href="#">Service Status</a>
+<a class="text-surface-variant opacity-70 font-label-md text-label-md hover:text-vibrant-red transition-all" href="#">Contact Us</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="text-pure-white font-label-bold text-label-bold uppercase mb-2">Legal</span>
+<a class="text-surface-variant opacity-70 font-label-md text-label-md hover:text-vibrant-red transition-all" href="#">Critical Information Summaries</a>
+<a class="text-surface-variant opacity-70 font-label-md text-label-md hover:text-vibrant-red transition-all" href="#">Privacy Policy</a>
+<a class="text-surface-variant opacity-70 font-label-md text-label-md hover:text-vibrant-red transition-all" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="max-w-max-width mx-auto w-full pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between gap-4">
+<span class="text-surface-variant opacity-70 font-label-md text-label-md">© 2024 NBN Business Solutions. All rights reserved.</span>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-pure-white hover:text-vibrant-red cursor-pointer" data-icon="language">language</span>
+<span class="material-symbols-outlined text-pure-white hover:text-vibrant-red cursor-pointer" data-icon="hub">hub</span>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-2 bg-pure-white dark:bg-deep-navy border-t border-outline-variant dark:border-outline shadow-lg rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant hover:bg-surface-container-low transition-colors px-4" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant hover:bg-surface-container-low transition-colors px-4" href="#">
+<span class="material-symbols-outlined" data-icon="speed">speed</span>
+<span class="font-label-md text-label-md">Plans</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant hover:bg-surface-container-low transition-colors px-4" href="#">
+<span class="material-symbols-outlined" data-icon="router">router</span>
+<span class="font-label-md text-label-md">Hardware</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim font-bold hover:bg-surface-container-low transition-colors px-4" href="#">
+<span class="material-symbols-outlined" data-icon="diversity_3" style="font-variation-settings: 'FILL' 1;">diversity_3</span>
+<span class="font-label-md text-label-md">Refer</span>
+</a>
+</nav>
+<script>
+        // Form submission micro-interaction
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'SENDING...';
+            btn.style.opacity = '0.7';
+            
+            setTimeout(() => {
+                btn.innerText = 'REFERRAL SENT';
+                btn.style.backgroundColor = '#4200B3'; // Electric Purple for success
+                btn.style.opacity = '1';
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = '';
+                    e.target.reset();
+                }, 3000);
+            }, 1500);
+        });
+
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>

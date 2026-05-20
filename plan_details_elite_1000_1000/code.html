@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c4c7c7",
+                    "pure-white": "#FFFFFF",
+                    "on-secondary-fixed-variant": "#930006",
+                    "inverse-on-surface": "#f1f1f1",
+                    "primary": "#000000",
+                    "secondary-fixed": "#ffdad5",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#e90812",
+                    "on-surface": "#1a1c1c",
+                    "on-primary-container": "#858383",
+                    "background": "#f9f9f9",
+                    "surface-dim": "#dadada",
+                    "on-background": "#1a1c1c",
+                    "on-surface-variant": "#444748",
+                    "on-primary-fixed": "#1c1b1b",
+                    "primary-container": "#1c1b1b",
+                    "tertiary-fixed-dim": "#cdbdff",
+                    "secondary-fixed-dim": "#ffb4aa",
+                    "on-error": "#ffffff",
+                    "surface": "#f9f9f9",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed": "#1f005f",
+                    "on-primary-fixed-variant": "#474746",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#5f5e5e",
+                    "surface-container-highest": "#e2e2e2",
+                    "electric-purple": "#4200B3",
+                    "surface-container": "#eeeeee",
+                    "inverse-primary": "#c8c6c5",
+                    "tertiary-container": "#1f005f",
+                    "secondary": "#bc000a",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#e5e2e1",
+                    "on-secondary-container": "#fffbff",
+                    "vibrant-red": "#E5000F",
+                    "deep-navy": "#0A0A0F",
+                    "outline": "#747878",
+                    "surface-variant": "#e2e2e2",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#f3f3f3",
+                    "surface-gray": "#F5F5F5",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#2f3131",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-secondary-fixed": "#410001",
+                    "surface-container-high": "#e8e8e8",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#e7deff",
+                    "tertiary": "#000000",
+                    "on-tertiary-container": "#8c69ff",
+                    "surface-bright": "#f9f9f9",
+                    "on-tertiary-fixed-variant": "#4e1ebe"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "max-width": "1280px",
+                    "margin-desktop": "64px",
+                    "unit": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Hanken Grotesk"],
+                    "label-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "label-bold": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Hanken Grotesk', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .bg-mesh {
+            background-color: #ffffff;
+            background-image: radial-gradient(at 0% 0%, rgba(229, 0, 15, 0.05) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(66, 0, 179, 0.05) 0px, transparent 50%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface selection:bg-vibrant-red selection:text-pure-white">
+<!-- Top Navigation Anchor -->
+<header class="w-full top-0 sticky z-50 bg-pure-white border-b border-surface-variant">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="flex items-center gap-2 cursor-pointer transition-transform active:scale-95">
+<span class="material-symbols-outlined text-vibrant-red font-bold text-3xl">fiber_smart_record</span>
+<h1 class="font-display-lg text-vibrant-red tracking-tighter text-2xl md:text-3xl">FiberFlow Business</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-vibrant-red font-bold font-label-md text-label-md hover:text-electric-purple transition-colors" href="#">Elite Plan</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-electric-purple transition-colors" href="#">Infrastructure</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-electric-purple transition-colors" href="#">SLA</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-electric-purple transition-colors" href="#">Support</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer transition-transform active:scale-95" data-icon="help">help</span>
+<button class="bg-vibrant-red text-pure-white px-6 py-2 font-label-bold text-label-bold rounded shadow-sm hover:opacity-90 transition-all">Portal</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-mesh py-20 md:py-32 border-b border-surface-variant">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="z-10">
+<div class="inline-flex items-center gap-2 bg-surface-gray border border-outline-variant px-3 py-1 mb-6 rounded-full">
+<span class="w-2 h-2 bg-vibrant-red rounded-full animate-pulse"></span>
+<span class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Enterprise Exclusive</span>
+</div>
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">
+                        The Elite <span class="text-vibrant-red">1000</span> Symmetric
+                    </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                        Unleash the full potential of your business with 1Gbps upload and download speeds. Powered by Velocity Enterprise, designed for mission-critical operations.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-vibrant-red text-pure-white px-10 py-5 font-headline-md text-headline-md rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 active:scale-95">
+                            Select Elite Plan
+                        </button>
+<button class="border-2 border-primary text-primary px-10 py-5 font-headline-md text-headline-md rounded-lg hover:bg-primary hover:text-pure-white transition-all active:scale-95">
+                            Speak to Sales
+                        </button>
+</div>
+<div class="mt-8 flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-vibrant-red" data-icon="verified_user">verified_user</span>
+<span class="font-label-bold text-label-bold">99.99% SLA</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-vibrant-red" data-icon="rocket_launch">rocket_launch</span>
+<span class="font-label-bold text-label-bold">Uncontended</span>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-electric-purple/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-10 -right-10 w-60 h-60 bg-vibrant-red/10 rounded-full blur-3xl"></div>
+<div class="relative bg-pure-white border border-outline-variant p-2 rounded-xl shadow-2xl overflow-hidden">
+<img alt="Business technology hub" class="w-full h-full object-cover rounded-lg" data-alt="A macro photograph of high-end fiber optic cables glowing with a soft red and purple light against a deep navy blue background. The lighting is sharp and cinematic, highlighting the precision of the infrastructure. The atmosphere is professional, tech-focused, and high-performance, fitting a corporate ISP landing page with a minimalist and sophisticated aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhZbsAjZ4ANnwJaA8wnyr6q6hu2kISrqGC4eN-8l1Y6_uIalgSPJo4jOs_w6ypTBOd6oPN9KzqxjZ0FSU-XdzaHeRo2JSFFSHJfUoEjV8hm5ojOV08UX1JZpDelMhV4LMTOr8O08VwvAe4jb4v219nEQDez1gG1pI-RmBXKRj1-JJWVCivGYLUnbb_Uhsnf_1V-jvLK-0h0ZqHeYrnCqfUiQLbP98pAy7XU47BQpt3ek7V7epGDZ5BhOF_bE66JBWpfKJBiv4pMPog"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+<div>
+<p class="text-pure-white/80 font-label-md text-label-md">Tier 1 Infrastructure</p>
+<p class="text-pure-white font-headline-md text-headline-md">1000/1000 Mbps</p>
+</div>
+<div class="bg-vibrant-red text-pure-white px-4 py-2 rounded font-label-bold text-label-bold">
+                                $299/mo
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Bento Grid -->
+<section class="py-20 md:py-32 bg-pure-white">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4">Unrivaled Power, Built for Scale</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Engineered for data-heavy environments, remote teams, and server-side hosting.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-gutter h-auto md:h-[600px]">
+<!-- Large Card: Symmetric Speed -->
+<div class="md:col-span-2 md:row-span-2 bg-surface-gray border border-outline-variant p-10 flex flex-col justify-between group hover:border-vibrant-red transition-all cursor-default">
+<div>
+<span class="material-symbols-outlined text-vibrant-red text-5xl mb-6" data-icon="speed">speed</span>
+<h4 class="font-headline-lg text-headline-lg mb-4">Symmetric Performance</h4>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">Equal download and upload speeds ensure your video calls are crystal clear, your backups are lightning-fast, and your cloud apps never lag.</p>
+</div>
+<div class="flex items-end gap-1">
+<span class="text-9xl font-extrabold text-primary leading-none">1</span>
+<div class="flex flex-col">
+<span class="text-4xl font-bold text-vibrant-red">Gbps</span>
+<span class="text-sm font-label-bold text-on-surface-variant uppercase tracking-tighter">Guaranteed</span>
+</div>
+</div>
+</div>
+<!-- Small Card: SLA -->
+<div class="bg-pure-white border border-outline-variant p-8 flex flex-col justify-between hover:border-electric-purple transition-all">
+<span class="material-symbols-outlined text-electric-purple text-3xl" data-icon="verified">verified</span>
+<div>
+<h5 class="font-headline-md text-headline-md mb-2">99.99% Uptime</h5>
+<p class="font-label-md text-label-md text-on-surface-variant">Our service level agreement ensures your business stays online 24/7/365 with proactive monitoring.</p>
+</div>
+</div>
+<!-- Small Card: IPs -->
+<div class="bg-primary text-pure-white p-8 flex flex-col justify-between hover:bg-on-surface-variant transition-all">
+<span class="material-symbols-outlined text-pure-white text-3xl" data-icon="lan">lan</span>
+<div>
+<h5 class="font-headline-md text-headline-md mb-2">/29 Static IP Block</h5>
+<p class="font-label-md text-label-md text-white/70">Multiple static IPs included for hosting, VPNs, and dedicated infrastructure needs.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Deep Dive -->
+<section class="py-20 bg-surface-gray">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<img alt="Dedicated Account Manager" class="rounded-lg shadow-xl border border-outline-variant" data-alt="A portrait of a professional IT consultant in a high-tech corporate office setting. The person is focused and friendly, surrounded by modern workstations and subtle glowing network equipment in the background. The aesthetic is clean, well-lit, and conveys a sense of premium service and expert support. The color palette features whites, grays, and professional navy tones with red accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxTzyrZ99ou99WvD6T96rrdM33VMMKte2wK-g9hkzkPfMtDzq9Eepn-Jher7sNSuquVOK9Drt4h3PSbkql3FcJZNVNzcgkfI4xoBIqtbcw30n-XYl3ZI_tId8ARMxfTFPJn2wmG4Ri-Uw9AWLmPB_GH5wBP6ArOcUI5r8fxVrB1AWB0S7fMDi0sL7vFbUsVcL8571-gH5DIcblUxi9pJGqFEUowK6wKAXMwbzoaD-bRREI0zpf0_FjXN0E7QgdvfFpbQ8Va9FiZHo9"/>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-8">Personal Support, No Queues.</h3>
+<div class="space-y-10">
+<div class="flex gap-6">
+<div class="w-12 h-12 shrink-0 bg-vibrant-red/10 text-vibrant-red rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="person_check">person_check</span>
+</div>
+<div>
+<h6 class="font-headline-md text-headline-md mb-2">Dedicated Account Manager</h6>
+<p class="font-body-md text-body-md text-on-surface-variant">A single point of contact who understands your business infrastructure and growth roadmap.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 shrink-0 bg-electric-purple/10 text-electric-purple rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+</div>
+<div>
+<h6 class="font-headline-md text-headline-md mb-2">Uncontended Bandwidth</h6>
+<p class="font-body-md text-body-md text-on-surface-variant">Private throughput for your site. Your speeds aren't shared with neighbors during peak hours.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 shrink-0 bg-primary/10 text-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+</div>
+<div>
+<h6 class="font-headline-md text-headline-md mb-2">Enterprise Response Time</h6>
+<p class="font-body-md text-body-md text-on-surface-variant">4-hour business-day restoration target. We treat your connectivity as the lifeline of your operation.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-20 md:py-32 bg-deep-navy text-pure-white overflow-hidden relative">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute top-0 right-0 w-full h-full transform translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(circle,rgba(229,0,15,1)_0%,transparent_70%)]"></div>
+</div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
+<h3 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-8">Ready for Velocity?</h3>
+<div class="max-w-2xl mx-auto bg-pure-white/5 border border-pure-white/10 p-10 rounded-2xl backdrop-blur-md mb-12">
+<p class="font-label-bold text-label-bold text-vibrant-red uppercase tracking-widest mb-4">Elite Business Plan</p>
+<div class="flex justify-center items-end gap-2 mb-8">
+<span class="text-4xl font-bold">$</span>
+<span class="text-8xl font-extrabold leading-none">299</span>
+<span class="text-2xl font-medium text-white/60 mb-2">/mo</span>
+</div>
+<ul class="text-left space-y-4 mb-10 max-w-sm mx-auto">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-vibrant-red text-sm" data-icon="check_circle">check_circle</span> 1000/1000 Mbps Symmetric</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-vibrant-red text-sm" data-icon="check_circle">check_circle</span> 99.99% Uptime Guarantee</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-vibrant-red text-sm" data-icon="check_circle">check_circle</span> 1:1 Contention Ratio</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-vibrant-red text-sm" data-icon="check_circle">check_circle</span> /29 Static IP Block</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-vibrant-red text-sm" data-icon="check_circle">check_circle</span> Personal Account Manager</li>
+</ul>
+<button class="w-full bg-vibrant-red text-pure-white py-6 rounded-lg font-headline-md text-headline-md hover:scale-[1.02] transition-transform active:scale-95 shadow-xl shadow-vibrant-red/20">
+                        Choose Elite Plan
+                    </button>
+<p class="mt-4 text-white/40 font-label-md text-label-md">No hidden setup fees on 24-month contracts.</p>
+</div>
+<a class="text-white hover:text-vibrant-red transition-colors flex items-center justify-center gap-2 font-label-bold text-label-bold" href="#">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+                    Download Critical Information Summary (CIS)
+                </a>
+</div>
+</section>
+</main>
+<!-- Footer Anchor -->
+<footer class="w-full py-12 bg-surface-container-low border-t border-surface-variant">
+<div class="grid grid-cols-1 md:grid-cols-2 px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto gap-gutter">
+<div class="flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary font-bold text-2xl">fiber_smart_record</span>
+<h4 class="font-label-bold text-on-surface">FiberFlow Business</h4>
+</div>
+<p class="text-on-surface-variant font-label-md text-label-md max-w-sm">
+                        High-performance business connectivity delivered over Australia's premier fiber infrastructure. SLA guaranteed.
+                    </p>
+</div>
+<p class="mt-12 text-on-surface-variant font-label-md text-label-md opacity-60">
+                    © 2024 FiberFlow Business ISP. All rights reserved. SLA Guaranteed.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<span class="font-label-bold text-on-surface uppercase tracking-widest text-xs">Policy</span>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-vibrant-red underline transition-opacity" href="#">Critical Information Summary</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-opacity" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-opacity" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-bold text-on-surface uppercase tracking-widest text-xs">Resources</span>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-opacity" href="#">Support</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-opacity" href="#">Network Status</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-opacity" href="#">Contact Sales</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for the plan card hover effect
+        document.querySelectorAll('section button').forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                // Potential for subtle sound or extra animation
+            });
+        });
+
+        // Simple smooth scroll behavior (standard but useful)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>

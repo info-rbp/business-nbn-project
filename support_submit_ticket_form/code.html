@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Submit Support Ticket | Velocity Enterprise</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#e5e2e1",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#bc000a",
+                    "vibrant-red": "#E5000F",
+                    "surface-dim": "#dadada",
+                    "deep-navy": "#0A0A0F",
+                    "surface-variant": "#e2e2e2",
+                    "on-tertiary-fixed": "#1f005f",
+                    "on-tertiary-fixed-variant": "#4e1ebe",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#858383",
+                    "electric-purple": "#4200B3",
+                    "secondary-fixed-dim": "#ffb4aa",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "primary": "#000000",
+                    "tertiary-fixed-dim": "#cdbdff",
+                    "tertiary": "#000000",
+                    "outline-variant": "#c4c7c7",
+                    "on-secondary-fixed": "#410001",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#f9f9f9",
+                    "secondary-fixed": "#ffdad5",
+                    "surface-bright": "#f9f9f9",
+                    "on-primary-fixed-variant": "#474746",
+                    "surface-container-low": "#f3f3f3",
+                    "on-tertiary-container": "#8c69ff",
+                    "on-secondary-fixed-variant": "#930006",
+                    "surface-container-highest": "#e2e2e2",
+                    "background": "#f9f9f9",
+                    "surface-tint": "#5f5e5e",
+                    "surface-container": "#eeeeee",
+                    "on-primary-fixed": "#1c1b1b",
+                    "on-surface": "#1a1c1c",
+                    "tertiary-fixed": "#e7deff",
+                    "on-secondary-container": "#fffbff",
+                    "inverse-surface": "#2f3131",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "outline": "#747878",
+                    "tertiary-container": "#1f005f",
+                    "primary-container": "#1c1b1b",
+                    "on-surface-variant": "#444748",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-container-high": "#e8e8e8",
+                    "on-primary": "#ffffff",
+                    "surface-gray": "#F5F5F5",
+                    "inverse-primary": "#c8c6c5",
+                    "secondary-container": "#e90812",
+                    "pure-white": "#FFFFFF",
+                    "on-background": "#1a1c1c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px",
+                    "max-width": "1280px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Hanken Grotesk"],
+                    "label-md": ["Hanken Grotesk"],
+                    "label-bold": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Hanken Grotesk', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Custom focus ring for form elements */
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #4200B3 !important;
+            box-shadow: 0 0 0 1px #4200B3;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="bg-pure-white dark:bg-deep-navy fixed top-0 w-full z-50 border-b border-outline-variant transition-opacity duration-200">
+<div class="flex justify-between items-center h-16 px-4">
+<div class="flex items-center gap-4">
+<button class="hover:opacity-80 transition-opacity duration-200">
+<span class="material-symbols-outlined text-primary dark:text-pure-white" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md-mobile text-primary dark:text-pure-white">Support Ticket</h1>
+</div>
+<div class="w-10"></div> <!-- Spacer for symmetry -->
+</div>
+</header>
+<main class="pt-24 px-4 md:px-margin-desktop max-w-screen-xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Form Content -->
+<div class="lg:col-span-8">
+<section class="mb-8">
+<h2 class="font-headline-lg text-headline-lg-mobile text-primary mb-2">Technical Support Ticket</h2>
+<p class="font-body-md text-on-surface-variant">Provide details about your technical issue. Our enterprise engineers will prioritize your request based on the selected SLA tier.</p>
+</section>
+<form class="space-y-6" id="support-form">
+<!-- Ticket Subject -->
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-label-bold text-primary" for="subject">Ticket Subject</label>
+<input class="h-12 px-4 border border-outline rounded-DEFAULT bg-pure-white font-body-md placeholder:text-outline focus:ring-1 focus:ring-electric-purple transition-all" id="subject" name="subject" placeholder="e.g., Fiber link down in Sector 4" type="text"/>
+</div>
+<!-- Priority Level & Contact Method (Split Row) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-label-bold text-primary" for="priority">Priority Level</label>
+<div class="relative">
+<select class="appearance-none h-12 w-full px-4 border border-outline rounded-DEFAULT bg-pure-white font-body-md focus:ring-1 focus:ring-electric-purple transition-all" id="priority" name="priority">
+<option value="low">Low - General Inquiry</option>
+<option value="medium">Medium - Minor Performance Issue</option>
+<option value="high">High - Degraded Service</option>
+<option value="critical">Critical - Total Service Outage</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-3 pointer-events-none text-outline" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-label-bold text-primary">Contact Method Preference</label>
+<div class="flex h-12 border border-outline rounded-DEFAULT bg-surface-gray overflow-hidden p-1">
+<button class="flex-1 flex items-center justify-center gap-2 rounded-DEFAULT bg-pure-white text-primary font-label-md shadow-sm transition-all" id="btn-email" onclick="setContact('email')" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span> Email
+                                </button>
+<button class="flex-1 flex items-center justify-center gap-2 rounded-DEFAULT text-on-surface-variant font-label-md transition-all" id="btn-phone" onclick="setContact('phone')" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="call">call</span> Phone
+                                </button>
+</div>
+<input id="contact_pref" name="contact_pref" type="hidden" value="email"/>
+</div>
+</div>
+<!-- Detailed Description -->
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-label-bold text-primary" for="description">Detailed Description</label>
+<textarea class="p-4 border border-outline rounded-DEFAULT bg-pure-white font-body-md placeholder:text-outline focus:ring-1 focus:ring-electric-purple transition-all resize-none" id="description" name="description" placeholder="Describe the steps to reproduce the issue and any troubleshooting already performed..." rows="6"></textarea>
+</div>
+<!-- Attachment Upload -->
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-label-bold text-primary">Attachment (Screenshots or Logs)</label>
+<div class="border-2 border-dashed border-outline-variant rounded-DEFAULT p-8 flex flex-col items-center justify-center bg-surface-container-lowest hover:bg-surface-gray transition-colors cursor-pointer group" onclick="document.getElementById('file-upload').click()">
+<input class="hidden" id="file-upload" multiple="" type="file"/>
+<span class="material-symbols-outlined text-[48px] text-electric-purple mb-2 group-hover:scale-110 transition-transform" data-icon="cloud_upload">cloud_upload</span>
+<p class="font-body-md text-primary font-bold">Click to upload or drag and drop</p>
+<p class="font-label-md text-on-surface-variant">PDF, PNG, JPG, or LOG files (max 10MB)</p>
+</div>
+</div>
+<!-- Submit Button -->
+<div class="pt-4">
+<button class="w-full h-14 bg-vibrant-red text-pure-white font-headline-md rounded-DEFAULT flex items-center justify-center gap-3 hover:opacity-90 active:scale-[0.98] transition-all shadow-md" type="submit">
+                            SUBMIT TICKET
+                            <span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Right Column: Sidebar Info -->
+<div class="lg:col-span-4 space-y-6">
+<!-- SLA Information Card -->
+<div class="bg-surface-container border border-outline-variant p-6 rounded-DEFAULT">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-electric-purple" data-icon="verified_user">verified_user</span>
+<h3 class="font-label-bold text-label-bold text-primary">SLA RESPONSE TIMES</h3>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center border-b border-outline-variant pb-2">
+<span class="font-body-md text-on-surface-variant">Critical (P1)</span>
+<span class="font-label-bold text-vibrant-red">2 Hours</span>
+</div>
+<div class="flex justify-between items-center border-b border-outline-variant pb-2">
+<span class="font-body-md text-on-surface-variant">High (P2)</span>
+<span class="font-label-bold text-primary">4 Hours</span>
+</div>
+<div class="flex justify-between items-center border-b border-outline-variant pb-2">
+<span class="font-body-md text-on-surface-variant">Medium (P3)</span>
+<span class="font-label-bold text-primary">8 Hours</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-on-surface-variant">Low (P4)</span>
+<span class="font-label-bold text-primary">24 Hours</span>
+</div>
+</div>
+<div class="mt-6 p-4 bg-pure-white border-l-4 border-vibrant-red">
+<p class="font-label-md text-on-surface-variant italic">"SLA guaranteed for all Enterprise and Business Premium clients."</p>
+</div>
+</div>
+<!-- Contextual Visual -->
+<div class="relative overflow-hidden rounded-DEFAULT aspect-video lg:aspect-square bg-deep-navy">
+<img alt="Server room lighting" class="w-full h-full object-cover opacity-60" data-alt="A high-performance enterprise server room filled with racks of glowing fiber optic networking equipment. The lighting is moody and professional, dominated by deep navy tones and sharp, vibrant red LED status indicators. The scene conveys a sense of extreme speed, reliability, and state-of-the-art infrastructure in a corporate ISP environment. Minimalist and high-contrast aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQFT1Z1isyNkCB3efulRYCrIdnfSFiCO4Laz8AOQKr6G0oIF6Fs4E8MVmWkS48odAi5YswaQw67e3DutVte8OU_2SZ7S0s0Qir2cS5utCgboUcB3dlXBv55EO97oR_x3myzTAKaBI-94xbL5ty4A5jNKLBia4Zysqyt5hJ_dcGUrAIM7Z2MNP3oxlrJS-LWmnxQf2UVJRuWPfiN9dFFN1Pf_Wyj1W4Uq3G0dWPV1tGXlNyt3U7AT-HPfIED_o1Cv12xvseZ_sKOmqY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-navy via-transparent to-transparent flex flex-col justify-end p-6">
+<p class="font-headline-md text-pure-white">Expert Network Support</p>
+<p class="font-body-md text-outline-variant">Direct access to L3 engineers 24/7/365.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-20 pb-safe px-2 bg-pure-white dark:bg-deep-navy border-t border-outline-variant z-50">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-all scale-95 active:scale-90 p-2" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</a>
+<!-- Network -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-all scale-95 active:scale-90 p-2" href="#">
+<span class="material-symbols-outlined" data-icon="router">router</span>
+<span class="font-label-md text-label-md">Network</span>
+</a>
+<!-- Tickets -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-low transition-all scale-95 active:scale-90 p-2" href="#">
+<span class="material-symbols-outlined" data-icon="confirmation_number">confirmation_number</span>
+<span class="font-label-md text-label-md">Tickets</span>
+</a>
+<!-- Support (Active) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1 transition-all scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+<span class="font-label-md text-label-md">Support</span>
+</a>
+</nav>
+<script>
+        function setContact(method) {
+            const btnEmail = document.getElementById('btn-email');
+            const btnPhone = document.getElementById('btn-phone');
+            const hiddenInput = document.getElementById('contact_pref');
+            
+            if (method === 'email') {
+                btnEmail.className = 'flex-1 flex items-center justify-center gap-2 rounded-DEFAULT bg-pure-white text-primary font-label-md shadow-sm transition-all';
+                btnPhone.className = 'flex-1 flex items-center justify-center gap-2 rounded-DEFAULT text-on-surface-variant font-label-md transition-all';
+                hiddenInput.value = 'email';
+            } else {
+                btnPhone.className = 'flex-1 flex items-center justify-center gap-2 rounded-DEFAULT bg-pure-white text-primary font-label-md shadow-sm transition-all';
+                btnEmail.className = 'flex-1 flex items-center justify-center gap-2 rounded-DEFAULT text-on-surface-variant font-label-md transition-all';
+                hiddenInput.value = 'phone';
+            }
+        }
+
+        // Simple form submission micro-interaction
+        document.getElementById('support-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const originalContent = btn.innerHTML;
+            
+            btn.disabled = true;
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin" data-icon="progress_activity">progress_activity</span> Processing...';
+            
+            setTimeout(() => {
+                btn.innerHTML = '<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span> TICKET CREATED';
+                btn.classList.remove('bg-vibrant-red');
+                btn.classList.add('bg-electric-purple');
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.classList.remove('bg-electric-purple');
+                    btn.classList.add('bg-vibrant-red');
+                    btn.disabled = false;
+                    e.target.reset();
+                    setContact('email');
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+</body></html>

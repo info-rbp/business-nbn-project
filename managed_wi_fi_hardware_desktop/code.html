@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .perspective-text {
+            transform: perspective(1000px) rotateX(2deg);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid #E0E0E0;
+        }
+        .gradient-mesh {
+            background-color: #f9f9f9;
+            background-image: radial-gradient(at 0% 0%, #ffffff 0, transparent 50%), radial-gradient(at 100% 0%, #F5F5F5 0, transparent 50%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#1a1c1c",
+                        "pure-white": "#FFFFFF",
+                        "secondary-container": "#e90812",
+                        "surface-gray": "#F5F5F5",
+                        "inverse-primary": "#c8c6c5",
+                        "surface-container-high": "#e8e8e8",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-surface-variant": "#444748",
+                        "tertiary-container": "#1f005f",
+                        "primary-container": "#1c1b1b",
+                        "outline": "#747878",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "inverse-surface": "#2f3131",
+                        "on-secondary-container": "#fffbff",
+                        "tertiary-fixed": "#e7deff",
+                        "on-surface": "#1a1c1c",
+                        "on-primary-fixed": "#1c1b1b",
+                        "surface-container": "#eeeeee",
+                        "surface-tint": "#5f5e5e",
+                        "background": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary-container": "#8c69ff",
+                        "on-secondary-fixed-variant": "#930006",
+                        "surface-container-low": "#f3f3f3",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary-fixed-variant": "#474746",
+                        "secondary-fixed": "#ffdad5",
+                        "surface": "#f9f9f9",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#410001",
+                        "tertiary": "#000000",
+                        "outline-variant": "#c4c7c7",
+                        "tertiary-fixed-dim": "#cdbdff",
+                        "primary": "#000000",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "on-primary-container": "#858383",
+                        "electric-purple": "#4200B3",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#4e1ebe",
+                        "on-tertiary-fixed": "#1f005f",
+                        "surface-variant": "#e2e2e2",
+                        "deep-navy": "#0A0A0F",
+                        "surface-dim": "#dadada",
+                        "vibrant-red": "#E5000F",
+                        "secondary": "#bc000a",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "max-width": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Hanken Grotesk"],
+                        "label-bold": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- TopNavBar -->
+<nav class="w-full top-0 sticky bg-pure-white dark:bg-primary-container border-b border-outline-variant dark:border-on-surface-variant z-50 transition-all duration-300">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="font-display-lg text-headline-lg tracking-tighter text-on-surface dark:text-pure-white">
+                Velocity Enterprise
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface dark:text-pure-white hover:text-vibrant-red transition-colors font-label-bold text-label-bold" href="#">Plans</a>
+<a class="text-on-surface dark:text-pure-white hover:text-vibrant-red transition-colors font-label-bold text-label-bold" href="#">Support</a>
+<a class="text-on-surface dark:text-pure-white hover:text-vibrant-red transition-colors font-label-bold text-label-bold" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 border border-on-surface text-on-surface hover:bg-surface-gray transition-all duration-200 font-label-bold text-label-bold active:scale-95">
+                    Login
+                </button>
+<button class="px-6 py-2 bg-vibrant-red text-pure-white hover:opacity-90 transition-all duration-200 font-label-bold text-label-bold active:scale-95">
+                    Check Address
+                </button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-on-background py-32">
+<div class="max-w-max-width mx-auto px-margin-desktop grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-6 z-10">
+<div class="inline-flex items-center px-3 py-1 bg-electric-purple text-pure-white mb-6">
+<span class="font-label-bold text-label-bold tracking-widest">MANAGED WI-FI</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-pure-white mb-6">Zero Dead Zones.<br/><span class="text-vibrant-red">Infinite Scale.</span></h1>
+<p class="font-body-lg text-body-lg text-inverse-on-surface mb-10 max-w-lg">
+                        Meet the eero 6+ mesh system. Enterprise-grade wireless infrastructure designed for the high-density demands of modern business.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-vibrant-red text-pure-white px-8 py-4 font-label-bold text-label-bold flex items-center gap-2 hover:shadow-lg transition-all active:scale-95">
+                            ADD TO PLAN <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border border-pure-white text-pure-white px-8 py-4 font-label-bold text-label-bold hover:bg-pure-white/10 transition-all active:scale-95">
+                            VIEW TECHNICAL SPECS
+                        </button>
+</div>
+</div>
+<div class="col-span-6 relative">
+<img alt="eero 6+ hardware" class="w-full h-auto drop-shadow-2xl" data-alt="A high-fidelity studio shot of a sleek, white eero 6+ mesh Wi-Fi router sitting on a dark, reflective surface. The lighting is dramatic and professional, emphasizing the smooth, minimalist curves of the hardware. The background is a deep, dark navy to maintain the high-contrast corporate aesthetic, with subtle red laser-line accents suggesting high-speed data flow. The overall mood is sophisticated, modern, and technologically advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAahBD7zEFfvjccZ5e5GPkz3tz_1axHZA-9ZQ0gXnf8vBJQYG3krYYLj9fkWHo-0GrdcsN1NCHghXP15gkzJvNcSkpWtaeUCAFZ0kjvjl7WSysNaldtvJ6PyYtCsC98xaD9Rc6FkKIj9MKuZSap5QrAeecT_V727fPROLJOsL5zW8-_on4L04wtXeNQRmwQyfgKF3y9iMdiEq0uOchbDsyGckA1_cSM-XAYmsiRNqEWkT7Iw9U4WRpDCC49OcPB8xgpwCxhvsutohgP"/>
+</div>
+</div>
+</section>
+<!-- Exploded Feature Views -->
+<section class="py-24 bg-pure-white">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg mb-4">Enterprise-Grade Architecture</h2>
+<div class="w-20 h-1 bg-vibrant-red mx-auto"></div>
+</div>
+<div class="grid grid-cols-3 gap-12">
+<!-- Feature 1 -->
+<div class="group">
+<div class="bg-surface-gray aspect-square flex items-center justify-center mb-8 border border-outline-variant overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A macro close-up of high-quality internal circuit components and a wireless antenna array of a modern network device. The image features a clean, technical aesthetic with cool blue and white tones, accented by sharp industrial lighting. The composition is structured and clean, representing the precision of fiber-optic and Wi-Fi technology in a high-performance corporate environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmL9juAJFl0ALmX5faKbOo8gKkOEkvMkGr8jcHzqMebscgt0nY1j09xXn69QE-fEZPlQ1kFC9JjWEauEsL0at8xGNxE3J58fFpf1FlIHvWNPr-Js3GXAF1kugU4-l94fK2oNRPDTYIYOYwVMKtfHrL548N-DP79Wvssw2Bozh7vARzAJi1B-ghfbVlpgO9cfIXDSDt01tSuufBWdvGqVYZSY8n3v7Gy6_A6DoMiXhePdNAVU03P7rVHz5lphwRUX-5MReQ3CP39czK"/>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-vibrant-red" data-weight="fill">router</span>
+                            Gigabit+ Speeds
+                        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Support for wireless speeds up to 1.5 Gbps. Connect over 75 devices simultaneously without a single drop in performance.
+                        </p>
+</div>
+<!-- Feature 2 -->
+<div class="group">
+<div class="bg-surface-gray aspect-square flex items-center justify-center mb-8 border border-outline-variant overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A wide-angle interior of a modern, open-plan corporate office with multiple people working at sleek desks. Thin, glowing white mesh lines are overlaid on the image to visualize the seamless Wi-Fi coverage spanning across floors and walls. The lighting is bright and airy, following a light-mode aesthetic with clean lines and a professional atmosphere, punctuated by small red glowing nodes at connection points." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNLOz6O-Ey0Sk7UXME3_RSU0BBof8aLMZua68XCeFxGe4uMMr_j2u5zdyYxF6pH9EVf2_onG8o2HbRF4qMjPMaFE1UO2RN-2dc6XlIYzsZT4ENl9bRaoQCbgW017sINFmYBvJ6Vprpu6MCxVLlLe8OmloiZrk60qkWyHzGJfGDIup70w-Hvix4e0Qr8ObU3D86GwDsBojA_vS4E-3w6jaxnR-Fj0xcoOxUKYG-cYvyEQOMqPPH1HbgOCW6Ne4hN_MZQqY15nmOlelI"/>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-vibrant-red" data-weight="fill">grid_view</span>
+                            TrueMesh Technology
+                        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Patented mesh routing technology dynamically finds the fastest path for your data, bypassing interference and obstacles.
+                        </p>
+</div>
+<!-- Feature 3 -->
+<div class="group">
+<div class="bg-surface-gray aspect-square flex items-center justify-center mb-8 border border-outline-variant overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close-up view of a professional tablet interface showing a clean, high-contrast network security dashboard. The screen displays real-time data visualizations of threat detection and bandwidth usage in vibrant red and electric purple against a dark background. The scene is set in a professional, dimly lit IT control room, conveying a sense of absolute security and high-performance monitoring." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIMTntNFFkUMiXQG0RlaRhsBspnbJKYPGF1JbFRDHxbEAyRMLWFOTSVexF_cTIp75CjJ0is1ozf99GPCR73Csp_5EsO-xB8MTS2Q0MPVSbBmzyw94vVPlxEwQmgnLgdh2x8zgtdzXxZVOZhi8OpViQXEKtIEbF7rr8IhuXd7DbPg9e-kVPXLtKTYWZ6ny6nnKwAKekuZIFSa0DUfWW6xJ39HyAhGWGABJ6gay2hYpZ1NsHmNF1hcyyjI2ha7BZLfcQDaohtOxjlRYu"/>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-vibrant-red" data-weight="fill">security</span>
+                            Velocity Shield Pro
+                        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Built-in threat protection, content filtering, and ad blocking. Automatically updated to protect against evolving digital threats.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specs Grid -->
+<section class="py-24 bg-surface-gray">
+<div class="max-w-max-width mx-auto px-margin-desktop">
+<div class="grid grid-cols-12 gap-gutter">
+<div class="col-span-4">
+<h2 class="font-headline-lg text-headline-lg mb-6">Technical Specifications</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                            Engineered for uncompromising reliability. Compare the core infrastructure metrics of the Velocity Enterprise mesh system.
+                        </p>
+<button class="flex items-center gap-2 text-electric-purple font-label-bold text-label-bold hover:underline">
+                            DOWNLOAD FULL DATASHEET <span class="material-symbols-outlined">download</span>
+</button>
+</div>
+<div class="col-span-8 grid grid-cols-2 gap-px bg-outline-variant border border-outline-variant">
+<!-- Spec Item -->
+<div class="bg-pure-white p-8">
+<div class="text-on-surface-variant font-label-bold text-label-bold mb-2 uppercase tracking-widest">Wi-Fi Standard</div>
+<div class="font-headline-md text-headline-md">Wi-Fi 6 (802.11ax)</div>
+</div>
+<div class="bg-pure-white p-8">
+<div class="text-on-surface-variant font-label-bold text-label-bold mb-2 uppercase tracking-widest">Frequency Bands</div>
+<div class="font-headline-md text-headline-md">Dual-band 2.4GHz &amp; 5GHz</div>
+</div>
+<div class="bg-pure-white p-8">
+<div class="text-on-surface-variant font-label-bold text-label-bold mb-2 uppercase tracking-widest">Ethernet Ports</div>
+<div class="font-headline-md text-headline-md">2 x 10/100/1000 Mbps</div>
+</div>
+<div class="bg-pure-white p-8">
+<div class="text-on-surface-variant font-label-bold text-label-bold mb-2 uppercase tracking-widest">Coverage</div>
+<div class="font-headline-md text-headline-md">Up to 140 m² per node</div>
+</div>
+<div class="bg-pure-white p-8">
+<div class="text-on-surface-variant font-label-bold text-label-bold mb-2 uppercase tracking-widest">Processor</div>
+<div class="font-headline-md text-headline-md">1 GHz Dual-Core</div>
+</div>
+<div class="bg-pure-white p-8">
+<div class="text-on-surface-variant font-label-bold text-label-bold mb-2 uppercase tracking-widest">Memory</div>
+<div class="font-headline-md text-headline-md">512 MB RAM / 4 GB Flash</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Professional Installation Workflow -->
+<section class="py-24 bg-on-background overflow-hidden relative">
+<!-- Background Decorative Element -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-vibrant-red/5 skew-x-12 transform translate-x-1/2"></div>
+<div class="max-w-max-width mx-auto px-margin-desktop relative z-10">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg text-pure-white mb-4">The Concierge Experience</h2>
+<p class="font-body-lg text-body-lg text-inverse-on-surface">We don't just ship boxes. We build networks.</p>
+</div>
+<div class="grid grid-cols-4 gap-gutter">
+<!-- Step 1 -->
+<div class="relative">
+<div class="text-vibrant-red font-display-lg text-display-lg-mobile mb-4 opacity-50">01</div>
+<h4 class="font-headline-md text-headline-md text-pure-white mb-3">Site Survey</h4>
+<p class="text-inverse-on-surface font-body-md text-body-md">Our engineers conduct a signal analysis of your workspace to identify optimal node placement.</p>
+<div class="mt-8 h-1 w-full bg-surface-variant/20 relative">
+<div class="absolute top-0 left-0 h-full w-full bg-vibrant-red"></div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative">
+<div class="text-vibrant-red font-display-lg text-display-lg-mobile mb-4 opacity-50">02</div>
+<h4 class="font-headline-md text-headline-md text-pure-white mb-3">Professional Install</h4>
+<p class="text-inverse-on-surface font-body-md text-body-md">Hardware is mounted and configured for maximum throughput and seamless handoffs.</p>
+<div class="mt-8 h-1 w-full bg-surface-variant/20"></div>
+</div>
+<!-- Step 3 -->
+<div class="relative">
+<div class="text-vibrant-red font-display-lg text-display-lg-mobile mb-4 opacity-50">03</div>
+<h4 class="font-headline-md text-headline-md text-pure-white mb-3">Security Audit</h4>
+<p class="text-inverse-on-surface font-body-md text-body-md">Deployment of Velocity Shield Pro and isolation of guest/internal network traffic.</p>
+<div class="mt-8 h-1 w-full bg-surface-variant/20"></div>
+</div>
+<!-- Step 4 -->
+<div class="relative">
+<div class="text-vibrant-red font-display-lg text-display-lg-mobile mb-4 opacity-50">04</div>
+<h4 class="font-headline-md text-headline-md text-pure-white mb-3">24/7 Monitoring</h4>
+<p class="text-inverse-on-surface font-body-md text-body-md">Continuous remote optimization and priority technical support for your infrastructure.</p>
+<div class="mt-8 h-1 w-full bg-surface-variant/20"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-32 bg-pure-white text-center">
+<div class="max-w-3xl mx-auto px-margin-mobile">
+<h2 class="font-display-lg text-headline-lg mb-8">Ready for Fiber-Grade Wi-Fi?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                    Managed Wi-Fi is available as a $15/mo add-on to any Velocity Enterprise fiber plan. Secure your business infrastructure today.
+                </p>
+<div class="flex justify-center gap-6">
+<button class="bg-vibrant-red text-pure-white px-12 py-5 font-label-bold text-label-bold hover:scale-105 transition-transform">
+                        UPGRADE MY PLAN
+                    </button>
+<button class="border border-on-surface text-on-surface px-12 py-5 font-label-bold text-label-bold hover:bg-surface-gray transition-colors">
+                        SPEAK TO AN AGENT
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-on-background dark:bg-black">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-max-width mx-auto">
+<div class="col-span-1">
+<div class="font-headline-md text-headline-md text-pure-white mb-6">Velocity Enterprise</div>
+<p class="text-inverse-on-surface font-body-md text-body-md mb-8">
+                    High-performance fiber infrastructure for the modern enterprise.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-inverse-on-surface hover:text-vibrant-red cursor-pointer">language</span>
+<span class="material-symbols-outlined text-inverse-on-surface hover:text-vibrant-red cursor-pointer">share</span>
+<span class="material-symbols-outlined text-inverse-on-surface hover:text-vibrant-red cursor-pointer">mail</span>
+</div>
+</div>
+<div class="col-span-1">
+<h5 class="text-vibrant-red font-label-bold text-label-bold mb-6 uppercase">Service</h5>
+<ul class="space-y-4">
+<li><a class="text-inverse-on-surface hover:text-vibrant-red transition-colors font-body-md text-body-md" href="#">Managed Wi-Fi</a></li>
+<li><a class="text-inverse-on-surface hover:text-vibrant-red transition-colors font-body-md text-body-md" href="#">Static IP</a></li>
+<li><a class="text-inverse-on-surface hover:text-vibrant-red transition-colors font-body-md text-body-md" href="#">SLA Guaranteed</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h5 class="text-vibrant-red font-label-bold text-label-bold mb-6 uppercase">Legal</h5>
+<ul class="space-y-4">
+<li><a class="text-inverse-on-surface hover:text-vibrant-red transition-colors font-body-md text-body-md" href="#">Regulatory</a></li>
+<li><a class="text-inverse-on-surface hover:text-vibrant-red transition-colors font-body-md text-body-md" href="#">Privacy Policy</a></li>
+<li><a class="text-inverse-on-surface hover:text-vibrant-red transition-colors font-body-md text-body-md" href="#">CIS</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h5 class="text-vibrant-red font-label-bold text-label-bold mb-6 uppercase">Support</h5>
+<ul class="space-y-4">
+<li><a class="text-inverse-on-surface hover:text-vibrant-red transition-colors font-body-md text-body-md" href="#">Contact Support</a></li>
+<li><a class="text-inverse-on-surface hover:text-vibrant-red transition-colors font-body-md text-body-md" href="#">Network Status</a></li>
+<li><a class="text-inverse-on-surface hover:text-vibrant-red transition-colors font-body-md text-body-md" href="#">Help Center</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-max-width mx-auto px-margin-desktop mt-16 pt-8 border-t border-surface-variant/10">
+<p class="text-inverse-on-surface font-body-md text-body-md opacity-60">
+                © 2024 Velocity Enterprise. High-performance fiber infrastructure.
+            </p>
+</div>
+</footer>
+<script>
+        // Simple scroll interaction for navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+                nav.classList.remove('py-4');
+                nav.classList.add('py-2');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+            }
+        });
+
+        // Hover effect for technical specs
+        const specItems = document.querySelectorAll('.bg-pure-white.p-8');
+        specItems.forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.backgroundColor = '#fcfcfc';
+                item.style.transform = 'translateY(-2px)';
+                item.style.boxShadow = '0 4px 12px rgba(0,0,0,0.05)';
+            });
+            item.addEventListener('mouseleave', () => {
+                item.style.backgroundColor = '#ffffff';
+                item.style.transform = 'translateY(0)';
+                item.style.boxShadow = 'none';
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e7deff",
+                    "tertiary-container": "#1f005f",
+                    "surface": "#f9f9f9",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "vibrant-red": "#E5000F",
+                    "secondary-fixed-dim": "#ffb4aa",
+                    "tertiary": "#000000",
+                    "surface-bright": "#f9f9f9",
+                    "on-primary-fixed-variant": "#474746",
+                    "on-primary-fixed": "#1c1b1b",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f3f3f3",
+                    "on-tertiary-container": "#8c69ff",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#1a1c1c",
+                    "deep-navy": "#0A0A0F",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#dadada",
+                    "surface-tint": "#5f5e5e",
+                    "pure-white": "#FFFFFF",
+                    "background": "#f9f9f9",
+                    "secondary-container": "#e90812",
+                    "secondary": "#bc000a",
+                    "secondary-fixed": "#ffdad5",
+                    "on-secondary-fixed-variant": "#930006",
+                    "electric-purple": "#4200B3",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#e2e2e2",
+                    "primary-container": "#1c1b1b",
+                    "primary-fixed": "#e5e2e1",
+                    "on-surface": "#1a1c1c",
+                    "on-secondary-fixed": "#410001",
+                    "surface-container": "#eeeeee",
+                    "inverse-surface": "#2f3131",
+                    "on-secondary-container": "#fffbff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-variant": "#e2e2e2",
+                    "on-primary-container": "#858383",
+                    "surface-container-high": "#e8e8e8",
+                    "surface-gray": "#F5F5F5",
+                    "tertiary-fixed-dim": "#cdbdff",
+                    "outline-variant": "#c4c7c7",
+                    "on-surface-variant": "#444748",
+                    "primary": "#000000",
+                    "on-tertiary-fixed-variant": "#4e1ebe",
+                    "on-tertiary-fixed": "#1f005f",
+                    "on-primary": "#ffffff",
+                    "outline": "#747878",
+                    "inverse-primary": "#c8c6c5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "max-width": "1280px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "label-md": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "label-bold": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glow-green {
+            box-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
+            animation: pulse-green 2s infinite;
+        }
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 5px rgba(34, 197, 94, 0.4); }
+            50% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.7); }
+            100% { box-shadow: 0 0 5px rgba(34, 197, 94, 0.4); }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+<!-- TopAppBar Component -->
+<header class="bg-deep-navy fixed top-0 w-full z-50 border-b border-on-surface-variant/20">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-max-width mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-headline-md" data-icon="router">router</span>
+<span class="font-display-lg text-headline-md font-extrabold text-pure-white">CORE CONNECT</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-surface-variant hover:text-pure-white transition-colors font-label-md text-label-md" href="#">Home</a>
+<a class="text-surface-variant hover:text-pure-white transition-colors font-label-md text-label-md" href="#">Plans &amp; Pricing</a>
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-label-md text-label-md" href="#">Network Status</a>
+<a class="text-surface-variant hover:text-pure-white transition-colors font-label-md text-label-md" href="#">Support Hub</a>
+</nav>
+<button class="bg-vibrant-red text-pure-white px-6 py-2 font-label-bold text-label-bold rounded-lg hover:opacity-90 active:scale-95 transition-all">
+                Check Address
+            </button>
+</div>
+</header>
+<main class="pt-32 pb-24 max-w-max-width mx-auto px-margin-desktop">
+<!-- Global Status Bar -->
+<section class="mb-12">
+<div class="bg-deep-navy rounded-xl p-8 flex flex-col md:flex-row items-center justify-between border border-outline-variant/20 relative overflow-hidden">
+<div class="flex items-center gap-6 z-10">
+<div class="w-4 h-4 bg-green-500 rounded-full glow-green"></div>
+<div>
+<h1 class="text-pure-white font-headline-lg text-headline-lg">All Systems Operational</h1>
+<p class="text-on-primary-container font-body-md text-body-md">Core Connect Global Network is performing at optimal capacity.</p>
+</div>
+</div>
+<div class="mt-6 md:mt-0 z-10">
+<span class="text-on-primary-container font-label-md text-label-md opacity-60">Last Updated: Today, 14:42 AEST</span>
+</div>
+<!-- Subtle tech background pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, #E5000F 1px, transparent 0); background-size: 40px 40px;"></div>
+</div>
+</section>
+<!-- Network Health Map Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Map Visualization -->
+<section class="lg:col-span-8 bg-pure-white border border-outline-variant rounded-xl overflow-hidden">
+<div class="p-6 border-b border-outline-variant flex justify-between items-center">
+<h2 class="font-headline-md text-headline-md text-deep-navy">Australia Network Health</h2>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-green-500 rounded-full"></span>
+<span class="text-label-md font-label-md">Online</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-vibrant-red rounded-full"></span>
+<span class="text-label-md font-label-md">Degraded</span>
+</div>
+</div>
+</div>
+<div class="relative h-[500px] bg-surface-gray">
+<img class="w-full h-full object-cover" data-alt="A sophisticated digital heat map of Australia displayed on a high-tech dark interface. The map shows network nodes glowing in vibrant green across major cities like Sydney, Melbourne, and Brisbane, indicating healthy fiber-optic connectivity. The overall aesthetic is professional and corporate, using a deep navy background with sharp red accents and a clean minimalist design that emphasizes real-time data visualization." data-location="Australia" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8SrEJdKMeEkZZiM4c2YAmdeK-99pU21C6gcKm5BbArrx1IGsw19LQDT1eILqw5c7-TJjUQwohI2Q6GUfQ70PWOZU81XHMzGv96eORocqFdjXXL9lHrCCZGlRjFpBm6HtCFk-xyxkFUjBp0sFeEujUnPQQTvRRcthd9ZJgMSwexshhnDnYz8xHXJSSeZeM4bja9mhe29EOeXRkXnfYCbK5OGOV5pi2H6kdHE5BP3DCqp4YWfIaYAlRdSWnDRTFKX56ZJaTgh5a5eS7"/>
+<!-- Overlaying mock "Nodes" -->
+<div class="absolute top-1/4 left-1/4 group cursor-pointer">
+<div class="w-4 h-4 bg-green-500 rounded-full glow-green"></div>
+<div class="absolute hidden group-hover:block bg-deep-navy text-pure-white p-3 rounded-lg text-label-md w-32 -translate-y-full mb-2">
+                            Perth Hub: 100%
+                        </div>
+</div>
+<div class="absolute bottom-1/4 right-1/4 group cursor-pointer">
+<div class="w-4 h-4 bg-green-500 rounded-full glow-green"></div>
+<div class="absolute hidden group-hover:block bg-deep-navy text-pure-white p-3 rounded-lg text-label-md w-32 -translate-y-full mb-2">
+                            Sydney Core: 99.9%
+                        </div>
+</div>
+</div>
+</section>
+<!-- Planned Maintenance -->
+<section class="lg:col-span-4 flex flex-col gap-gutter">
+<div class="bg-pure-white border border-outline-variant rounded-xl p-6 h-full">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-electric-purple" data-icon="build">build</span>
+<h2 class="font-headline-md text-headline-md text-deep-navy">Maintenance</h2>
+</div>
+<div class="space-y-6">
+<!-- Maintenance Item -->
+<div class="p-4 bg-surface-gray rounded-lg border-l-4 border-electric-purple">
+<div class="flex justify-between items-start mb-2">
+<span class="bg-white border border-outline px-2 py-1 text-[10px] font-label-bold uppercase">Scheduled</span>
+<span class="text-label-md font-label-bold text-deep-navy">Oct 24</span>
+</div>
+<h3 class="font-label-bold text-label-bold mb-1">Melbourne POI Upgrade</h3>
+<p class="text-label-md text-on-surface-variant">00:00 - 04:00 AEST. Impact: Fiber &amp; Fixed Wireless.</p>
+</div>
+<!-- Maintenance Item -->
+<div class="p-4 bg-surface-gray rounded-lg border-l-4 border-electric-purple">
+<div class="flex justify-between items-start mb-2">
+<span class="bg-white border border-outline px-2 py-1 text-[10px] font-label-bold uppercase">Scheduled</span>
+<span class="text-label-md font-label-bold text-deep-navy">Oct 27</span>
+</div>
+<h3 class="font-label-bold text-label-bold mb-1">Sydney DC Switching</h3>
+<p class="text-label-md text-on-surface-variant">02:00 - 05:00 AEST. Impact: Enterprise Ethernet.</p>
+</div>
+<button class="w-full py-3 border border-deep-navy font-label-bold text-label-bold hover:bg-deep-navy hover:text-pure-white transition-all">
+                            View All Windows
+                        </button>
+</div>
+</div>
+</section>
+</div>
+<!-- Recent Incidents Log -->
+<section class="mt-gutter">
+<div class="bg-pure-white border border-outline-variant rounded-xl p-8">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-vibrant-red" data-icon="history">history</span>
+<h2 class="font-headline-md text-headline-md text-deep-navy">Recent Incidents</h2>
+</div>
+<span class="text-label-md text-on-surface-variant italic">Showing past 7 days</span>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-outline-variant text-label-bold font-label-bold text-on-surface-variant">
+<th class="pb-4 px-4">STATUS</th>
+<th class="pb-4 px-4">INCIDENT ID</th>
+<th class="pb-4 px-4">REGION</th>
+<th class="pb-4 px-4">DURATION</th>
+<th class="pb-4 px-4">RESOLUTION</th>
+</tr>
+</thead>
+<tbody class="text-body-md font-body-md">
+<tr class="border-b border-outline-variant hover:bg-surface-gray transition-colors">
+<td class="py-6 px-4">
+<span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-[12px] font-label-bold">RESOLVED</span>
+</td>
+<td class="py-6 px-4 font-label-bold">INC-88291</td>
+<td class="py-6 px-4 text-on-surface-variant">Brisbane Metro (FTTP)</td>
+<td class="py-6 px-4">42 mins</td>
+<td class="py-6 px-4 text-on-surface-variant">Hardware replacement at local node.</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-gray transition-colors">
+<td class="py-6 px-4">
+<span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-[12px] font-label-bold">RESOLVED</span>
+</td>
+<td class="py-6 px-4 font-label-bold">INC-88245</td>
+<td class="py-6 px-4 text-on-surface-variant">Adelaide Regional</td>
+<td class="py-6 px-4">1h 12m</td>
+<td class="py-6 px-4 text-on-surface-variant">Upstream carrier power outage.</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-gray transition-colors">
+<td class="py-6 px-4">
+<span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-[12px] font-label-bold">RESOLVED</span>
+</td>
+<td class="py-6 px-4 font-label-bold">INC-88190</td>
+<td class="py-6 px-4 text-on-surface-variant">Perth North Hub</td>
+<td class="py-6 px-4">12 mins</td>
+<td class="py-6 px-4 text-on-surface-variant">Automated failover to secondary link.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- CIS Documents CTA -->
+<section class="mt-gutter grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="bg-electric-purple p-8 rounded-xl flex items-center justify-between group cursor-pointer hover:shadow-lg transition-all">
+<div>
+<h3 class="text-pure-white font-headline-md text-headline-md">SLA Details</h3>
+<p class="text-white/80 font-body-md text-body-md">Learn about our 99.9% uptime guarantee.</p>
+</div>
+<span class="material-symbols-outlined text-pure-white text-4xl group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</div>
+<div class="bg-deep-navy p-8 rounded-xl flex items-center justify-between group cursor-pointer hover:shadow-lg transition-all">
+<div>
+<h3 class="text-pure-white font-headline-md text-headline-md">Critical Information</h3>
+<p class="text-white/80 font-body-md text-body-md">Download CIS for your specific plan.</p>
+</div>
+<span class="material-symbols-outlined text-vibrant-red text-4xl group-hover:translate-x-2 transition-transform" data-icon="description">description</span>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-deep-navy w-full py-12 border-t border-on-surface-variant/10 mt-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-max-width mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-headline-md text-headline-md text-pure-white">CORE CONNECT</span>
+<p class="text-surface-variant font-body-md text-body-md opacity-60">High-performance business NBN infrastructure for Australia's enterprise sector.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-secondary font-label-bold text-label-bold">RESOURCES</h4>
+<a class="text-surface-variant hover:text-pure-white transition-colors font-body-md text-body-md" href="#">About Us</a>
+<a class="text-surface-variant hover:text-pure-white transition-colors font-body-md text-body-md text-secondary-fixed-dim underline" href="#">SLA Details</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-secondary font-label-bold text-label-bold">SUPPORT</h4>
+<a class="text-surface-variant hover:text-pure-white transition-colors font-body-md text-body-md" href="#">Support Hub</a>
+<a class="text-surface-variant hover:text-pure-white transition-colors font-body-md text-body-md" href="#">Network Status</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-secondary font-label-bold text-label-bold">LEGAL</h4>
+<a class="text-surface-variant hover:text-pure-white transition-colors font-body-md text-body-md" href="#">Privacy Policy</a>
+<a class="text-surface-variant hover:text-pure-white transition-colors font-body-md text-body-md" href="#">Critical Information Summaries</a>
+</div>
+</div>
+<div class="max-w-max-width mx-auto px-margin-desktop mt-12 pt-8 border-t border-on-surface-variant/10">
+<p class="text-surface-variant font-body-md text-body-md text-center opacity-50">© 2024 Core Connect Business NBN. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
+        // Micro-interaction: Randomly update status text to simulate "live" data
+        const updateStatus = () => {
+            const timeSpan = document.querySelector('span.opacity-60');
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString('en-AU', { hour: '2-digit', minute: '2-digit', hour12: false });
+            timeSpan.textContent = `Last Updated: Today, ${timeStr} AEST`;
+        };
+
+        // Update time every 60 seconds
+        setInterval(updateStatus, 60000);
+
+        // Simple scroll effect for header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-xl');
+            } else {
+                header.classList.remove('shadow-xl');
+            }
+        });
+    </script>
+</body></html>
