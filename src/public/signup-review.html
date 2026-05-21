@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Order Review | FiberFlow Business</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e2e2e2;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dadada",
+                        "on-secondary-fixed": "#410001",
+                        "on-error-container": "#93000a",
+                        "primary": "#000000",
+                        "deep-navy": "#0A0A0F",
+                        "surface-bright": "#f9f9f9",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "tertiary-container": "#1f005f",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#e90812",
+                        "on-secondary-container": "#fffbff",
+                        "secondary": "#bc000a",
+                        "surface-container": "#eeeeee",
+                        "inverse-surface": "#2f3131",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "outline-variant": "#c4c7c7",
+                        "on-tertiary-container": "#8c69ff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f3f3f3",
+                        "on-primary-fixed": "#1c1b1b",
+                        "inverse-primary": "#c8c6c5",
+                        "surface-gray": "#F5F5F5",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "pure-white": "#FFFFFF",
+                        "secondary-fixed": "#ffdad5",
+                        "on-primary-fixed-variant": "#474746",
+                        "primary-fixed": "#e5e2e1",
+                        "tertiary": "#000000",
+                        "surface-container-high": "#e8e8e8",
+                        "on-background": "#1a1c1c",
+                        "surface-tint": "#5f5e5e",
+                        "electric-purple": "#4200B3",
+                        "surface": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#858383",
+                        "on-tertiary-fixed": "#1f005f",
+                        "outline": "#747878",
+                        "tertiary-fixed-dim": "#cdbdff",
+                        "tertiary-fixed": "#e7deff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#930006",
+                        "on-surface-variant": "#444748",
+                        "on-tertiary-fixed-variant": "#4e1ebe",
+                        "vibrant-red": "#E5000F",
+                        "primary-container": "#1c1b1b",
+                        "background": "#f9f9f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "max-width": "1280px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Hanken Grotesk"],
+                        "label-bold": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                        "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-pure-white dark:bg-deep-navy border-b border-surface-variant dark:border-outline-variant z-50">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-max-width mx-auto">
+<div class="flex items-center gap-4">
+<button class="cursor-pointer transition-transform active:scale-95 text-primary dark:text-pure-white" onclick="window.history.back()">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-display-lg text-vibrant-red dark:text-vibrant-red tracking-tighter text-[24px]">FiberFlow Business</h1>
+</div>
+<div class="flex items-center gap-6">
+<span class="hidden md:block font-label-md text-label-md text-on-surface-variant">Step 4 of 4: Final Review</span>
+<button class="cursor-pointer transition-transform active:scale-95 text-primary dark:text-pure-white">
+<span class="material-symbols-outlined">help</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow max-w-max-width mx-auto w-full px-margin-mobile md:px-margin-desktop py-12">
+<!-- Progress Indicator -->
+<div class="mb-12">
+<div class="flex items-center justify-between mb-4">
+<h2 class="font-headline-lg text-headline-lg">Order Review</h2>
+<span class="font-label-bold text-label-bold bg-surface-container-high px-3 py-1 rounded">FINAL STEP</span>
+</div>
+<div class="w-full h-1 bg-surface-variant overflow-hidden">
+<div class="h-full bg-vibrant-red w-full transition-all duration-1000"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Summary Canvas -->
+<div class="lg:col-span-8 space-y-gutter">
+<!-- Plan Summary Card -->
+<div class="bg-pure-white border border-surface-variant p-8 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-electric-purple/5 -mr-16 -mt-16 rounded-full blur-3xl group-hover:bg-vibrant-red/5 transition-colors"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
+<div>
+<span class="font-label-bold text-label-bold text-electric-purple uppercase tracking-widest">Selected Infrastructure</span>
+<h3 class="font-headline-md text-headline-md mt-1">Velocity Enterprise 1000</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Symmetric 1000/1000 Mbps Dedicated Fiber</p>
+</div>
+<div class="text-left md:text-right">
+<span class="font-display-lg text-[48px] text-primary">$349</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/month (Ex. GST)</span>
+</div>
+</div>
+<div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 pt-8 border-t border-surface-gray">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-vibrant-red">check_circle</span>
+<div>
+<p class="font-label-bold text-label-bold">SLA Guaranteed</p>
+<p class="font-label-md text-label-md text-on-surface-variant">99.95% Uptime</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-vibrant-red">check_circle</span>
+<div>
+<p class="font-label-bold text-label-bold">Static IP</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Included (/30 block)</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-vibrant-red">check_circle</span>
+<div>
+<p class="font-label-bold text-label-bold">Priority Tech</p>
+<p class="font-label-md text-label-md text-on-surface-variant">24/7 Enterprise Support</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Business & Address Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Business Details -->
+<div class="bg-pure-white border border-surface-variant p-8">
+<div class="flex justify-between items-start mb-6">
+<h4 class="font-label-bold text-label-bold uppercase tracking-wider text-on-surface-variant">Business Profile</h4>
+<button class="text-vibrant-red font-label-bold text-[12px] hover:underline" onclick="window.location.href='/signup-business'">EDIT</button>
+</div>
+<div class="space-y-4">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant">Legal Entity Name</label>
+<p class="font-body-md text-body-md font-bold">TechFlow Solutions Pty Ltd</p>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant">ABN / ACN</label>
+<p class="font-body-md text-body-md font-bold">45 123 456 789</p>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant">Primary Contact</label>
+<p class="font-body-md text-body-md font-bold">Sarah Jenkins</p>
+<p class="font-label-md text-label-md text-on-surface-variant">s.jenkins@techflow.io</p>
+</div>
+</div>
+</div>
+<!-- Service Location -->
+<div class="bg-pure-white border border-surface-variant p-8 relative overflow-hidden">
+<div class="flex justify-between items-start mb-6">
+<h4 class="font-label-bold text-label-bold uppercase tracking-wider text-on-surface-variant">Service Address</h4>
+<button class="text-vibrant-red font-label-bold text-[12px] hover:underline" onclick="window.location.href='/signup'">EDIT</button>
+</div>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-electric-purple mt-1">location_on</span>
+<div>
+<p class="font-body-md text-body-md font-bold">Level 14, 201 Elizabeth St</p>
+<p class="font-body-md text-body-md font-bold">Sydney, NSW 2000</p>
+<p class="font-label-md text-label-md text-on-surface-variant mt-2">NBN Technology: FTTP (Fiber to the Premises)</p>
+</div>
+</div>
+<!-- Map Context -->
+<div class="w-full h-24 mt-4 bg-surface-gray rounded relative overflow-hidden grayscale opacity-50">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist vector-style map showing the central business district of a major city. The map uses a monochrome palette of light grays and subtle blue-grays to maintain a professional, high-contrast business aesthetic. Red highlights indicate critical infrastructure nodes or service locations. The lighting is digital and crisp, evoking a sense of precise network coverage." data-location="Sydney" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4hPzCDxtEP20X0Iz4mYRGevWH883tIp4H6i1G_vk1auC7Aq-r2rBwwWaPqAm-BLR0SUY-FuYkgeLIkwh9OpQEsmxP4J3ON6nxPVEemYghT1r40jkusreQo5mlZoRTyCxKEGI4a3dcAZlOSif1lvX-0BVZz2IX9y07yKHmuE7dDt1q-AJKAxhPCfWN7Yq8Ih4rXnhURXeJUgxlfzb5jkez-KnIVuD3pUKFAZTS7fCLtPhgVfLwmXXso5ivWeVvZnFs-cimcJN_W-iL"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-4 h-4 bg-vibrant-red rounded-full animate-ping"></div>
+<div class="w-3 h-3 bg-vibrant-red rounded-full absolute"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Terms and Compliance -->
+<div class="bg-surface-gray/50 border border-surface-variant p-8">
+<h4 class="font-label-bold text-label-bold uppercase tracking-wider mb-6">Terms &amp; Acknowledgements</h4>
+<div class="space-y-4">
+<label class="flex items-start gap-4 cursor-pointer group">
+<div class="mt-1 relative flex items-center">
+<input class="peer h-5 w-5 border-2 border-surface-variant rounded-none text-vibrant-red focus:ring-vibrant-red transition-all cursor-pointer" type="checkbox"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">
+                                I confirm that I am authorized to enter into this agreement on behalf of TechFlow Solutions Pty Ltd.
+                            </span>
+</label>
+<label class="flex items-start gap-4 cursor-pointer group">
+<div class="mt-1 relative flex items-center">
+<input class="peer h-5 w-5 border-2 border-surface-variant rounded-none text-vibrant-red focus:ring-vibrant-red transition-all cursor-pointer" id="terms-check" type="checkbox"/>
+</div>
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">
+                                I have read and agree to the <a class="text-electric-purple font-bold hover:underline" href="#">Critical Information Summary</a>, <a class="text-electric-purple font-bold hover:underline" href="#">Service Level Agreement (SLA)</a>, and <a class="text-electric-purple font-bold hover:underline" href="#">Standard Terms of Service</a>.
+                            </span>
+</label>
+</div>
+</div>
+</div>
+<!-- Order Sidebar -->
+<aside class="lg:col-span-4 sticky top-28">
+<div class="bg-deep-navy text-pure-white p-8 shadow-2xl relative overflow-hidden">
+<!-- Accent bar -->
+<div class="absolute top-0 left-0 w-full h-1 bg-vibrant-red"></div>
+<h3 class="font-headline-md text-headline-md mb-8">Order Summary</h3>
+<div class="space-y-4 border-b border-surface-variant/20 pb-6 mb-6">
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-surface-variant">Monthly Service Fee</span>
+<span>$349.00</span>
+</div>
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-surface-variant">Activation Fee</span>
+<span class="text-vibrant-red">FREE</span>
+</div>
+<div class="flex justify-between font-label-md text-label-md">
+<span class="text-surface-variant">Enterprise NTD Hardware</span>
+<span>$0.00</span>
+</div>
+</div>
+<div class="space-y-2 mb-8">
+<div class="flex justify-between items-baseline">
+<span class="font-label-bold text-label-bold uppercase text-surface-variant">Monthly Total</span>
+<span class="font-display-lg text-[32px]">$349.00</span>
+</div>
+<p class="text-[12px] text-surface-variant text-right">Pricing excludes GST (10%)</p>
+</div>
+<div class="bg-white/5 p-4 mb-8">
+<div class="flex gap-3 items-center">
+<span class="material-symbols-outlined text-electric-purple">speed</span>
+<div class="text-[12px]">
+<p class="font-bold">Next Business Day Install</p>
+<p class="text-surface-variant">Provisional slot: Oct 24th, 9AM-12PM</p>
+</div>
+</div>
+</div>
+<button class="w-full bg-vibrant-red hover:bg-red-700 text-pure-white font-label-bold py-5 px-6 transition-all transform hover:scale-[1.02] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center gap-2" disabled="" id="complete-order-btn">
+<span>COMPLETE ORDER</span>
+<span class="material-symbols-outlined">rocket_launch</span>
+</button>
+<p class="text-[11px] text-surface-variant mt-4 text-center leading-relaxed">
+                        By clicking "Complete Order", your provisioning process will begin immediately. You will be redirected to the secure payment portal.
+                    </p>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface-container-low dark:bg-deep-navy border-t border-surface-variant">
+<div class="grid grid-cols-1 md:grid-cols-2 px-margin-desktop max-w-max-width mx-auto gap-gutter">
+<div class="space-y-4">
+<p class="font-label-bold text-label-bold text-on-surface">FiberFlow Business</p>
+<p class="font-label-md text-label-md text-on-surface-variant">© 2024 FiberFlow Business ISP. All rights reserved. SLA Guaranteed.</p>
+</div>
+<div class="flex flex-wrap md:justify-end gap-x-8 gap-y-2">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">Critical Information Summary</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">Privacy Policy</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">Terms of Service</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">Support</a>
+</div>
+</div>
+</footer>
+<script>
+    window.onload = () => {
+        const updateUI = async () => {
+            const address = localStorage.getItem('signup_address');
+            const serviceability = JSON.parse(localStorage.getItem('signup_serviceability'));
+            const planId = localStorage.getItem('signup_plan_id');
+            const businessDetails = JSON.parse(localStorage.getItem('signup_business_details'));
+
+            const plansResponse = await fetch('/api/plans');
+            const plans = await plansResponse.json();
+            const plan = plans.find(p => p.id === planId);
+
+            if (plan) {
+                document.querySelector('h3.font-headline-md').innerText = plan.name;
+                document.querySelector('p.text-on-surface-variant.mt-2').innerText = `${plan.speed} Business Grade Connectivity`;
+                document.querySelector('span.font-display-lg').innerText = `$${plan.promo_price || plan.price}`;
+                document.querySelector('aside span.font-display-lg').innerText = `$${plan.promo_price || plan.price}.00`;
+                document.querySelectorAll('aside .flex.justify-between.font-label-md span:last-child')[0].innerText = `$${plan.promo_price || plan.price}.00`;
+            }
+
+            if (businessDetails) {
+                const h4 = Array.from(document.querySelectorAll('h4')).find(el => el.textContent.includes("Business Profile"));
+                const profileSection = h4.parentElement.nextElementSibling;
+                profileSection.innerHTML = `
+                    <div>
+                        <label class="block font-label-md text-label-md text-on-surface-variant">Legal Entity Name</label>
+                        <p class="font-body-md text-body-md font-bold">${businessDetails.businessName}</p>
+                    </div>
+                    <div>
+                        <label class="block font-label-md text-label-md text-on-surface-variant">ABN / ACN</label>
+                        <p class="font-body-md text-body-md font-bold">${businessDetails.abn}</p>
+                    </div>
+                    <div>
+                        <label class="block font-label-md text-label-md text-on-surface-variant">Primary Contact</label>
+                        <p class="font-body-md text-body-md font-bold">${businessDetails.contactName}</p>
+                        <p class="font-label-md text-label-md text-on-surface-variant">${businessDetails.email}</p>
+                    </div>
+                `;
+            }
+
+            if (address) {
+                const h4 = Array.from(document.querySelectorAll('h4')).find(el => el.textContent.includes("Service Address"));
+                const addressSection = h4.parentElement.nextElementSibling;
+                addressSection.querySelector('p.font-body-md.font-bold').innerText = address;
+                addressSection.querySelectorAll('p.font-body-md.font-bold')[1].innerText = '';
+                if (serviceability) {
+                    addressSection.querySelector('p.text-on-surface-variant.mt-2').innerText = `NBN Technology: ${serviceability.techType}`;
+                }
+            }
+        };
+        updateUI();
+
+        // Interaction logic
+        const termsCheck = document.getElementById('terms-check');
+        const completeBtn = document.getElementById('complete-order-btn');
+
+        termsCheck.addEventListener('change', (e) => {
+            completeBtn.disabled = !e.target.checked;
+        });
+
+        completeBtn.addEventListener('click', async () => {
+            if(!completeBtn.disabled) {
+                completeBtn.innerHTML = `
+                    <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    <span>REDIRECTING...</span>
+                `;
+
+                try {
+                    const planId = localStorage.getItem('signup_plan_id');
+                    const response = await fetch('/api/create-checkout-session', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            planId,
+                            businessDetails: JSON.parse(localStorage.getItem('signup_business_details')),
+                            address: localStorage.getItem('signup_address')
+                        })
+                    });
+                    const session = await response.json();
+                    window.location.href = session.url;
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Failed to initiate checkout. Please try again.');
+                    window.location.reload();
+                }
+            }
+        });
+
+        // Atmospheric micro-interactions
+        document.querySelectorAll('.bg-pure-white').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-2px)';
+                card.style.transition = 'all 0.3s ease';
+                card.style.boxShadow = '0 10px 30px -10px rgba(0,0,0,0.05)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+                card.style.boxShadow = 'none';
+            });
+        });
+    };
+</script>
+</body></html>
