@@ -1,2 +1,6 @@
 name = "business-nbn-project"
-pages_build_output_dir = "src/public"
+main = "src/worker.js"
+compatibility_date = "2024-05-22"
+
+[site]
+bucket = "./src/public"
