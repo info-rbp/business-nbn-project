@@ -1,71 +1,68 @@
-# Velocity Enterprise - NBN Business Portal
+# Velocity Enterprise - Business NBN Portal
 
-This is an enterprise-grade digital portal for Velocity Enterprise, a Business ISP. It allows customers to check NBN serviceability, view tailored business plans, and sign up online with integrated Stripe payments.
-
-## Features
-
-- **NBN Serviceability Check**: Real-time address validation using NBN Co data (via RapidAPI).
-- **Dynamic Business Plans**: Managed via `plans.json`, matching Superloop's latest business offerings.
-- **Multi-step Sign-up Flow**: Professional UI covering Location -> Plan -> Business Details -> Review.
-- **Stripe Integration**: Secure subscription handling via Stripe Checkout.
-- **Order Persistence**: SQLite database for tracking pending and completed orders.
-- **Design System**: High-contrast, corporate aesthetic built with Tailwind CSS.
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js (v18+)
-- Stripe Account (for API keys)
-- RapidAPI Account (for NBN serviceability API)
-
-### Installation
-
-1.  **Clone the repository**:
-    ```bash
-    git clone <repository-url>
-    cd velocity-enterprise-portal
-    ```
-
-2.  **Install dependencies**:
-    ```bash
-    npm install
-    ```
-
-3.  **Configure environment variables**:
-    Create a `.env` file in the root directory:
-    ```env
-    PORT=3000
-    STRIPE_SECRET_KEY=sk_test_...
-    RAPIDAPI_KEY=your_rapidapi_key_here
-    ```
-
-4.  **Start the server**:
-    ```bash
-    npm start
-    ```
-    The portal will be available at `http://localhost:3000`.
-
-## Project Structure
-
-- `src/app.js`: Express application configuration.
-- `src/server.js`: Entry point for the server.
-- `src/routes/api.js`: API endpoints for plans, serviceability, and payments.
-- `src/controllers/`: Logic for handling API requests.
-- `src/services/`: External integrations (Stripe, NBN API, SQLite).
-- `src/public/`: Static frontend assets (HTML, CSS, Client-side JS).
-- `plans.json`: Source of truth for NBN plan details and pricing.
-- `legacy_pages/`: Original design assets and templates.
-
-## API Endpoints
-
-- `GET /api/plans`: Returns all available NBN business plans.
-- `POST /api/check-address`: Validates NBN serviceability for a given address.
-- `POST /api/create-checkout-session`: Initiates a Stripe Checkout session for a chosen plan.
+A production-ready Business NBN sign-up portal with Node.js/Express, Stripe Checkout integration, and NBN serviceability checks.
 
 ## Deployment
 
-The application is ready for deployment on platforms like Heroku, DigitalOcean, or AWS. Ensure that the SQLite database file path is correctly handled in persistent environments or migrate to a managed database like PostgreSQL.
+This application is an Express/Node.js app. It is recommended to deploy it to a Node-capable hosting provider.
 
----
-© 2024 Velocity Enterprise. High-performance fiber infrastructure.
+### Recommended Hosting
+- **Render / Railway / Fly.io**: Connect your GitHub repo and use the following settings.
+- **VPS (DigitalOcean / Linode)**: Use PM2 to manage the process.
+- **Heroku**: Supported via `Procfile`.
+
+### Deployment Settings
+- **Build Command**: `npm install && npm run build`
+- **Start Command**: `npm start`
+- **Node Version**: 20+
+
+### Cloudflare Note
+The previous Cloudflare Workers deployment failed because this is not a Workers-native app. To use Cloudflare:
+- **Static Preview**: You can deploy `src/public` as a Cloudflare Pages static site.
+  - **Build Command**: `exit 0`
+  - **Output Directory**: `src/public`
+  - **Note**: This will ONLY deploy the frontend. APIs, Stripe, and persistence will NOT work.
+- **Full Backend**: Requires migrating the app to Cloudflare Pages Functions or Workers.
+
+## Environment Variables
+
+Copy `.env.example` to `.env` and configure:
+
+| Variable | Description | Required in Prod |
+|----------|-------------|------------------|
+| `NODE_ENV` | `production` or `development` | Yes |
+| `PUBLIC_BASE_URL` | Full URL of your app (e.g., `https://nbn.example.com`) | Yes |
+| `STRIPE_SECRET_KEY` | Your Stripe Secret Key | Yes |
+| `STRIPE_WEBHOOK_SECRET` | Your Stripe Webhook Signing Secret | Yes |
+| `DATABASE_URL` | PostgreSQL connection string (fallback to SQLite) | Optional |
+| `RAPIDAPI_KEY` | RapidAPI key for NBN serviceability | Yes* |
+| `ALLOW_MOCK_SERVICEABILITY` | Set to `true` to allow mock checks in prod | No |
+
+\* Optional in development; required in production unless mock is allowed.
+
+## Pre-launch Checklist
+
+- [ ] Set all production environment variables.
+- [ ] Configure Stripe Live keys and Webhook endpoint.
+- [ ] Ensure `DATABASE_URL` is set for PostgreSQL if not using persistent SQLite.
+- [ ] Verify `plans.json` pricing and features.
+- [ ] Add real content to legal pages:
+  - `privacy.html`
+  - `terms.html`
+  - `critical-information-summary.html`
+  - `sla.html`
+- [ ] Update `sitemap.xml` with the final production domain.
+- [ ] Test the full signup flow on mobile and desktop.
+- [ ] Verify Webhook handling for successful and failed payments.
+- [ ] Disable `ALLOW_MOCK_SERVICEABILITY` in production.
+
+## Local Development
+
+1. `npm install`
+2. `cp .env.example .env`
+3. `npm run dev`
+
+Visit `http://localhost:3000`.
+
+## Testing
+`npm test` - Runs ABN validation and route smoke tests.

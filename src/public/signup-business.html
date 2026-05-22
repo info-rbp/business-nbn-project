@@ -3,7 +3,7 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>FiberFlow Business - Sign Up: Business Details</title>
+<title>Velocity Enterprise - Sign Up: Business Details</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -134,8 +134,8 @@
 <nav class="w-full top-0 sticky bg-pure-white border-b border-surface-variant z-50">
 <div class="flex justify-between items-center px-4 md:px-margin-desktop py-4 max-w-max-width mx-auto">
 <div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-transform" data-icon="arrow_back">arrow_back</span>
-<span class="font-display-lg text-[24px] text-vibrant-red tracking-tighter">FiberFlow Business</span>
+<span class="material-symbols-outlined text-primary cursor-pointer active:scale-95 transition-transform" data-icon="arrow_back" onclick="window.history.back()">arrow_back</span>
+<span class="font-display-lg text-[24px] text-vibrant-red tracking-tighter">Velocity Enterprise</span>
 </div>
 <div class="hidden md:flex items-center gap-2 text-on-surface-variant font-label-md">
 <span class="material-symbols-outlined text-[20px]" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
@@ -240,36 +240,16 @@
 <h3 class="font-label-bold text-label-bold">Security First</h3>
 </div>
 <p class="font-body-md text-body-md text-on-surface-variant mb-4">Your business data is encrypted using 256-bit SSL. We never share your ABN or contact details with third parties.</p>
-<a class="text-electric-purple font-label-bold text-sm flex items-center gap-1 hover:underline" href="#">
+<a class="text-electric-purple font-label-bold text-sm flex items-center gap-1 hover:underline" href="/privacy">
                             Privacy Policy
                             <span class="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
 </a>
 </div>
 <!-- Summary Card -->
-<div class="gradient-bg p-6 text-pure-white shadow-xl">
+<div class="gradient-bg p-6 text-pure-white shadow-xl" id="review-summary-card">
 <h3 class="font-label-bold text-label-bold text-surface-variant uppercase mb-4">Current Order</h3>
 <div class="space-y-4">
-<div class="flex justify-between items-start">
-<div>
-<p class="font-label-bold text-pure-white">Business Ultra 1000</p>
-<p class="text-xs text-surface-variant">1000/400 Mbps + Static IP</p>
-</div>
-<span class="font-label-bold">$249/mo</span>
-</div>
-<div class="pt-4 border-t border-white/10">
-<div class="flex justify-between items-center text-xs opacity-70">
-<span>Setup Fee</span>
-<span>$0.00</span>
-</div>
-<div class="flex justify-between items-center text-xs opacity-70 mt-1">
-<span>Hardware (SLA)</span>
-<span>Included</span>
-</div>
-</div>
-<div class="flex justify-between items-center pt-4 text-vibrant-red font-display-lg text-[20px]">
-<span>Total Today</span>
-<span>$0.00</span>
-</div>
+    <p>Loading summary...</p>
 </div>
 </div>
 <!-- Support Image Card -->
@@ -288,56 +268,90 @@
 <footer class="w-full py-12 bg-surface-container-low border-t border-surface-variant">
 <div class="grid grid-cols-1 md:grid-cols-2 px-4 md:px-margin-desktop max-w-max-width mx-auto gap-gutter">
 <div>
-<span class="font-label-bold text-on-surface text-lg">FiberFlow Business ISP</span>
+<span class="font-label-bold text-on-surface text-lg">Velocity Enterprise</span>
 <p class="font-label-md text-label-md text-on-surface-variant mt-2 max-w-[400px]">
                     Empowering Australian enterprises with symmetrical speeds and guaranteed 99.9% uptime SLAs.
                 </p>
 </div>
 <div class="flex flex-col md:items-end gap-4">
 <div class="flex flex-wrap gap-x-6 gap-y-2">
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Critical Information Summary</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Support</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="/critical-information-summary">Critical Information Summary</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="/privacy">Privacy Policy</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="/terms">Terms of Service</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="/support">Support</a>
 </div>
 <p class="font-label-md text-label-md text-on-surface-variant/60">
-                    © 2024 FiberFlow Business ISP. All rights reserved. SLA Guaranteed.
+                    © 2024 Velocity Enterprise. All rights reserved. SLA Guaranteed.
                 </p>
 </div>
 </div>
 </footer>
 <script>
         async function updateSummary() {
-            const planId = localStorage.getItem('signup_plan_id');
-            const plansResponse = await fetch('/api/plans');
-            const plans = await plansResponse.json();
-            const plan = plans.find(p => p.id === planId);
+            try {
+                const planId = localStorage.getItem('signup_plan_id');
+                const plansResponse = await fetch('/api/plans');
+                const plans = await plansResponse.json();
+                const plan = plans.find(p => p.id === planId);
 
-            if (plan) {
-                const summaryCard = document.querySelector('.gradient-bg .space-y-4');
-                summaryCard.innerHTML = `
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <p class="font-label-bold text-pure-white">${plan.name}</p>
-                            <p class="text-xs text-surface-variant">${plan.speed} + Static IP</p>
-                        </div>
-                        <span class="font-label-bold">$${plan.promo_price || plan.price}/mo</span>
-                    </div>
-                    <div class="pt-4 border-t border-white/10">
-                        <div class="flex justify-between items-center text-xs opacity-70">
-                            <span>Setup Fee</span>
-                            <span>$0.00</span>
-                        </div>
-                        <div class="flex justify-between items-center text-xs opacity-70 mt-1">
-                            <span>Hardware (SLA)</span>
-                            <span>Included</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-center pt-4 text-vibrant-red font-display-lg text-[20px]">
-                        <span>Total Today</span>
-                        <span>$0.00</span>
-                    </div>
-                `;
+                if (plan) {
+                    const summaryContainer = document.querySelector('#review-summary-card .space-y-4');
+                    summaryContainer.innerHTML = '';
+
+                    const topDiv = document.createElement('div');
+                    topDiv.className = 'flex justify-between items-start';
+
+                    const planInfo = document.createElement('div');
+                    const pName = document.createElement('p');
+                    pName.className = 'font-label-bold text-pure-white';
+                    pName.textContent = plan.name;
+                    planInfo.appendChild(pName);
+
+                    const pSpeed = document.createElement('p');
+                    pSpeed.className = 'text-xs text-surface-variant';
+                    pSpeed.textContent = `${plan.speed} + Static IP`;
+                    planInfo.appendChild(pSpeed);
+                    topDiv.appendChild(planInfo);
+
+                    const pPrice = document.createElement('span');
+                    pPrice.className = 'font-label-bold';
+                    pPrice.textContent = `$${plan.promo_price || plan.price}/mo`;
+                    topDiv.appendChild(pPrice);
+                    summaryContainer.appendChild(topDiv);
+
+                    const midDiv = document.createElement('div');
+                    midDiv.className = 'pt-4 border-t border-white/10';
+
+                    const fees = [
+                        { label: 'Setup Fee', val: '$0.00' },
+                        { label: 'Hardware (SLA)', val: 'Included' }
+                    ];
+
+                    fees.forEach(f => {
+                        const feeDiv = document.createElement('div');
+                        feeDiv.className = 'flex justify-between items-center text-xs opacity-70 mt-1';
+                        const sLabel = document.createElement('span');
+                        sLabel.textContent = f.label;
+                        feeDiv.appendChild(sLabel);
+                        const sVal = document.createElement('span');
+                        sVal.textContent = f.val;
+                        feeDiv.appendChild(sVal);
+                        midDiv.appendChild(feeDiv);
+                    });
+                    summaryContainer.appendChild(midDiv);
+
+                    const totalDiv = document.createElement('div');
+                    totalDiv.className = 'flex justify-between items-center pt-4 text-vibrant-red font-display-lg text-[20px]';
+                    const sTotalLabel = document.createElement('span');
+                    sTotalLabel.textContent = 'Total Today';
+                    totalDiv.appendChild(sTotalLabel);
+                    const sTotalVal = document.createElement('span');
+                    sTotalVal.textContent = '$0.00';
+                    totalDiv.appendChild(sTotalVal);
+                    summaryContainer.appendChild(totalDiv);
+                }
+            } catch (err) {
+                console.error("Error updating summary:", err);
             }
         }
 
@@ -375,7 +389,7 @@
             // Button loading state simulation
             const btn = e.target.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
-            btn.innerHTML = '<span class="material-symbols-outlined animate-spin" data-icon="progress_activity">progress_activity</span> Validating...';
+            btn.textContent = 'Validating...';
             btn.classList.add('opacity-80');
 
             setTimeout(() => {

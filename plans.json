@@ -6,6 +6,7 @@
     "download": 50,
     "upload": 20,
     "price": 79,
+    "stripe_price_id": "price_basic_50_standard",
     "features": [
       "Unlimited Data",
       "Static IP Included",
@@ -20,6 +21,7 @@
     "download": 100,
     "upload": 40,
     "price": 99,
+    "stripe_price_id": "price_pro_100_standard",
     "features": [
       "Unlimited Data",
       "Static IP Included",
@@ -37,6 +39,8 @@
     "price": 105,
     "promo_price": 90,
     "promo_duration": 6,
+    "stripe_price_id": "price_max_250_standard",
+    "stripe_promo_price_id": "price_max_250_promo",
     "features": [
       "Unlimited Data",
       "Static IP Included",
@@ -55,6 +59,8 @@
     "price": 125,
     "promo_price": 110,
     "promo_duration": 6,
+    "stripe_price_id": "price_max_500_standard",
+    "stripe_promo_price_id": "price_max_500_promo",
     "features": [
       "Unlimited Data",
       "Static IP Included",
@@ -73,6 +79,8 @@
     "price": 145,
     "promo_price": 130,
     "promo_duration": 6,
+    "stripe_price_id": "price_max_1000_standard",
+    "stripe_promo_price_id": "price_max_1000_promo",
     "features": [
       "Unlimited Data",
       "Static IP Included",
