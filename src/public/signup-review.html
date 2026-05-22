@@ -3,7 +3,7 @@
 <html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Order Review | FiberFlow Business</title>
+<title>Order Review | Velocity Enterprise</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -136,7 +136,7 @@
 <button class="cursor-pointer transition-transform active:scale-95 text-primary dark:text-pure-white" onclick="window.history.back()">
 <span class="material-symbols-outlined">arrow_back</span>
 </button>
-<h1 class="font-display-lg text-vibrant-red dark:text-vibrant-red tracking-tighter text-[24px]">FiberFlow Business</h1>
+<h1 class="font-display-lg text-vibrant-red dark:text-vibrant-red tracking-tighter text-[24px]">Velocity Enterprise</h1>
 </div>
 <div class="flex items-center gap-6">
 <span class="hidden md:block font-label-md text-label-md text-on-surface-variant">Step 4 of 4: Final Review</span>
@@ -166,11 +166,11 @@
 <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
 <div>
 <span class="font-label-bold text-label-bold text-electric-purple uppercase tracking-widest">Selected Infrastructure</span>
-<h3 class="font-headline-md text-headline-md mt-1">Velocity Enterprise 1000</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mt-2">Symmetric 1000/1000 Mbps Dedicated Fiber</p>
+<h3 class="font-headline-md text-headline-md mt-1" id="review-plan-name">Loading...</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2" id="review-plan-speed"></p>
 </div>
 <div class="text-left md:text-right">
-<span class="font-display-lg text-[48px] text-primary">$349</span>
+<span class="font-display-lg text-[48px] text-primary" id="review-plan-price">...</span>
 <span class="font-label-md text-label-md text-on-surface-variant">/month (Ex. GST)</span>
 </div>
 </div>
@@ -186,14 +186,14 @@
 <span class="material-symbols-outlined text-vibrant-red">check_circle</span>
 <div>
 <p class="font-label-bold text-label-bold">Static IP</p>
-<p class="font-label-md text-label-md text-on-surface-variant">Included (/30 block)</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Included</p>
 </div>
 </div>
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-vibrant-red">check_circle</span>
 <div>
 <p class="font-label-bold text-label-bold">Priority Tech</p>
-<p class="font-label-md text-label-md text-on-surface-variant">24/7 Enterprise Support</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Business Support</p>
 </div>
 </div>
 </div>
@@ -206,20 +206,8 @@
 <h4 class="font-label-bold text-label-bold uppercase tracking-wider text-on-surface-variant">Business Profile</h4>
 <button class="text-vibrant-red font-label-bold text-[12px] hover:underline" onclick="window.location.href='/signup-business'">EDIT</button>
 </div>
-<div class="space-y-4">
-<div>
-<label class="block font-label-md text-label-md text-on-surface-variant">Legal Entity Name</label>
-<p class="font-body-md text-body-md font-bold">TechFlow Solutions Pty Ltd</p>
-</div>
-<div>
-<label class="block font-label-md text-label-md text-on-surface-variant">ABN / ACN</label>
-<p class="font-body-md text-body-md font-bold">45 123 456 789</p>
-</div>
-<div>
-<label class="block font-label-md text-label-md text-on-surface-variant">Primary Contact</label>
-<p class="font-body-md text-body-md font-bold">Sarah Jenkins</p>
-<p class="font-label-md text-label-md text-on-surface-variant">s.jenkins@techflow.io</p>
-</div>
+<div class="space-y-4" id="review-business-profile">
+    <p>Loading...</p>
 </div>
 </div>
 <!-- Service Location -->
@@ -232,9 +220,8 @@
 <div class="flex items-start gap-4">
 <span class="material-symbols-outlined text-electric-purple mt-1">location_on</span>
 <div>
-<p class="font-body-md text-body-md font-bold">Level 14, 201 Elizabeth St</p>
-<p class="font-body-md text-body-md font-bold">Sydney, NSW 2000</p>
-<p class="font-label-md text-label-md text-on-surface-variant mt-2">NBN Technology: FTTP (Fiber to the Premises)</p>
+<p class="font-body-md text-body-md font-bold" id="review-address">Loading...</p>
+<p class="font-label-md text-label-md text-on-surface-variant mt-2" id="review-tech-type"></p>
 </div>
 </div>
 <!-- Map Context -->
@@ -257,7 +244,7 @@
 <input class="peer h-5 w-5 border-2 border-surface-variant rounded-none text-vibrant-red focus:ring-vibrant-red transition-all cursor-pointer" type="checkbox"/>
 </div>
 <span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">
-                                I confirm that I am authorized to enter into this agreement on behalf of TechFlow Solutions Pty Ltd.
+                                I confirm that I am authorized to enter into this agreement on behalf of the business.
                             </span>
 </label>
 <label class="flex items-start gap-4 cursor-pointer group">
@@ -265,7 +252,7 @@
 <input class="peer h-5 w-5 border-2 border-surface-variant rounded-none text-vibrant-red focus:ring-vibrant-red transition-all cursor-pointer" id="terms-check" type="checkbox"/>
 </div>
 <span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">
-                                I have read and agree to the <a class="text-electric-purple font-bold hover:underline" href="#">Critical Information Summary</a>, <a class="text-electric-purple font-bold hover:underline" href="#">Service Level Agreement (SLA)</a>, and <a class="text-electric-purple font-bold hover:underline" href="#">Standard Terms of Service</a>.
+                                I have read and agree to the <a class="text-electric-purple font-bold hover:underline" href="/critical-information-summary">Critical Information Summary</a>, <a class="text-electric-purple font-bold hover:underline" href="/sla">Service Level Agreement (SLA)</a>, and <a class="text-electric-purple font-bold hover:underline" href="/terms">Standard Terms of Service</a>.
                             </span>
 </label>
 </div>
@@ -280,21 +267,21 @@
 <div class="space-y-4 border-b border-surface-variant/20 pb-6 mb-6">
 <div class="flex justify-between font-label-md text-label-md">
 <span class="text-surface-variant">Monthly Service Fee</span>
-<span>$349.00</span>
+<span id="summary-monthly-fee">...</span>
 </div>
 <div class="flex justify-between font-label-md text-label-md">
 <span class="text-surface-variant">Activation Fee</span>
 <span class="text-vibrant-red">FREE</span>
 </div>
 <div class="flex justify-between font-label-md text-label-md">
-<span class="text-surface-variant">Enterprise NTD Hardware</span>
+<span class="text-surface-variant">Hardware</span>
 <span>$0.00</span>
 </div>
 </div>
 <div class="space-y-2 mb-8">
 <div class="flex justify-between items-baseline">
 <span class="font-label-bold text-label-bold uppercase text-surface-variant">Monthly Total</span>
-<span class="font-display-lg text-[32px]">$349.00</span>
+<span class="font-display-lg text-[32px]" id="summary-monthly-total">...</span>
 </div>
 <p class="text-[12px] text-surface-variant text-right">Pricing excludes GST (10%)</p>
 </div>
@@ -302,8 +289,8 @@
 <div class="flex gap-3 items-center">
 <span class="material-symbols-outlined text-electric-purple">speed</span>
 <div class="text-[12px]">
-<p class="font-bold">Next Business Day Install</p>
-<p class="text-surface-variant">Provisional slot: Oct 24th, 9AM-12PM</p>
+<p class="font-bold">Fast Activation</p>
+<p class="text-surface-variant">Provisioning begins immediately after payment.</p>
 </div>
 </div>
 </div>
@@ -322,65 +309,79 @@
 <footer class="w-full py-12 bg-surface-container-low dark:bg-deep-navy border-t border-surface-variant">
 <div class="grid grid-cols-1 md:grid-cols-2 px-margin-desktop max-w-max-width mx-auto gap-gutter">
 <div class="space-y-4">
-<p class="font-label-bold text-label-bold text-on-surface">FiberFlow Business</p>
-<p class="font-label-md text-label-md text-on-surface-variant">© 2024 FiberFlow Business ISP. All rights reserved. SLA Guaranteed.</p>
+<p class="font-label-bold text-label-bold text-on-surface">Velocity Enterprise</p>
+<p class="font-label-md text-label-md text-on-surface-variant">© 2024 Velocity Enterprise. All rights reserved. SLA Guaranteed.</p>
 </div>
 <div class="flex flex-wrap md:justify-end gap-x-8 gap-y-2">
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">Critical Information Summary</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">Privacy Policy</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">Terms of Service</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">Support</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="/critical-information-summary">Critical Information Summary</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="/privacy">Privacy Policy</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="/terms">Terms of Service</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="/support">Support</a>
 </div>
 </div>
 </footer>
 <script>
     window.onload = () => {
         const updateUI = async () => {
-            const address = localStorage.getItem('signup_address');
-            const serviceability = JSON.parse(localStorage.getItem('signup_serviceability'));
-            const planId = localStorage.getItem('signup_plan_id');
-            const businessDetails = JSON.parse(localStorage.getItem('signup_business_details'));
+            try {
+                const address = localStorage.getItem('signup_address');
+                const serviceability = JSON.parse(localStorage.getItem('signup_serviceability'));
+                const planId = localStorage.getItem('signup_plan_id');
+                const businessDetails = JSON.parse(localStorage.getItem('signup_business_details'));
 
-            const plansResponse = await fetch('/api/plans');
-            const plans = await plansResponse.json();
-            const plan = plans.find(p => p.id === planId);
+                const plansResponse = await fetch('/api/plans');
+                const plans = await plansResponse.json();
+                const plan = plans.find(p => p.id === planId);
 
-            if (plan) {
-                document.querySelector('h3.font-headline-md').innerText = plan.name;
-                document.querySelector('p.text-on-surface-variant.mt-2').innerText = `${plan.speed} Business Grade Connectivity`;
-                document.querySelector('span.font-display-lg').innerText = `$${plan.promo_price || plan.price}`;
-                document.querySelector('aside span.font-display-lg').innerText = `$${plan.promo_price || plan.price}.00`;
-                document.querySelectorAll('aside .flex.justify-between.font-label-md span:last-child')[0].innerText = `$${plan.promo_price || plan.price}.00`;
-            }
-
-            if (businessDetails) {
-                const h4 = Array.from(document.querySelectorAll('h4')).find(el => el.textContent.includes("Business Profile"));
-                const profileSection = h4.parentElement.nextElementSibling;
-                profileSection.innerHTML = `
-                    <div>
-                        <label class="block font-label-md text-label-md text-on-surface-variant">Legal Entity Name</label>
-                        <p class="font-body-md text-body-md font-bold">${businessDetails.businessName}</p>
-                    </div>
-                    <div>
-                        <label class="block font-label-md text-label-md text-on-surface-variant">ABN / ACN</label>
-                        <p class="font-body-md text-body-md font-bold">${businessDetails.abn}</p>
-                    </div>
-                    <div>
-                        <label class="block font-label-md text-label-md text-on-surface-variant">Primary Contact</label>
-                        <p class="font-body-md text-body-md font-bold">${businessDetails.contactName}</p>
-                        <p class="font-label-md text-label-md text-on-surface-variant">${businessDetails.email}</p>
-                    </div>
-                `;
-            }
-
-            if (address) {
-                const h4 = Array.from(document.querySelectorAll('h4')).find(el => el.textContent.includes("Service Address"));
-                const addressSection = h4.parentElement.nextElementSibling;
-                addressSection.querySelector('p.font-body-md.font-bold').innerText = address;
-                addressSection.querySelectorAll('p.font-body-md.font-bold')[1].innerText = '';
-                if (serviceability) {
-                    addressSection.querySelector('p.text-on-surface-variant.mt-2').innerText = `NBN Technology: ${serviceability.techType}`;
+                if (plan) {
+                    document.getElementById('review-plan-name').textContent = plan.name;
+                    document.getElementById('review-plan-speed').textContent = `${plan.speed} Business Grade Connectivity`;
+                    const priceStr = `$${plan.promo_price || plan.price}`;
+                    document.getElementById('review-plan-price').textContent = priceStr;
+                    document.getElementById('summary-monthly-fee').textContent = priceStr + ".00";
+                    document.getElementById('summary-monthly-total').textContent = priceStr + ".00";
                 }
+
+                if (businessDetails) {
+                    const profileSection = document.getElementById('review-business-profile');
+                    profileSection.innerHTML = '';
+
+                    const details = [
+                        { label: 'Legal Entity Name', value: businessDetails.businessName },
+                        { label: 'ABN / ACN', value: businessDetails.abn },
+                        { label: 'Primary Contact', value: businessDetails.contactName, sub: businessDetails.email }
+                    ];
+
+                    details.forEach(item => {
+                        const div = document.createElement('div');
+                        const label = document.createElement('label');
+                        label.className = 'block font-label-md text-label-md text-on-surface-variant';
+                        label.textContent = item.label;
+                        div.appendChild(label);
+
+                        const p = document.createElement('p');
+                        p.className = 'font-body-md text-body-md font-bold';
+                        p.textContent = item.value;
+                        div.appendChild(p);
+
+                        if (item.sub) {
+                            const pSub = document.createElement('p');
+                            pSub.className = 'font-label-md text-label-md text-on-surface-variant';
+                            pSub.textContent = item.sub;
+                            div.appendChild(pSub);
+                        }
+                        profileSection.appendChild(div);
+                    });
+                }
+
+                if (address) {
+                    document.getElementById('review-address').textContent = address;
+                    if (serviceability) {
+                        document.getElementById('review-tech-type').textContent = `NBN Technology: ${serviceability.techType}`;
+                    }
+                }
+            } catch (err) {
+                console.error("Error updating UI:", err);
             }
         };
         updateUI();
@@ -414,11 +415,17 @@
                             address: localStorage.getItem('signup_address')
                         })
                     });
+
+                    if (!response.ok) {
+                        const err = await response.json();
+                        throw new Error(err.error || 'Checkout failed');
+                    }
+
                     const session = await response.json();
                     window.location.href = session.url;
                 } catch (error) {
                     console.error('Error:', error);
-                    alert('Failed to initiate checkout. Please try again.');
+                    alert(error.message);
                     window.location.reload();
                 }
             }

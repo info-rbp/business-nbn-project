@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const nbnController = require('../controllers/nbnController');
 const paymentController = require('../controllers/paymentController');
+const webhookController = require('../controllers/webhookController');
 const fs = require('fs').promises;
 const path = require('path');
 
@@ -10,6 +11,7 @@ router.post('/check-address', nbnController.checkAddress);
 
 // Payments
 router.post('/create-checkout-session', paymentController.createCheckoutSession);
+router.post('/stripe-webhook', webhookController.handleWebhook);
 
 // Plans
 router.get('/plans', async (req, res) => {

@@ -1,9 +1,9 @@
 const axios = require('axios');
+const config = require('../config/env');
 
 /**
  * Service to handle NBN Serviceability checks.
  * Utilizes RapidAPI's NBNco Address Check API if configured.
- * Otherwise, falls back to a smart mock for development.
  */
 class NBNService {
     /**
@@ -11,7 +11,9 @@ class NBNService {
      * @param {string} address
      */
     async checkServiceability(address) {
-        const apiKey = process.env.RAPIDAPI_KEY;
+        const apiKey = config.RAPIDAPI_KEY;
+        const isProduction = config.NODE_ENV === 'production';
+        const allowMock = config.ALLOW_MOCK_SERVICEABILITY;
 
         if (apiKey) {
             try {
@@ -21,11 +23,11 @@ class NBNService {
                     headers: {
                         'X-RapidAPI-Key': apiKey,
                         'X-RapidAPI-Host': 'nbnco-address-check.p.rapidapi.com'
-                    }
+                    },
+                    timeout: 10000 // 10 second timeout
                 });
 
                 const data = response.data;
-                // Basic mapping of RapidAPI response to our app's internal format
                 if (data && data.addressDetail) {
                     return {
                         serviceable: data.addressDetail.serviceStatus === 'Available',
@@ -33,24 +35,42 @@ class NBNService {
                         maxSpeed: 'Up to 1000/400 Mbps',
                         address: data.addressDetail.formattedAddress || address,
                         csaId: data.servingArea?.csaId || 'N/A',
-                        readyForService: true
+                        readyForService: true,
+                        source: 'REAL_API'
                     };
+                } else {
+                    throw new Error('Invalid response format from NBN API');
                 }
             } catch (error) {
-                console.error('RapidAPI Error:', error.message);
-                // Fall through to mock if API fails
+                console.error('NBN API Error:', error.message);
+
+                // In production, we don't fall back to mock unless explicitly allowed
+                if (isProduction && !allowMock) {
+                    return {
+                        serviceable: false,
+                        error: 'Serviceability check failed. Please contact support.',
+                        address: address
+                    };
+                }
             }
         }
 
-        // Smart Mock Logic
+        // If we reach here, either API key is missing or API failed.
+        // Check if we are allowed to use mock.
+        if (isProduction && !allowMock) {
+             throw new Error('NBN Serviceability check is not available (Missing API key or API failure)');
+        }
+
+        // Mock Logic (Development or explicitly enabled)
         console.log(`Using mock serviceability for: ${address}`);
-        await new Promise(resolve => setTimeout(resolve, 1200));
+        await new Promise(resolve => setTimeout(resolve, 800));
 
         if (address.toLowerCase().includes('fail') || address.toLowerCase().includes('unavailable')) {
             return {
                 serviceable: false,
                 reason: 'NBN is not currently available at this location.',
-                address: address
+                address: address,
+                source: 'MOCK'
             };
         }
 
@@ -60,7 +80,8 @@ class NBNService {
             maxSpeed: '1000/400 Mbps',
             address: address,
             csaId: 'CSA-MOCK-999',
-            readyForService: true
+            readyForService: true,
+            source: 'MOCK'
         };
     }
 }

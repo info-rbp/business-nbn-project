@@ -1,7 +1,0 @@
-
-> velocity-enterprise-portal@1.0.0 start
-> node src/server.js
-
-Server is running on port 3000
-Using mock serviceability for: 123 Business Way, Sydney
-rminated

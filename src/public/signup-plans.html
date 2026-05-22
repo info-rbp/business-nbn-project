@@ -122,8 +122,8 @@
 <header class="w-full top-0 sticky bg-pure-white z-50 border-b border-surface-variant">
 <div class="flex justify-between items-center px-margin-desktop py-4 max-w-max-width mx-auto">
 <div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-primary cursor-pointer transition-transform active:scale-95" data-icon="arrow_back">arrow_back</span>
-<span class="font-display-lg text-vibrant-red tracking-tighter text-[24px]">FiberFlow Business</span>
+<span class="material-symbols-outlined text-primary cursor-pointer transition-transform active:scale-95" data-icon="arrow_back" onclick="window.history.back()">arrow_back</span>
+<span class="font-display-lg text-vibrant-red tracking-tighter text-[24px]">Velocity Enterprise</span>
 </div>
 <div class="flex items-center gap-6">
 <span class="font-label-md text-label-md text-on-surface-variant hidden md:block">Need assistance?</span>
@@ -193,14 +193,14 @@
 <footer class="w-full py-12 bg-surface-container-low border-t border-surface-variant">
 <div class="grid grid-cols-1 md:grid-cols-2 px-margin-desktop max-w-max-width mx-auto gap-gutter">
 <div class="flex flex-col gap-4">
-<span class="font-label-bold text-on-surface">FiberFlow Business ISP</span>
-<p class="font-label-md text-label-md text-on-surface-variant">© 2024 FiberFlow Business ISP. All rights reserved. SLA Guaranteed.</p>
+<span class="font-label-bold text-on-surface">Velocity Enterprise</span>
+<p class="font-label-md text-label-md text-on-surface-variant">© 2024 Velocity Enterprise. All rights reserved. SLA Guaranteed.</p>
 </div>
 <div class="flex flex-wrap gap-x-8 gap-y-4 md:justify-end items-center">
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">Critical Information Summary</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">Privacy Policy</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">Terms of Service</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="#">Support</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="/critical-information-summary">Critical Information Summary</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="/privacy">Privacy Policy</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="/terms">Terms of Service</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-opacity duration-200" href="/support">Support</a>
 </div>
 </div>
 </footer>
@@ -214,36 +214,82 @@
 
                 plans.forEach(plan => {
                     const isRecommended = plan.id === 'business-pro-100';
-                    const planCard = `
-                        <div class="plan-card ${isRecommended ? 'recommended-card transform md:-translate-y-4 shadow-lg' : ''} bg-pure-white border border-surface-variant p-8 flex flex-col h-full relative transition-all duration-300 cursor-pointer" onclick="selectPlan('${plan.id}')">
-                            ${isRecommended ? '<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-electric-purple text-pure-white px-4 py-1 font-label-bold text-label-bold uppercase tracking-tighter">Most Popular</div>' : ''}
-                            <div class="mb-8">
-                                <span class="font-label-bold text-label-bold bg-surface-gray px-3 py-1 rounded-full text-on-surface mb-4 inline-block">NBN READY</span>
-                                <h3 class="font-headline-lg text-headline-lg mb-1">${plan.name}</h3>
-                                <p class="font-body-md text-on-surface-variant">${plan.speed}</p>
-                            </div>
-                            <div class="mb-8">
-                                <div class="flex items-baseline gap-1">
-                                    <span class="font-display-lg-mobile text-display-lg-mobile text-primary">$</span>
-                                    <span class="font-display-lg text-display-lg text-primary">${plan.promo_price || plan.price}</span>
-                                    <span class="font-label-md text-label-md text-on-surface-variant">/mo</span>
-                                </div>
-                                ${plan.promo_price ? `<p class="font-label-bold text-label-bold text-vibrant-red mt-2">First ${plan.promo_duration} months, then $${plan.price}/mo</p>` : ''}
-                            </div>
-                            <div class="space-y-4 mb-10 flex-grow">
-                                ${plan.features.map(feature => `
-                                    <div class="flex items-start gap-3">
-                                        <span class="material-symbols-outlined text-electric-purple text-[20px]" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                                        <span class="font-body-md">${feature}</span>
-                                    </div>
-                                `).join('')}
-                            </div>
-                            <button class="w-full py-4 ${isRecommended ? 'bg-vibrant-red text-pure-white' : 'bg-primary text-on-primary'} font-label-bold text-label-bold uppercase tracking-widest hover:brightness-110 transition-all active:scale-[0.98]">
-                                Select Plan
-                            </button>
-                        </div>
-                    `;
-                    container.innerHTML += planCard;
+                    const planCard = document.createElement('div');
+                    planCard.className = `plan-card ${isRecommended ? 'recommended-card transform md:-translate-y-4 shadow-lg' : ''} bg-pure-white border border-surface-variant p-8 flex flex-col h-full relative transition-all duration-300 cursor-pointer`;
+                    planCard.onclick = () => selectPlan(plan.id);
+
+                    if (isRecommended) {
+                        const recBadge = document.createElement('div');
+                        recBadge.className = 'absolute -top-4 left-1/2 -translate-x-1/2 bg-electric-purple text-pure-white px-4 py-1 font-label-bold text-label-bold uppercase tracking-tighter';
+                        recBadge.textContent = 'Most Popular';
+                        planCard.appendChild(recBadge);
+                    }
+
+                    const topSection = document.createElement('div');
+                    topSection.className = 'mb-8';
+                    const nbnBadge = document.createElement('span');
+                    nbnBadge.className = 'font-label-bold text-label-bold bg-surface-gray px-3 py-1 rounded-full text-on-surface mb-4 inline-block';
+                    nbnBadge.textContent = 'NBN READY';
+                    topSection.appendChild(nbnBadge);
+                    const h3 = document.createElement('h3');
+                    h3.className = 'font-headline-lg text-headline-lg mb-1';
+                    h3.textContent = plan.name;
+                    topSection.appendChild(h3);
+                    const pSpeed = document.createElement('p');
+                    pSpeed.className = 'font-body-md text-on-surface-variant';
+                    pSpeed.textContent = plan.speed;
+                    topSection.appendChild(pSpeed);
+                    planCard.appendChild(topSection);
+
+                    const priceSection = document.createElement('div');
+                    priceSection.className = 'mb-8';
+                    const priceFlex = document.createElement('div');
+                    priceFlex.className = 'flex items-baseline gap-1';
+                    const sCurrency = document.createElement('span');
+                    sCurrency.className = 'font-display-lg-mobile text-display-lg-mobile text-primary';
+                    sCurrency.textContent = '$';
+                    priceFlex.appendChild(sCurrency);
+                    const sPrice = document.createElement('span');
+                    sPrice.className = 'font-display-lg text-display-lg text-primary';
+                    sPrice.textContent = plan.promo_price || plan.price;
+                    priceFlex.appendChild(sPrice);
+                    const sInterval = document.createElement('span');
+                    sInterval.className = 'font-label-md text-label-md text-on-surface-variant';
+                    sInterval.textContent = '/mo';
+                    priceFlex.appendChild(sInterval);
+                    priceSection.appendChild(priceFlex);
+
+                    if (plan.promo_price) {
+                        const pPromo = document.createElement('p');
+                        pPromo.className = 'font-label-bold text-label-bold text-vibrant-red mt-2';
+                        pPromo.textContent = `First ${plan.promo_duration} months, then $${plan.price}/mo`;
+                        priceSection.appendChild(pPromo);
+                    }
+                    planCard.appendChild(priceSection);
+
+                    const featuresSection = document.createElement('div');
+                    featuresSection.className = 'space-y-4 mb-10 flex-grow';
+                    plan.features.forEach(feature => {
+                        const featureDiv = document.createElement('div');
+                        featureDiv.className = 'flex items-start gap-3';
+                        const icon = document.createElement('span');
+                        icon.className = 'material-symbols-outlined text-electric-purple text-[20px]';
+                        icon.textContent = 'check_circle';
+                        featureDiv.appendChild(icon);
+                        const sFeat = document.createElement('span');
+                        sFeat.className = 'font-body-md';
+                        sFeat.textContent = feature;
+                        featureDiv.appendChild(sFeat);
+                        featuresSection.appendChild(featureDiv);
+                    });
+                    planCard.appendChild(featuresSection);
+
+                    const selectBtn = document.createElement('button');
+                    selectBtn.className = `w-full py-4 ${isRecommended ? 'bg-vibrant-red text-pure-white' : 'bg-primary text-on-primary'} font-label-bold text-label-bold uppercase tracking-widest hover:brightness-110 transition-all active:scale-[0.98]`;
+                    selectBtn.textContent = 'Select Plan';
+                    planCard.appendChild(selectBtn);
+
+                    container.appendChild(planCard);
                 });
             } catch (error) {
                 console.error('Error loading plans:', error);
